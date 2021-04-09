@@ -44,6 +44,7 @@ class Lknu extends CI_Controller{
             $config['prev_link'] = '<< Prev';
             $this->pagination->initialize($config);
             $x['page'] =$this->pagination->create_links();
+						$x['datas']=$this->m_lknu->berita_perpage($offset,$limit)->result_array(); //print_r($x['data']); die();
 						$x['data']=$this->m_lknu->berita_perpage($offset,$limit);
 						$x['category']=$this->db->get('tbl_kategori');
 						$x['profil']=$this->m_profiltk->get_all_tulisan();

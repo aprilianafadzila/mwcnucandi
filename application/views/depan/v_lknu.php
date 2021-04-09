@@ -26,10 +26,10 @@
     <!-- Modernizr JS -->
     <script src="js/modernizr-3.5.0.min.js"></script>
     <?php
-    		function limit_words($string, $word_limit){
-    				$words = explode(" ",$string);
-    				return implode(" ",array_splice($words,0,$word_limit));
-    		}
+        function limit_words($string, $word_limit){
+            $words = explode(" ",$string);
+            return implode(" ",array_splice($words,0,$word_limit));
+        }
     ?>
 </head>
 <style>
@@ -226,13 +226,13 @@
 </div>
 </div>
 
-
 <div class="padding-page">
 <div class="" style="background:#ffffff;">
 
     <div class="mx-0" style="display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; margin-right: -15px; margin-left: -15px;">
-        <div class="slider col-md-8 col-16 paddding animate-box" data-animate-effect="fadeIn" style="padding-left: 0px !important; padding-right: 5px !important;">
-          <?php if (empty($data)) { ?>
+        <!-- <div class="slider col-md-8 col-16 paddding animate-box" data-animate-effect="fadeIn" style="padding-left: 0px !important; padding-right: 5px !important;"> -->
+
+          <?php if (empty($datas)) { ?>
 
             <div  class="slide">
             <div class="fh5co_suceefh5co_height">
@@ -244,27 +244,45 @@
               </div>
             </div>
             </div>
-        <?php } else { foreach ($data->result() as $row) : ?>
+            <?php }?>
+
+        <?php if (!empty($datas)) {  ?>
+
+          <?php
+
+          foreach ($datas as $key) {
+              $tulisan_judul = $key['tulisan_judul'];
+              $tulisan_isi = $key['tulisan_isi'];
+              $tulisan_kategori_nama = $key['tulisan_kategori_nama'];
+              $tulisan_tanggal = $key['tulisan_tanggal'];
+              $tulisan_gambar = $key['tulisan_gambar'];
+              $tulisan_author = $key['tulisan_author'];
+              $tulisan_slug = $key['tulisan_slug'];
+
+            }
+           ?>
+
+
           <div  class="slide">
           <div class="fh5co_suceefh5co_height">
             <div class="course-content">
               <div class="slider-wrapper theme-default">
               <div class="ribbons"></div>
-                  <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="" class="col-12" widht="200px;" title="" />
+                  <img src="<?php echo base_url().'assets/images/'.$tulisan_gambar;?>" alt="" class="col-12" widht="200px;" title="" />
               </div>
             </div>
               <div class="fh5co_suceefh5co_height_position_absolute"></div>
               <div class="fh5co_suceefh5co_height_position_absolute_font">
-                  <div class=""><a href="#" class="color_fff"> <i class=" "></i><?php echo $row->tulisan_tanggal?></a>
+                  <div class=""><a href="#" class="color_fff"> <i class=" "></i><?php echo $tulisan_tanggal?></a>
                 </div><br>
-                <div class=""><a href="#" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
+                <div class=""><a href="#" class="color_fff"> <?php echo $tulisan_judul;?></a>
                 </div>
                   <div class=""><a href="single.html" class="fh5co_good_font">  </a></div>
               </div>
           </div>
           </div>
 
-        <?php endforeach; }?>
+        <?php }?>
 
         </div>
 
@@ -329,23 +347,23 @@
                 </div>
 
                 <?php echo $this->session->flashdata('msg');?>
-                <?php if(!empty($data)){ foreach ($data->result() as $row) : ?>
-                  <?php echo "april"; die();?>
+                <?php if(!empty($data)){ 
+                  foreach ($datas as $key) : ?>
                 <div class="row pb-4">
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
                         <h6 style="background:#4dab73; padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px;">Label</h6>
                             <div class="fh5co_news_img">
-                            <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt=""/></div>
+                            <img src="<?php echo base_url().'assets/images/'.$tulisan_gambar;?>" alt=""/></div>
                             <div></div>
                         </div>
                     </div>
                     <div class="col-md-7 animate-box"><br><br>
-                        <a href="#" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a> <a href="#" class="fh5co_mini_time py-3"> </a>
-                        <div class="c_g"><?php echo $row->tulisan_author;?> - <i class=""></i><?php echo $row->tulisan_tanggal;?></div>
-                        <div class="fh5co_consectetur"> <?php echo limit_words($row->tulisan_isi,30).'...';?>
+                        <a href="#" class="fh5co_magna py-2"> <?php echo $tulisan_judul;?> </a> <a href="#" class="fh5co_mini_time py-3"> </a>
+                        <div class="c_g"><?php echo $tulisan_author;?> - <i class=""></i><?php echo $tulisan_tanggal;?></div>
+                        <div class="fh5co_consectetur"> <?php echo limit_words($tulisan_isi,30).'...';?>
                         </div>
-                          <a href="<?php echo site_url('lknu/'.$row->tulisan_slug);?>" class="btn academy-btn btn-sm mt-15">Read More</a>
+                          <a href="<?php echo site_url('lknu/'.$tulisan_slug);?>" class="btn academy-btn btn-sm mt-15">Read More</a>
                     </div>
                 </div>
                 <nav>
@@ -644,37 +662,37 @@
 <script src="js/slick.js"></script>
 <script>
     $('.slider').slick({
-	infinite: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	arrows: false,
-	autoplay: true,
-	autoplaySpeed: 2000,
-	responsive: [
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1
-			}
-		},
-		{
-			breakpoint: 1008,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			}
-		},
-		{
-			breakpoint: 800,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			}
-			// settings: "unslick"
-		}
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 1008,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+      // settings: "unslick"
+    }
 
-	]
+  ]
 });
 var tw = new Date();
 if (tw.getTimezoneOffset() == 0) (a=tw.getTime() + ( 7 *60*60*1000))
