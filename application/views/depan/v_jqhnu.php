@@ -1,37 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en" class="no-js">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>MWCNU Candi Sidoarjo</title>
-
-    <link href="css/media_query.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="css/animate.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
-    <link href="css/owl.theme.default.css" rel="stylesheet" type="text/css"/>
-
-    <link rel="stylesheet" href="assets/plugins/Nivo-Slider/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="css/slick.css" type="text/css" />
-    <link rel="stylesheet" href="css/slick-theme.css" type="text/css" />
-    <link rel="stylesheet" href="assets/plugins/Nivo-Slider/themes/default/default.css" type="text/css" />
-
-    <!-- Bootstrap CSS -->
-    <link href="css/style_1.css" rel="stylesheet" type="text/css"/>
-    <!-- Modernizr JS -->
-    <script src="js/modernizr-3.5.0.min.js"></script>
-    <?php
-    		function limit_words($string, $word_limit){
-    				$words = explode(" ",$string);
-    				return implode(" ",array_splice($words,0,$word_limit));
-    		}
-    ?>
-</head>
 <style>
 @media only screen and (min-width:700px) {
   /* For tablets: */
@@ -50,191 +16,21 @@
     }
 }
 </style>
+
 <body style="background:#4dab73;">
-
 <div class="padding-page">
-<div class="container-fluid fh5co_header_bg" style="background: #006127;">
-
-        <div class="container">
-        <div class="row">
-            <div class="col-12 fh5co_mediya_center" ><a href="#" class="color_fff fh5co_mediya_setting"><i
-                    class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp;Friday, 5 January 2018</a>
-
-                </div>
-                  </div>
-        </div>
-        </div>
-
-</div>
-</div>
-
-<div class="padding-page">
-<div class="container-fluid" style=" background:#ffffff; ">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-3 fh5co_padding_menu">
-                <img src="images/logo1.png" alt="img" class="fh5co_logo_width"/>
-            </div>
-            <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
-                <div class="text-center d-inline-block">
-                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-"></i></div></a>
-                </div>
-                <div class="text-center d-inline-block">
-                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-youtube"></i></div></a>
-                </div>
-                <div class="text-center d-inline-block">
-                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-instagram"></i></div></a>
-                </div>
-                <div class="text-center d-inline-block">
-                    <a href="https://twitter.com/fh5co" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div></a>
-                </div>
-                <div class="text-center d-inline-block">
-                    <a href="https://fb.com/fh5co" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div></a>
-                </div>
-                <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
-                <div class="d-inline-block text-center dd_position_relative ">
-                    <select class="form-control fh5co_text_select_option">
-                        <option>English </option>
-                        <option>French </option>
-                        <option>German </option>
-                        <option>Spanish </option>
-                    </select>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php
+ $this->load->view('depan/v_header');
+?>
 </div>
 
 <div class="padding-page">
 <div class="container-fluid bg-faded fh5co_padd_mediya padding_786" style="background:#00702d;">
-
-    <div class="container padding_786">
-        <nav class="navbar navbar-toggleable-md navbar-light ">
-            <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-            <a class="navbar-brand" href="hpme"><img src="images/logo1.png" alt="img" class="mobile_logo_width"/></a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">KANAL</h7><span class="sr-only">(current)</span></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="blog">Berita</a>
-                          <a class="dropdown-item" href="galeri">Galeri</a>
-                          <a class="dropdown-item" href="aswaja">Keaswajan</a>
-                          <a class="dropdown-item" href="#">Pesantren</a>
-                          <a class="dropdown-item" href="#">Lain-lain</a>
-                      </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">TENTANG NU CANDI</h7><span class="sr-only">(current)</span></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="#">Sejarah NU Candi</a>
-                          <a class="dropdown-item" href="#">Kantor</a>
-                          <a class="dropdown-item" href="#">Pengurus</a>
-                          <a class="dropdown-item" href="#">Tokoh</a>
-                      </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">LEMBAGA NU</h7><span class="sr-only">(current)</span></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="#">Aswaja NU Center</a>
-                          <a class="dropdown-item" href="#">LAZISNU</a>
-                          <a class="dropdown-item" href="#">LDNU</a>
-                          <a class="dropdown-item" href="#">LKNU</a>
-                          <a class="dropdown-item" href="#">LAKPESDAM</a>
-                          <a class="dropdown-item" href="#">LBMNU</a>
-                          <a class="dropdown-item" href="#">LESBUMI NU</a>
-                          <a class="dropdown-item" href="#">LFNU</a>
-                          <a class="dropdown-item" href="#">LKKNU</a>
-                          <a class="dropdown-item" href="#">LP MA'ARIF NU</a>
-                          <a class="dropdown-item" href="#">LPBHNU</a>
-                          <a class="dropdown-item" href="#">LPBI NU</a>
-                          <a class="dropdown-item" href="#">LKNU</a>
-                          <a class="dropdown-item" href="#">LPNU</a>
-                          <a class="dropdown-item" href="#">LPPNU</a>
-                          <a class="dropdown-item" href="#">LPTNU</a>
-                          <a class="dropdown-item" href="#">LTMNU</a>
-                          <a class="dropdown-item" href="#">LTNNU</a>
-                          <a class="dropdown-item" href="#">LWPNU</a>
-                          <a class="dropdown-item" href="#">RMI NU</a>
-                      </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">BADAN OTONOM</h7><span class="sr-only">(current)</span></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="#">JATMAN NU</a>
-                          <a class="dropdown-item" href="#">JQH NU</a>
-                          <a class="dropdown-item" href="#">Pagar Nusa</a>
-                          <a class="dropdown-item" href="#">MUSLIMAT</a>
-                          <a class="dropdown-item" href="#">FATAYAT</a>
-                          <a class="dropdown-item" href="#">ISNU</a>
-                          <a class="dropdown-item" href="#">PERGUNU</a>
-                          <a class="dropdown-item" href="#">SARBUMUSI</a>
-                          <a class="dropdown-item" href="#">PMII</a>
-                          <a class="dropdown-item" href="#">IPNU-IPPNU</a>
-                          <a class="dropdown-item" href="#">ISHARI</a>
-                      </div>
-                  </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">RANTING</h7><span class="sr-only">(current)</span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="#">Ranting Sepande</a>
-                            <a class="dropdown-item" href="#">Ranting Sumokali</a>
-                            <a class="dropdown-item" href="#">Ranting Tenggulunan</a>
-                            <a class="dropdown-item" href="#">Ranting Sugihwaras</a>
-                            <a class="dropdown-item" href="#">Ranting Kedungkendo</a>
-                            <a class="dropdown-item" href="#">Ranting Larangan</a>
-                            <a class="dropdown-item" href="#">Ranting Sidodadi</a>
-                            <a class="dropdown-item" href="#">Ranting Candi</a>
-                            <a class="dropdown-item" href="#">Ranting Jambangan</a>
-                            <a class="dropdown-item" href="#">Ranting Gelam</a>
-                            <a class="dropdown-item" href="#">Ranting Bligo</a>
-                            <a class="dropdown-item" href="#">Ranting Kerangtanjung</a>
-                            <a class="dropdown-item" href="#">Ranting Sumorame</a>
-                            <a class="dropdown-item" href="#">Ranting Balongdowo</a>
-                            <a class="dropdown-item" href="#">Ranting Balonggabus</a>
-                            <a class="dropdown-item" href="#">Ranting Wedoroklurak</a>
-                            <a class="dropdown-item" href="#">Ranting Klurak</a>
-                            <a class="dropdown-item" href="#">Ranting Kebonsari</a>
-                            <a class="dropdown-item" href="#">Ranting Sidodadi</a>
-                            <a class="dropdown-item" href="#">Ranting Durung Bedug</a>
-                            <a class="dropdown-item" href="#">Ranting Durung Banjar</a>
-                            <a class="dropdown-item" href="#">Ranting Ngampelsari</a>
-                            <a class="dropdown-item" href="#">Ranting Kalipecabean</a>
-                            <a class="dropdown-item" href="#">Ranting Kendalpecabean</a>
-                            <a class="dropdown-item" href="#">Ranting Kedungpeluk</a>
-
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="">DOWNLOAD</h7><span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="">REDAKSI</h7><span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<?php
+ $this->load->view('depan/v_headermenu');
+?>
 </div>
 </div>
-<div class="padding-page">
-<div class="" style="background:#ffffff; ">
-<br>
-</div>
-</div>
-
 
 <div class="padding-page">
 <div class="" style="background:#ffffff;">
