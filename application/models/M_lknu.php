@@ -60,4 +60,11 @@ class M_lknu extends CI_Model{
 		return $hsl;
 	}
 
+	public function get_all_tag()
+
+    {
+        return $this->db->get('tbl_kategori')->result();
+
+    }
+
 }

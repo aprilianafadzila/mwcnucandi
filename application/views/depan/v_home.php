@@ -378,8 +378,10 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="fh5co_tags_all">
+
                     <?php foreach ($category->result() as $row) : ?>
-                    <a href="#" class="fh5co_tagg"><?php echo $row->kategori_nama;?></a>
+                   <?php $slug = generate_slug($row->kategori_nama); ?>
+                    <a href="<?php echo base_url($slug)?>" class="fh5co_tagg"><?php echo $row->kategori_nama;?></a>
                   <?php endforeach;?>
                 </div>
                 <div>
