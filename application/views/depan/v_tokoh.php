@@ -1,37 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en" class="no-js">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>MWCNU Candi Sidoarjo</title>
-    <link rel="icon" href="images/logo1.png">
-    <link href="css/media_query.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="css/animate.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
-    <link href="css/owl.theme.default.css" rel="stylesheet" type="text/css"/>
-
-    <link rel="stylesheet" href="assets/plugins/Nivo-Slider/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="css/slick.css" type="text/css" />
-    <link rel="stylesheet" href="css/slick-theme.css" type="text/css" />
-    <link rel="stylesheet" href="assets/plugins/Nivo-Slider/themes/default/default.css" type="text/css" />
-
-    <!-- Bootstrap CSS -->
-    <link href="css/style_1.css" rel="stylesheet" type="text/css"/>
-    <!-- Modernizr JS -->
-    <script src="js/modernizr-3.5.0.min.js"></script>
-    <?php
-    		function limit_words($string, $word_limit){
-    				$words = explode(" ",$string);
-    				return implode(" ",array_splice($words,0,$word_limit));
-    		}
-    ?>
-</head>
 <style>
 @media only screen and (min-width:700px) {
   /* For tablets: */
@@ -50,182 +16,21 @@
     }
 }
 </style>
+
 <body style="background:#4dab73;">
-
 <div class="padding-page">
-<div class="container-fluid fh5co_header_bg" style="background: #006127;">
-
-        <div class="container">
-        <div class="row">
-            <div class="col-12 fh5co_mediya_center" ><a href="#" class="color_fff fh5co_mediya_setting"><i
-                    class=" "></i><span id="tanggalwaktu"></span></a>
-
-                </div>
-                  </div>
-        </div>
-        </div>
-
-</div>
-</div>
-
-<div class="padding-page">
-<div class="container-fluid" style=" background:#ffffff; ">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-3 fh5co_padding_menu">
-                <img src="images/logo1.png" alt="img" class="fh5co_logo_width"/>
-            </div>
-            <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
-                <div class="text-center d-inline-block">
-                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-"></i></div></a>
-                </div>
-                <div class="text-center d-inline-block">
-                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-youtube"></i></div></a>
-                </div>
-                <div class="text-center d-inline-block">
-                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-instagram"></i></div></a>
-                </div>
-                <div class="text-center d-inline-block">
-                    <a href="https://twitter.com/fh5co" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div></a>
-                </div>
-                <div class="text-center d-inline-block">
-                    <a href="https://fb.com/fh5co" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div></a>
-                </div>
-                <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
-                <div class="d-inline-block text-center dd_position_relative ">
-                    <select class="form-control fh5co_text_select_option">
-                        <option>English </option>
-                        <option>French </option>
-                        <option>German </option>
-                        <option>Spanish </option>
-                    </select>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php
+ $this->load->view('depan/v_header');
+?>
 </div>
 
 <div class="padding-page">
 <div class="container-fluid bg-faded fh5co_padd_mediya padding_786" style="background:#00702d;">
-
-    <div class="container padding_786">
-        <nav class="navbar navbar-toggleable-md navbar-light ">
-            <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-            <a class="navbar-brand" href="hpme"><img src="images/logo1.png" alt="img" class="mobile_logo_width"/></a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle"><b>KANAL</b></h7><span class="sr-only">(current)</span></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="blog">Berita</a>
-                          <a class="dropdown-item" href="galeri">Galeri</a>
-                          <a class="dropdown-item" href="aswaja">Keaswajan</a>
-                          <a class="dropdown-item" href="pesantren">Pesantren</a>
-                          <a class="dropdown-item" href="#">Lain-lain</a>
-                      </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">TENTANG NU CANDI</h7><span class="sr-only">(current)</span></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="sejarah">Sejarah NU Candi</a>
-                          <a class="dropdown-item" href="kantor">Kantor</a>
-                          <a class="dropdown-item" href="pengurus">Pengurus</a>
-                          <a class="dropdown-item" href="tokoh">Tokoh</a>
-                      </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">LEMBAGA NU</h7><span class="sr-only">(current)</span></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="aswajanucenter">Aswaja NU Center</a>
-                          <a class="dropdown-item" href="laziznu">LAZISNU</a>
-                          <a class="dropdown-item" href="ldnu">LDNU</a>
-                          <a class="dropdown-item" href="lknu">LKNU</a>
-                          <a class="dropdown-item" href="lakpesdam">LAKPESDAM</a>
-                          <a class="dropdown-item" href="lbmnu">LBMNU</a>
-                          <a class="dropdown-item" href="lesbumi">LESBUMI NU</a>
-                          <a class="dropdown-item" href="lfnu">LFNU</a>
-                          <a class="dropdown-item" href="lkknu">LKKNU</a>
-                          <a class="dropdown-item" href="lpmaarifnu">LP MA'ARIF NU</a>
-                          <a class="dropdown-item" href="lpbhnu">LPBHNU</a>
-                          <a class="dropdown-item" href="lpbinu">LPBI NU</a>
-                          <a class="dropdown-item" href="lpnu">LPNU</a>
-                          <a class="dropdown-item" href="lppnu">LPPNU</a>
-                          <a class="dropdown-item" href="lptnu">LPTNU</a>
-                          <a class="dropdown-item" href="ltmnu">LTMNU</a>
-                          <a class="dropdown-item" href="ltnnu">LTNNU</a>
-                          <a class="dropdown-item" href="lwpnu">LWPNU</a>
-                          <a class="dropdown-item" href="rminu">RMI NU</a>
-                      </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">BADAN OTONOM</h7><span class="sr-only">(current)</span></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="sarbumusi">GP ANSOR</a>
-                          <a class="dropdown-item" href="fatayat">FATAYAT</a>
-                          <a class="dropdown-item" href="muslimat">MUSLIMAT</a>
-                          <a class="dropdown-item" href="ipnu">IPNU-IPPNU</a>
-                          <a class="dropdown-item" href="pagarnusa">Pagar Nusa</a>
-                          <a class="dropdown-item" href="ishari">ISHARI</a>
-                      </div>
-                  </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">RANTING</h7><span class="sr-only">(current)</span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="rantingsepande">Ranting Sepande</a>
-                            <a class="dropdown-item" href="rantingsumokali">Ranting Sumokali</a>
-                            <a class="dropdown-item" href="rantingtenggulunan">Ranting Tenggulunan</a>
-                            <a class="dropdown-item" href="rantingsugihwaras">Ranting Sugihwaras</a>
-                            <a class="dropdown-item" href="rantingkedungkendo">Ranting Kedungkendo</a>
-                            <a class="dropdown-item" href="rantinglarangan">Ranting Larangan</a>
-                            <a class="dropdown-item" href="rantingsidodadi">Ranting Sidodadi</a>
-                            <a class="dropdown-item" href="rantingcandi">Ranting Candi</a>
-                            <a class="dropdown-item" href="rantingjambangan">Ranting Jambangan</a>
-                            <a class="dropdown-item" href="rantinggelam">Ranting Gelam</a>
-                            <a class="dropdown-item" href="rantingbligo">Ranting Bligo</a>
-                            <a class="dropdown-item" href="rantingkarangtanjung">Ranting Kerangtanjung</a>
-                            <a class="dropdown-item" href="rantingsumorame">Ranting Sumorame</a>
-                            <a class="dropdown-item" href="rantingbalongdowo">Ranting Balongdowo</a>
-                            <a class="dropdown-item" href="rantingbalonggabus">Ranting Balonggabus</a>
-                            <a class="dropdown-item" href="rantingwedoroklurak">Ranting Wedoroklurak</a>
-                            <a class="dropdown-item" href="rantingklurak">Ranting Klurak</a>
-                            <a class="dropdown-item" href="rantingkebonsari">Ranting Kebonsari</a>
-                            <a class="dropdown-item" href="rantingdurungbedug">Ranting Durung Bedug</a>
-                            <a class="dropdown-item" href="rantingdurungbanjar">Ranting Durung Banjar</a>
-                            <a class="dropdown-item" href="rantingngampelsari">Ranting Ngampelsari</a>
-                            <a class="dropdown-item" href="rantingkalipecabean">Ranting Kalipecabean</a>
-                            <a class="dropdown-item" href="rantingkendalpecabean">Ranting Kendalpecabean</a>
-                            <a class="dropdown-item" href="rantingkedungpeluk">Ranting Kedungpeluk</a>
-
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="download" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="" >DOWNLOAD</h7><span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="redaksi" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="">REDAKSI</h7><span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<?php
+ $this->load->view('depan/v_headermenu');
+?>
 </div>
 </div>
-<div class="padding-page">
-<div class="" style="background:#ffffff; ">
-<br>
-</div>
-</div>
-
 
 <div class="padding-page">
 <div class="" style="background:#ffffff;">
@@ -382,143 +187,9 @@
         <div>
             <div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4  text-white">VIDEO TERBARU</div>
         </div>
-        <div>
-            <div class="owl-carousel owl-theme" id="slider3">
-                <div class="item px-2">
-                    <div class="fh5co_hover_news_img">
-                        <div class="fh5co_hover_news_img_video_tag_position_relative">
-                            <div class="fh5co_news_img">
-                                <iframe class="embed-responsive-item" id="video" width="100%" height="200" src="https://www.youtube.com/embed/WYovSLru2o4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute fh5co_hide">
-                                <img src="" alt=""/>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute_1 fh5co_hide" id="play-video">
-                                <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button_1">
-                                    <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button">
-                                        <span><i class="fa fa-play"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pt-2 text-black">
-                            <a href="#" class="d-block fh5co_small_post_heading fh5co_small_post_heading_1">
-                            <span class="text-black">.</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item px-2">
-                    <div class="fh5co_hover_news_img">
-                        <div class="fh5co_hover_news_img_video_tag_position_relative">
-                            <div class="fh5co_news_img">
-                                <iframe id="video_2" width="100%" height="200"
-                                        src="https://www.youtube.com/embed/dOfYt69NHDs?rel=0&amp;showinfo=0"
-                                        frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute fh5co_hide_2">
-                                <img src="" alt=""/></div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute_1 fh5co_hide_2" id="play-video_2">
-                                <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button_1">
-                                    <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button">
-                                        <span><i class="fa fa-play"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pt-2">
-                            <a href="#" class="d-block fh5co_small_post_heading fh5co_small_post_heading_1">
-                            <span class=""></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item px-2">
-                    <div class="fh5co_hover_news_img">
-                        <div class="fh5co_hover_news_img_video_tag_position_relative">
-                            <div class="fh5co_news_img">
-                                <iframe id="video_3" width="100%" height="200"
-                                        src="https://www.youtube.com/embed/7ScPCsgFASg?rel=0&amp;showinfo=0"
-                                        frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute fh5co_hide_3">
-                                <img src="" alt=""/></div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute_1 fh5co_hide_3" id="play-video_3">
-                                <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button_1">
-                                    <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button">
-                                        <span><i class="fa fa-play"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="item px-2">
-                    <div class="fh5co_hover_news_img">
-                        <div class="fh5co_hover_news_img_video_tag_position_relative">
-                            <div class="fh5co_news_img">
-                                <iframe id="video_4" width="100%" height="200"
-                                        src="https://www.youtube.com/embed/4tTJjCHyHr0?rel=0&amp;showinfo=0"
-                                        frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute fh5co_hide_4">
-                                <img src="" alt=""/>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute_1 fh5co_hide_4" id="play-video_4">
-                                <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button_1">
-                                    <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button">
-                                        <span><i class="fa fa-play"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="item px-2">
-                    <div class="fh5co_hover_news_img">
-                        <div class="fh5co_hover_news_img_video_tag_position_relative">
-                            <div class="fh5co_news_img">
-                                <iframe id="video_4" width="100%" height="200"
-                                        src="https://www.youtube.com/embed/IewqfCqXWmU?rel=0&amp;showinfo=0"
-                                        frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute fh5co_hide_4">
-                                <img src="" alt=""/>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute_1 fh5co_hide_4" id="play-video_4">
-                                <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button_1">
-                                    <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button">
-                                        <span><i class="fa fa-play"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="item px-2">
-                    <div class="fh5co_hover_news_img">
-                        <div class="fh5co_hover_news_img_video_tag_position_relative">
-                            <div class="fh5co_news_img">
-                                <iframe id="video_4" width="100%" height="200"
-                                        src="https://www.youtube.com/embed/G1csN5Uhs_Q?rel=0&amp;showinfo=0"
-                                        frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute fh5co_hide_4">
-                                <img src="" alt=""/>
-                            </div>
-                            <div class="fh5co_hover_news_img_video_tag_position_absolute_1 fh5co_hide_4" id="play-video_4">
-                                <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button_1">
-                                    <div class="fh5co_hover_news_img_video_tag_position_absolute_1_play_button">
-                                        <span><i class="fa fa-play"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+         $this->load->view('depan/v_youtube');
+        ?>
     </div>
 </div>
 </div>
@@ -532,80 +203,9 @@
 </div>
 </div>
 </div>
-<div class="container-fluid fh5co_footer_bg pb-3">
-    <div class="container animate-box">
-        <div class="row">
-            <div class="col-12 spdp_right py-5"><img src="images/logo1.png" alt="img" class="footer_logo"/></div>
-            <div class="clearfix"></div>
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="footer_main_title py-3"> TENTANG KAMI</div>
-              <?php foreach ($profil->result() as $row) : ?>
-              <div class="footer_sub_about pb-3"><?php echo $row->tulisan_isi;?></div>
-            <?php endforeach;?>
-              <div class="footer_mediya_icon">
-                <div class="text-center d-inline-block"><a href="#" class="fh5co_display_table_footer">
-                    <div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div>
-                </a></div>
-                  <div class="text-center d-inline-block"><a href="#" class="fh5co_display_table_footer">
-                      <div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div>
-                  </a></div>
-                  <div class="text-center d-inline-block"><a href="#" class="fh5co_display_table_footer">
-                      <div class="fh5co_verticle_middle"><i class="fa fa-whatsapp"></i></div>
-                  </a></div>
-                  <div class="text-center d-inline-block"><a href="#" class="fh5co_display_table_footer">
-                      <div class="fh5co_verticle_middle"><i class="fa fa-instagram"></i></div>
-                  </a></div>
-                  <div class="text-center d-inline-block"><a href="#" class="fh5co_display_table_footer">
-                      <div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div>
-                  </a></div>
-
-              </div>
-            </div>
-
-            <div class="col-12 col-md-5 col-lg-3 position_footer_relative">
-                <div class="footer_main_title py-3"> Most Viewed Posts</div>
-                <?php foreach ($populer->result() as $row) :?>
-                <div class="footer_makes_sub_font"><?php echo $row->tulisan_tanggal;?></div>
-                <a href="<?php echo site_url('tokoh/'.$row->tulisan_slug);?>" class="footer_post pb-4"> <?php echo limit_words($row->tulisan_judul,3).'...';?> </a>
-      <?php endforeach;?>
-            </div>
-            <div class="col-12 col-md-12 col-lg-4 ">
-                <div class="footer_main_title py-3"> PENGURUS</div>
-                <a href="#" class="footer_img_post_6"><img src="images/2.PNG" alt="img"/></a>
-                <a href="#" class="footer_img_post_6"><img src="images/2.PNG" alt="img"/></a>
-                <a href="#" class="footer_img_post_6"><img src="images/2.PNG" alt="img"/></a>
-                <a href="#" class="footer_img_post_6"><img src="images/2.PNG" alt="img"/></a>
-                <a href="#" class="footer_img_post_6"><img src="images/2.PNG" alt="img"/></a>
-                <a href="#" class="footer_img_post_6"><img src="images/2.PNG" alt="img"/></a>
-                </div>
-        </div>
-        <div class="row justify-content-center pt-2 pb-4">
-            <div class="col-12 col-md-8 col-lg-7 ">
-                <div class="input-group">
-                    <span class="input-group-addon fh5co_footer_text_box" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                    <input type="text" class="form-control fh5co_footer_text_box" placeholder="Enter your email..." aria-describedby="basic-addon1">
-                    <a href="#" class="input-group-addon fh5co_footer_subcribe" id="basic-addon12"> <i class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid fh5co_footer_right_reserved">
-    <div class="container">
-        <div class="row  ">
-            <div class="col-12 col-md-6 py-4 Reserved"> Copyright &copy; <script>document.write(new Date().getFullYear());</script> MWCNU CANDI All rights reserved. </div>
-            <div class="col-12 col-md-6 spdp_right py-4">
-                <a href="home" class="footer_last_part_menu">Home</a>
-                <a href="kantor" class="footer_last_part_menu">About</a>
-                <a href="kantor" class="footer_last_part_menu">Contact</a>
-                <a href="tokoh" class="footer_last_part_menu">Latest News</a></div>
-        </div>
-    </div>
-</div>
-
-<div class="gototop js-top">
-    <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
-</div>
+<?php
+ $this->load->view('depan/v_footer');
+?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
