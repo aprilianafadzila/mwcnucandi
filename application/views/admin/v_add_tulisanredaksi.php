@@ -149,6 +149,28 @@
                 </select>
               </div>
 
+              <div class="form-group">
+
+                <label>Kategori Jenis</label>
+
+                <select name="kategori" id="kategori" class="form-control">
+                    <option value="0">-PILIH-</option>
+                    <?php foreach($data->result() as $row):?>
+                        <option value="<?php echo $row->id;?>"><?php echo $row->nama;?></option>
+                    <?php endforeach;?>
+                </select>
+                
+              </div>
+
+              <div class="form-group">
+                    <label>Sub Kategori</label>
+                   
+                        <select name="subkategori" class="subkategori form-control">
+                            <option value="0">-PILIH-</option>
+                        </select>
+                     
+                </div>
+
 			  <div class="form-group">
                 <label>Gambar</label>
                 <input type="file" name="filefoto" style="width: 100%;" required>
@@ -379,6 +401,8 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
+<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery/jquery-2.2.4.min.js'?>"></script>
+
 <script src="<?php echo base_url().'assets/plugins/jQuery/jquery-2.2.3.min.js'?>"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="<?php echo base_url().'assets/bootstrap/js/bootstrap.min.js'?>"></script>
@@ -408,6 +432,32 @@
 <script src="<?php echo base_url().'assets/dist/js/demo.js'?>"></script>
 <script src="<?php echo base_url().'assets/ckeditor/ckeditor.js'?>"></script>
 <!-- Page script -->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#kategori').change(function(){
+            var id=$(this).val();
+            $.ajax({
+                url : "<?php echo base_url();?>/admin/redaksi/get_subkategori",
+                method : "POST",
+                data : {id: id},
+                async : false,
+                dataType : 'json',
+                success: function(data){
+                    var html = '';
+                    var i;
+                    for(i=0; i<data.length; i++){
+
+                        html += '<option value="' + data[i].id + '">'+data[i].nama+'</option>';
+                        
+                    }
+                    $('.subkategori').html(html);
+                     
+                }
+            });
+        });
+    });
+</script>
 
 <script>
   $(function () {
@@ -487,5 +537,8 @@
     });
   });
 </script>
+
+
+
 </body>
 </html>

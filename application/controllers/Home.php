@@ -14,6 +14,7 @@ class Home extends CI_Controller{
 		$this->load->model('m_pengunjung');
 		$this->load->model('m_redaksi');
 		$this->load->model('m_aswaja');
+		$this->load->model('m_lknu');
 		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
@@ -33,6 +34,7 @@ class Home extends CI_Controller{
 			$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
 			$x['populer2']=$this->db->query("SELECT * FROM tbl_ansor ORDER BY tulisan_views DESC LIMIT 5");
 			$x['category']=$this->db->get('tbl_kategori');
+			$slug = $this->m_lknu->get_all_tag();
 			$this->load->view('depan/v_home',$x);
 	}
 

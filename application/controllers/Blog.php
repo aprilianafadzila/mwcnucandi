@@ -78,6 +78,32 @@ class Blog extends CI_Controller{
 		}
 	}
 
+	function berita($slugs){
+		$slug=htmlspecialchars($slugs,ENT_QUOTES);
+		$query = $this->db->get_where('tbl_tulisan', array('tulisan_slug' => $slug));
+		if($query->num_rows() > 0){
+			$b=$query->row_array();
+			$kode=$b['tulisan_id'];
+			$this->db->query("UPDATE tbl_tulisan SET tulisan_views=tulisan_views+1 WHERE tulisan_id='$kode'");
+			$data=$this->m_tulisan->get_berita_by_kode($kode);
+			$row=$data->row_array();
+			$x['id']=$row['tulisan_id'];
+			$x['title']=$row['tulisan_judul'];
+			$x['image']=$row['tulisan_gambar'];
+			$x['blog'] =$row['tulisan_isi'];
+			$x['tanggal']=$row['tanggal'];
+			$x['author']=$row['tulisan_author'];
+			$x['kategori']=$row['tulisan_kategori_nama'];
+			$x['slug']=$row['tulisan_slug'];
+			$x['show_komentar']=$this->m_tulisan->show_komentar_by_tulisan_id($kode);
+			$x['category']=$this->db->get('tbl_kategori');
+			$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
+			$this->load->view('depan/v_blog_detail',$x);
+		}else{
+			redirect('berita');
+		}
+	}
+
 	function kategori(){
 		 $kategori=str_replace("-"," ",$this->uri->segment(3));
 		 $query = $this->db->query("SELECT tbl_tulisan.*,DATE_FORMAT(tulisan_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_tulisan WHERE tulisan_kategori_nama LIKE '%$kategori%' ORDER BY tulisan_views DESC LIMIT 5");

@@ -6,6 +6,7 @@ class Filter extends CI_Controller{
 			$this->load->model('m_galeri');
 			$this->load->model('m_profiltk');
 			$this->load->model('m_datayayasan');
+			$this->load->model('m_filter');
 
 		$this->load->model('m_pengunjung');
 		$this->m_pengunjung->count_visitor();
@@ -43,6 +44,7 @@ class Filter extends CI_Controller{
             $config['next_link'] = 'Next >>';
             $config['prev_link'] = '<< Prev';
             $this->pagination->initialize($config);
+            
             $x['page'] =$this->pagination->create_links();
 						$x['data']=$this->m_tulisan->berita_perpage($offset,$limit);
 						$x['category']=$this->db->get('tbl_kategori');
@@ -50,7 +52,22 @@ class Filter extends CI_Controller{
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
-						$this->load->view('depan/v_filter',$x);
+
+			$tag = str_replace("-", " ", $this->input->get('tag',true)) ;
+			$x['tag'] = $tag;
+
+			$this->db->select('tbl_blog.*, tbl_jenis_kategori.nama as kategori_nama, tbl_ranting.nama as nama_ranting, tbl_kategori.kategori_nama as kategori_nama_tag');
+	        $this->db->from('tbl_blog');
+	        $this->db->join('tbl_jenis_kategori','tbl_blog.id_jenis_kategori = tbl_jenis_kategori.id','left');
+	        $this->db->join('tbl_ranting','tbl_blog.id_ranting = tbl_ranting.id','left');
+	        $this->db->join('tbl_kategori','tbl_blog.tulisan_kategori_id = tbl_kategori.kategori_id','left');
+
+	        $this->db->where('tbl_kategori.kategori_nama',$tag);
+	      
+
+	        $x['post'] = $this->db->get()->result();
+
+			$this->load->view('depan/v_filter',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);
@@ -132,6 +149,11 @@ class Filter extends CI_Controller{
 					$this->session->set_flashdata('msg','<div class="alert alert-info">Komentar Anda akan tampil setelah moderasi.</div>');
 					redirect('berita/'.$slug);
 				}
+		}
+
+		public function politik(){
+
+			$data['politik'] = $this->m_filter->get_politik(); print_r($data['politik']); die();
 		}
 
 }

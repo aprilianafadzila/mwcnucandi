@@ -23,4 +23,14 @@ class M_kategori extends CI_Model{
 		return $hsl;
 	}
 
+	function get_kategori(){
+        $hasil=$this->db->query("SELECT * FROM tbl_jenis_kategori");
+        return $hasil;
+    }
+ 
+    function get_subkategori($id){
+        $hasil=$this->db->query("SELECT * FROM tbl_ranting WHERE id_jenis_kategori='$id'");
+        return $hasil->result();
+    }
+
 }
