@@ -105,7 +105,7 @@
                 <a href="home" class="footer_last_part_menu">Home</a>
                 <a href="kantor" class="footer_last_part_menu">About</a>
                 <a href="kantor" class="footer_last_part_menu">Contact</a>
-                <a href="aswaja" class="footer_last_part_menu">Latest News</a></div>
+                <a href="home" class="footer_last_part_menu">Latest News</a></div>
         </div>
     </div>
 </div>

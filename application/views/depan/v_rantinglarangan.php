@@ -17,7 +17,7 @@
 }
 </style>
 
-<body style="background:#4dab73;">
+<body >
 <div class="padding-page">
 <?php
  $this->load->view('depan/v_header');
@@ -52,7 +52,7 @@
               </div>
                 <div class="fh5co_suceefh5co_height_position_absolute"></div>
                 <div class="fh5co_suceefh5co_height_position_absolute_font">
-                    <div class=""><a href="#" class="color_fff"> <i class=" "></i><?phpp echo $row->tulisan_tanggal?></a>
+                    <div class=""><a href="#" class="color_fff"> <i class=" "></i><?php echo $row->tulisan_tanggal?></a>
                   </div><br>
                   <div class=""><a href="#" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
                   </div>
@@ -72,8 +72,8 @@
                     <div style=" height: 180px; overflow: hidden; width: 100%; position: relative;"><img src="images/2.png" alt="img"/>
                         <div class="fh5co_suceefh5co_height_position_absolute"></div>
                         <div style="position: absolute; width: 100%; height: 100%; color: #fff; z-index: 7; top: 50%; left: 5%; padding: 0 10px;">
-                            <div class=""><a href="#" class="color_fff"> <i class=" "></i>20 Oct 2021</a></div>
-                            <div class=""><a href="single.html" style="font-size: 14px; color:#ffffff;"> asakjh</a></div>
+                            <div class=""><a href="#" class="color_fff"> <i class=" "></i></a></div>
+                            <div class=""><a href="single.html" style="font-size: 14px; color:#ffffff;"></a></div>
                         </div>
                     </div>
                 </div>
@@ -84,9 +84,8 @@
                     <div style=" height: 180px; overflow: hidden; width: 100%; position: relative;"><img src="images/2.png" alt="img"/>
                         <div class="fh5co_suceefh5co_height_position_absolute"></div>
                         <div style="position: absolute; width: 100%; height: 100%; color: #fff; z-index: 7; top: 50%; left: 5%; padding: 0 10px;">
-                            <div class=""><a href="#" class="color_fff"> <i class=" "></i>&nbsp;&nbsp;Oct
-                                28,2017 </a></div>
-                            <div class=""><a href="single.html" style="font-size: 14px; color:#ffffff;"> After all is said and done, <br>more is said than done </a></div>
+                            <div class=""><a href="#" class="color_fff"> <i class=" "></i></a></div>
+                            <div class=""><a href="single.html" style="font-size: 14px; color:#ffffff;">  </a></div>
                         </div>
                     </div>
                 </div>
@@ -97,9 +96,8 @@
                     <div style=" height: 180px; overflow: hidden; width: 100%; position: relative;"><img src="images/2.png" alt="img"/>
                         <div class="fh5co_suceefh5co_height_position_absolute"></div>
                         <div style="position: absolute; width: 100%; height: 100%; color: #fff; z-index: 7; top: 50%; left: 5%; padding: 0 10px;">
-                            <div class=""><a href="#" class="color_fff"> <i class=" "></i>&nbsp;&nbsp;Oct
-                                28,2017 </a></div>
-                            <div class=""><a href="single.html" style="font-size: 14px; color:#ffffff;"> After all is said and done, <br>more is said than done </a></div>
+                            <div class=""><a href="#" class="color_fff"> <i class=" "></i> </a></div>
+                            <div class=""><a href="single.html" style="font-size: 14px; color:#ffffff;"></a></div>
                         </div>
                     </div>
                 </div>
@@ -131,9 +129,8 @@
 
                         <div class="fh5co_hover_news_img">
 
-                        <h6 style="background:#4dab73; padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px;">Label</h6>
+                        <h6 style="background:#00702d; padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px;"><a class="text-white">Rantinglarangan</h6>
                             <div class="fh5co_news_img">
-
 
                             <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt=""/></div>
                             <div></div>
@@ -144,18 +141,19 @@
                         <div class="c_g"><?php echo $row->tulisan_author;?> - <i class=""></i><?php echo $row->tulisan_tanggal;?></div>
                         <div class="fh5co_consectetur"> <?php echo limit_words($row->tulisan_isi,30).'...';?>
                         </div>
-                          <a href="<?php echo site_url('artikel/'.$row->tulisan_slug);?>" class="btn academy-btn btn-sm mt-15">Read More</a>
+                          <a href="<?php echo site_url('rantinglarangan/'.$row->tulisan_slug);?>" class="">Read More</a>
                     </div>
                 </div>
                 <nav>
                     <?php error_reporting(0); echo $page;?>
                 </nav>
+                <hr>
                  <?php endforeach;?>
 
             </div>
             <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
                 <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"></b>TAGS</b></div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>TAGS</b></div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="fh5co_tags_all">
@@ -169,10 +167,10 @@
                 <?php foreach ($populer->result() as $row) :?>
               <div class="row pb-3">
                   <div class="col-5 align-self-center">
-                      <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="img" class="fh5co_most_trading"/>
+                      <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img"/>
                   </div>
                   <div class="col-7 paddding">
-                    <div class="most_fh5co_treding_font"><a href="<?php echo site_url('berita/'.$row->tulisan_slug);?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></div>
+                    <div class="most_fh5co_treding_font"><a href="<?php echo site_url('rantinglarangan/'.$row->tulisan_slug);?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></div>
                     <div class="most_fh5co_treding_font_123"> <?php echo $row->tulisan_author;?> | <?php echo $row->tulisan_tanggal;?></div>
                   </div>
               </div>
@@ -185,7 +183,7 @@
 <div class="container-fluid fh5co_video_news_bg pb-4" style="background:#ffffff; ">
     <div class="container animate-box" data-animate-effect="fadeIn">
         <div>
-            <div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4  text-white">VIDEO TERBARU</div>
+            <div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4  text-black"><b>VIDEO TERBARU</b></div>
         </div>
         <?php
          $this->load->view('depan/v_youtube');

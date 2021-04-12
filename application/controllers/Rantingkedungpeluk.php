@@ -47,6 +47,7 @@ class rantingkedungpeluk extends CI_Controller{
 						$x['data']=$this->m_rantingkedungpeluk->berita_perpage($offset,$limit);
 						$x['category']=$this->db->get('tbl_kategori');
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
+						$x['profil']=$this->m_profiltk->get_all_tulisan();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_rantingkedungpeluk ORDER BY tulisan_views DESC LIMIT 5");
 						$this->load->view('depan/v_rantingkedungpeluk',$x);

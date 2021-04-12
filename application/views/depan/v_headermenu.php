@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>MWCNU Candi Sidoarjo</title>
-<link rel="icon" href="images/logo1.png">
+<link rel="shortcut icon" href="images/1c.png" <link rel="stylesheet" href="css/style.css">
 <link href="css/media_query.css" rel="stylesheet" type="text/css"/>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -122,7 +122,7 @@
                             <a class="dropdown-item" href="rantingjambangan">Ranting Jambangan</a>
                             <a class="dropdown-item" href="rantinggelam">Ranting Gelam</a>
                             <a class="dropdown-item" href="rantingbligo">Ranting Bligo</a>
-                            <a class="dropdown-item" href="rantingkarangtanjung">Ranting Kerangtanjung</a>
+                            <a class="dropdown-item" href="rantingkerangtanjung">Ranting Kerangtanjung</a>
                             <a class="dropdown-item" href="rantingsumorame">Ranting Sumorame</a>
                             <a class="dropdown-item" href="rantingbalongdowo">Ranting Balongdowo</a>
                             <a class="dropdown-item" href="rantingbalonggabus">Ranting Balonggabus</a>

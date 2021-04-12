@@ -4,11 +4,13 @@ class Download extends CI_Controller{
 		parent::__construct();
 		$this->load->model('m_files');
 		$this->load->helper('download');
+		$this->load->model('m_profiltk');
 		$this->load->model('m_pengunjung');
 		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
 		$x['data']=$this->m_files->get_all_files();
+		$x['profil']=$this->m_profiltk->get_all_tulisan();
 		$this->load->view('depan/v_download',$x);
 	}
 

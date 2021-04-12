@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>MWCNU Candi Sidoarjo</title>
-    <link rel="icon" href="images/logo1.png">
+    <link rel="shortcut icon" href="images/logo.png" <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/1c.png" <link rel="stylesheet" href="css/style.css">
     <link href="css/media_query.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -49,9 +50,14 @@
   display:none;
     }
 }
+body {
+ background-image: url("images/bg.jpg");
+ background-size: auto;
+ background-color: #cccccc;
+}
 </style>
 
-<body style="background:#4dab73;">
+<body>
 
 <div class="padding-page">
 <div class="container-fluid fh5co_header_bg" style="background: #006127;">
@@ -75,11 +81,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-3 fh5co_padding_menu">
-                <img src="images/logo1.png" alt="img" class="fh5co_logo_width"/>
+                <img src="images/1c.png" alt="img" class="fh5co_logo_width"/>
+                <br>
+
             </div>
             <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
                 <div class="text-center d-inline-block">
-                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-"></i></div></a>
+                    <a href="home" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-home"></i></div></a>
                 </div>
                 <div class="text-center d-inline-block">
                     <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-youtube"></i></div></a>

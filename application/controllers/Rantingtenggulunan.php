@@ -74,7 +74,7 @@ class Rantingtenggulunan extends CI_Controller{
 			$x['populer']=$this->db->query("SELECT * FROM tbl_rantingtenggulunan ORDER BY tulisan_views DESC LIMIT 5");
 			$this->load->view('depan/v_blog_detail',$x);
 		}else{
-			redirect('artikel');
+			redirect('rantingtenggulunan');
 		}
 	}
 

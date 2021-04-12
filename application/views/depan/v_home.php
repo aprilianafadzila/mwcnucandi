@@ -1,3 +1,4 @@
+<link rel="shortcut icon" href="images/logo.png" <link rel="stylesheet" href="css/style.css">
 <style>
 @media only screen and (min-width:700px) {
   /* For tablets: */
@@ -17,7 +18,7 @@
 }
 </style>
 
-<body style="background:#4dab73;">
+<body>
 <div class="padding-page">
 <?php
  $this->load->view('depan/v_header');
@@ -74,8 +75,8 @@
                     <div style=" height: 180px; overflow: hidden; width: 100%; position: relative;"><img src="images/2.png" alt="img"/>
                         <div class="fh5co_suceefh5co_height_position_absolute"></div>
                         <div style="position: absolute; width: 100%; height: 100%; color: #fff; z-index: 7; top: 50%; left: 5%; padding: 0 10px;">
-                            <div class=""><a href="#" class="color_fff"> <i class=" "></i> 30 Maret 2021 </a></div>
-                            <div class=""><a href="#" style="font-size: 14px; color:#ffffff;">Badan Pengurus MWCNU candi</a></div>
+                            <div class=""><a href="#" class="color_fff"> <i class=" "></i> </a></div>
+                            <div class=""><a href="#" style="font-size: 14px; color:#ffffff;"></a></div>
                         </div>
                     </div>
                 </div>
@@ -85,8 +86,8 @@
                     <div style=" height: 180px; overflow: hidden; width: 100%; position: relative;"><img src="images/2.png" alt="img"/>
                         <div class="fh5co_suceefh5co_height_position_absolute"></div>
                         <div style="position: absolute; width: 100%; height: 100%; color: #fff; z-index: 7; top: 50%; left: 5%; padding: 0 10px;">
-                            <div class=""><a href="#" class="color_fff"> <i class=" "></i> 30 Maret 2021 </a></div>
-                            <div class=""><a href="#" style="font-size: 14px; color:#ffffff;">Badan Pengurus MWCNU candi</a></div>
+                            <div class=""><a href="#" class="color_fff"> <i class=" "></i>  </a></div>
+                            <div class=""><a href="#" style="font-size: 14px; color:#ffffff;"></a></div>
                         </div>
                     </div>
                 </div>
@@ -96,8 +97,8 @@
                     <div style=" height: 180px; overflow: hidden; width: 100%; position: relative;"><img src="images/2.png" alt="img"/>
                         <div class="fh5co_suceefh5co_height_position_absolute"></div>
                         <div style="position: absolute; width: 100%; height: 100%; color: #fff; z-index: 7; top: 50%; left: 5%; padding: 0 10px;">
-                            <div class=""><a href="#" class="color_fff"> <i class=" "></i> 30 Maret 2021 </a></div>
-                            <div class=""><a href="#" style="font-size: 14px; color:#ffffff;">Badan Pengurus MWCNU candi</a></div>
+                            <div class=""><a href="#" class="color_fff"> <i class=" "></i> </a></div>
+                            <div class=""><a href="#" style="font-size: 14px; color:#ffffff;"></a></div>
                         </div>
                     </div>
                 </div>
@@ -151,7 +152,7 @@
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
 
-                      <h6 class="text-white" style="background:#4dab73; padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px; "><center><i> Redaksi </i></center></h6>
+                      <h6 class="text-white" style=" padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px; "><center><i> Redaksi </i></center></h6>
                             <div class="fh5co_news_img">
 
 
@@ -191,10 +192,10 @@
                 <div>
                     <div class="fh5co_heading fh5co_heading_border_bottom pt-3 py-2 mb-4"><b>BERITA POPULER</b></div>
                 </div>
-                <?php foreach ($populer1->result() as $row) :?>
+                <?php foreach ($populer->result() as $row) :?>
                 <div class="row pb-3">
                     <div class="col-5 align-self-center">
-                        <img width="35%" src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="img" class="fh5co_most_trading"/>
+                        <img width="100%" src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="blog-featured-img" class="img-fluid">
                     </div>
                     <div class="col-7 paddding">
                         <div class="most_fh5co_treding_font"><a href="<?php echo site_url('berita/'.$row->tulisan_slug);?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></div>

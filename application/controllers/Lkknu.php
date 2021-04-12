@@ -1,5 +1,5 @@
 <?php
-class Blog extends CI_Controller{
+class Lkknu extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->model('m_lkknu');
@@ -19,7 +19,7 @@ class Blog extends CI_Controller{
             $offset = $page;
         endif;
         $limit=5;
-        $config['base_url'] = base_url() . 'blog/index/';
+        $config['base_url'] = base_url() . 'lkknu/index/';
             $config['total_rows'] = $jum->num_rows();
             $config['per_page'] = $limit;
             $config['uri_segment'] = 3;
@@ -50,7 +50,7 @@ class Blog extends CI_Controller{
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_lkknu ORDER BY tulisan_views DESC LIMIT 5");
-						$this->load->view('depan/v_blog',$x);
+						$this->load->view('depan/v_lkknu',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);

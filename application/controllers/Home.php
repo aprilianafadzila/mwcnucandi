@@ -30,7 +30,7 @@ class Home extends CI_Controller{
 			$x['tot_artikel']=$this->db->get('tbl_tulisan')->num_rows();
 			$x['tot_files']=$this->db->get('tbl_files')->num_rows();
 			$x['tot_agenda']=$this->db->get('tbl_agenda')->num_rows();
-			$x['populer1']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
+			$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
 			$x['populer2']=$this->db->query("SELECT * FROM tbl_ansor ORDER BY tulisan_views DESC LIMIT 5");
 			$x['category']=$this->db->get('tbl_kategori');
 			$this->load->view('depan/v_home',$x);

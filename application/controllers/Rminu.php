@@ -4,7 +4,7 @@ class Rminu extends CI_Controller{
 		parent::__construct();
 		$this->load->model('m_rminu');
 		$this->load->model('m_galeri');
-			$this->load->model('m_ptofiltk');
+			$this->load->model('m_profiltk');
 			$this->load->model('m_datayayasan');
 
 		$this->load->model('m_pengunjung');

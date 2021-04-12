@@ -4,6 +4,7 @@ class Jatmannu extends CI_Controller{
 		parent::__construct();
 		$this->load->model('m_jatmannu');
 			$this->load->model('m_galeri');
+			$this->load->model('m_profiltk');
 			$this->load->model('m_datayayasan');
 
 		$this->load->model('m_pengunjung');
@@ -46,9 +47,10 @@ class Jatmannu extends CI_Controller{
 						$x['data']=$this->m_jatmannu->berita_perpage($offset,$limit);
 						$x['category']=$this->db->get('tbl_kategori');
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
+						$x['profil']=$this->m_profiltk->get_all_tulisan();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_jatmannu ORDER BY tulisan_views DESC LIMIT 5");
-						$this->load->view('depan/v_blog',$x);
+						$this->load->view('depan/v_jatmannu',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);
