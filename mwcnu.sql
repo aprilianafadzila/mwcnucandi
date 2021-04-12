@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Apr 2021 pada 15.34
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.4.2
+-- Waktu pembuatan: 12 Apr 2021 pada 17.08
+-- Versi server: 10.4.18-MariaDB
+-- Versi PHP: 7.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -85,7 +84,7 @@ CREATE TABLE `tbl_ansor` (
 INSERT INTO `tbl_ansor` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`) VALUES
 (1, 'LAZISNU di Sidoarjo Canangkan Program 300 Sembako bagi Dluafa', '<p>Sidoarjo,&nbsp;<em><strong>NU Online Jatim</strong></em><br />\r\nBanyak cara yang dapat dilakukan sebagai wujud kepedulian kepada kalangan dluafa. Seperti yang dilakukan NU Care-Lembaga Amil, Zakat, Infaq, Shadaqah Nahdlatul Ulama (LAZISNU) Ranting Tenggulunan, Kecamatan Candi, Sidoarjo.</p>\r\n\r\n<p>Pada rapat &nbsp;yang digelar di kediaman Ketua Ranting Muslimat NU Tenggulunan disepakati mewujudkan komitmen dalam program santunan bagi dluafa dan anak yatim.<br />\r\n<br />\r\nDalam agenda kali ini LAZISNU&nbsp;setempat menghitung anggaran pendapatan yang didapatkan dari program Kotak Infak Nahdlatul Ulama atau Koin NU.&nbsp;</p>\r\n\r\n<p>&quot;Alhamdulillah di bulan Maret ini pendapatan yang diraih dari program Koin NU yang kita sebar ke seluruh Nahdliyin berjumlah Rp3.892.000. Dana ini nantinya&nbsp;kita&nbsp;pergunakan dalam program santunan anak yatim dan dluafa,&rdquo; kata Dewi Ussisa, Bendahara LAZISNU, Sabtu (20/03/2021) malam. &nbsp;<br />\r\n<br />\r\nDalam agenda kali ini pengurus LAZISNU juga melakukan rapat koordinasi tentang kegiatan yang akan dilaksanakan menjelang bulan suci&nbsp;Ramadlan.</p>\r\n\r\n<p>Zainul Arifin menuturkan bahwa LAZISNU akan melaksanakan kegiatan santunan kaum dluafa pada bulan Ramadlan.</p>\r\n\r\n<p>&quot;Insyaallah kita melaksanakan santunan kaum dluafa, di mana akan bekerja sama dengan pemerintah desa. Dan kami mengupayakan bantuan berupa 300 paket sembako yang didistribusikan kepada kaum dluafa,&quot; ujar Ketua LAZISNU Tenggulunan tersebut.</p>\r\n\r\n<p>Rapat juga dihadiri majelis pembina LAZISNU Tenggulunan, serta merapatkan teknis acara yang nantinya&nbsp;dilaksanakan&nbsp;pada 19 Ramadlan.</p>\r\n\r\n<p>&quot;Acara ini nantinya akan menggandeng&nbsp;pemerintah desa dan LAZISNU&nbsp;berperan menjadi fasilitator dalam agenda yang rutin dilaksanakan setiap bulan Ramadlan ini &quot; kata Ustadz Aly&nbsp;Masroeri.&nbsp;</p>\r\n\r\n<p>Pembina LAZISNU Tenggulunan yang juga Ketua&nbsp;Tim Panitia Sosial Dluafa dan Anak Yatim Desa Tenggulunan ini menambahkan bahwa LAZISNU yang bekerja&nbsp;sama dengan pemerintah desa mengupayakan dana senilai 45 juta rupiah.</p>\r\n\r\n<p>&quot;Insyaallah nantinya kami&nbsp;berupaya untuk mengumpulkan dana senilai Rp45 juta, yang kami alokasikan untuk dana bantuan sembako kepada kaum dhuafa,&rdquo; jelasnya.</p>\r\n\r\n<p>Disampaikan pula bahwa pemerintah desa akan mendata dengan detail lewat koordinasi PT dan RW untuk mengumpulkan data kaum dluafa yang ada di kawasan setempat.<br />\r\n<br />\r\n&quot;Di sini kami ingin saudara-saudara kita yang kurang beruntung&nbsp;mendapatkan secercah kebahagiaan dengan program kami ini. Dan ini adalah bukti komitmen bahwa LAZISNU Tenggulunan terus mengupayakan program yang menyejahterakan masyarakat kurang mampu,&quot; pungkasnya.</p>\r\n\r\n<p>Penulis: M Haikal</p>\r\n\r\n<p>Editor: Syaifullah</p>\r\n', '2021-04-07 02:09:34', 3, 'Penelitian dan Pengabdian', 38, 'cb9b7572132c7fa399e1904d8adc8767.jpg', 3, 'April', 0, 'lazisnu-di-sidoarjo-canangkan-program-300-sembako-bagi-dluafa'),
 (2, 'Wujudkan madrasah amil zakat, Lazisnu MWC Candi gelar rapat koordinasi ', '<p>Sidoarjo, LAZISNU MWC Candi.&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>NU-Care Lembaga Amil Zakat, Infaq, Shodaqoh Nahdlatul Ulama MWC Candi menggelar rapat koordinasi dalam rangka persiapan agenda kegiatan Madrasah Amil Zakat di kediaman H. Nur Salim, ketua umum Lazisnu MWC Candi pada hari hari minggu malam (20/3/2021) .&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Agenda rapat ini dipimpin langsung oleh abah Salim, panggilan akrab H. Nur Salim dan diikuti oleh pengurus serta relawan Lazisnu Candi.&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Ketua LAZISNU MWC Candi, H.Nur Salim mengatakan bahwa kegiatan tersebut guna mempersiapkan acara Madrasah Amil Zakat agar semakin banyak kader NU Candi yang cakap dalam urusan zakat.&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&quot; Kita saat ini mempersiapkan secara matang konsep dan teknis pada agenda tersebut, tujuan digelarnya kegiatan ini adalah sebagai wadah belajar dan tempat menempa diri bagi kader kader NU Candi &quot; ujar H. Nur salim kepada awak media.&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Para pengurus Lazisnu pun berharap diadakan agenda ini agar menjadi awal yang baik bagi kader kader NU maupun petugas pengurus zakat agar dapat mengelola zakat dengan baik dan benar sesuai kaidah kaidah fiqih Ahlussunnah wal jamaah.&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&quot; Harapannya nantinya semakin banyak kader NU yang mengerti akan pengelolaan zakat sesuai dengan kaidah Fiqih Ahlussunnah wal jamaah, agar tidak terjadi hal hal yang melanggar norma keislaman dalam pengelolaan zakat nantinya &quot; tambahnya</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Rencananya Madrasah Amil zakat yang nantinya akan digelar pada tanggal 28 Maret 2021 tersebut akan bertempat di gedung MWC NU Candi, dan meyasar para kader NU se - Kecamatan Candi.&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Penulis : M. Haikal</p>\r\n', '2021-04-07 02:10:57', 3, 'Penelitian dan Pengabdian', 1, 'ca68a114464bdee1fed5bb4f3ab72bcb.jpeg', 3, 'April', 0, 'wujudkan-madrasah-amil-zakat-lazisnu-mwc-candi-gelar-rapat-koordinasi'),
-(3, 'PERSIAPAN PELATIHAN KHOTIB DAN SHOLAT SEMPURNA-PANITIA GELAR SCREENING PESERTA', '<p>Sidoarjo, MWC NU Candi.&nbsp;</p>\r\n\r\n<p>Departemen bidang dakwah Gerakan pemuda Ansor Kecamatan Candi, yang bekerja sama dengan Lembaga Dakwah Nahdlatul Ulama atau LDNU PAC Candi akan menggelar pelatihan khotib dan sholat sempurna pada hari sabtu dan minggu, 27 - 28 maret 2021, namun sebelumnya, panitia menggelar screening dan pembekalan kepada calon peserta.&nbsp;</p>\r\n\r\n<p>&quot;Pelatihan khotib dan sholat sempurna ini tujuannya adalah mempersiapkan khotib khotib yang mumpuni dalam bidangnya, dan mengetahui dasar hukum tentang khotib, dan bisa menjalankan tugas serta sunnah seorang khotib dengan baik, dan yang diutamakan dalam acara ini adalah bersanad, karena ada ilmu yang bersanad sampai Rasulullah sehingga dapat menyempurnakan ilmu tentang khotib kepada peserta&quot; ujar M. Habibi, Ketua pelaksana pelatihan khotib dan sholat sempurna yang diadakan bekerja sama dengan LDNU Candi.&nbsp;</p>\r\n\r\n<p>Screening ini dilakukan pada Rabu malam (24/3/2021) dan bertempat di aula kantor MWC NU Candi. Tahapan screening yang dilakukan peserta adalah menyetorkan hafalan surat surat dalam Al-qur&#39;an yang ditentukan panitia, dan menyetorkan teks khutbah yang nantinya akan dibacakan pada hari dan tanggal pelaksanaan.&nbsp;</p>\r\n\r\n<p>Tujuan diadakan screening ini adalah untuk memilah antara khotib yang memang memiliki jam terbang, khotib muda yang belum berpengalaman, dan juga kader kader muda Nahdliyin yang tertarik dengan kegiatan khutbah.&nbsp;</p>\r\n\r\n<p>&quot;Untuk peserta kita menyasar dari beberapa kategori yaitu utusan dari Masjid yang ada di kecamatan Candi, utusan dari ranting ranting NU, dan juga terbuka untuk umum, dari dalam maupun luar wilayah candi, dan disini tujuan screening selain untuk mengklasifikasikan asal dan background peserta adalah kita akan mengkelompokkan peserta tergantung dari capaian atau kapasitas peserta&quot; kata M. Habibi.&nbsp;</p>\r\n\r\n<p>Panitia pun berharap kegiatan ini dapat berjalan lancar dan sesuai tujuan pelatihan yakni dapat menimba ilmu dan tips seputar khutbah serta dapat menyempurnakan ilmu seputar khutbah dan sholat.&nbsp;</p>\r\n\r\n<p>&quot;Dan nantinya peserta yang memang mampu dan siap untuk berpraktek akan didistribusikan ke masjid masjid di kecamatan Candi untuk mengaktualisasikan ilmu yang didapat di pelatihan ini&quot; tandas M. Habibi kepada tim media.&nbsp;</p>\r\n\r\n<p>Penulis : M. Haikal</p>\r\n', '2021-04-07 02:11:05', 3, 'Penelitian dan Pengabdian', 4, 'fa12718b853ecae4742619b4c2052fe4.jpg', 3, 'April', 0, 'persiapan-pelatihan-khotib-dan-sholat-sempurna-panitia-gelar-screening-peserta');
+(3, 'PERSIAPAN PELATIHAN KHOTIB DAN SHOLAT SEMPURNA-PANITIA GELAR SCREENING PESERTA', '<p>Sidoarjo, MWC NU Candi.&nbsp;</p>\r\n\r\n<p>Departemen bidang dakwah Gerakan pemuda Ansor Kecamatan Candi, yang bekerja sama dengan Lembaga Dakwah Nahdlatul Ulama atau LDNU PAC Candi akan menggelar pelatihan khotib dan sholat sempurna pada hari sabtu dan minggu, 27 - 28 maret 2021, namun sebelumnya, panitia menggelar screening dan pembekalan kepada calon peserta.&nbsp;</p>\r\n\r\n<p>&quot;Pelatihan khotib dan sholat sempurna ini tujuannya adalah mempersiapkan khotib khotib yang mumpuni dalam bidangnya, dan mengetahui dasar hukum tentang khotib, dan bisa menjalankan tugas serta sunnah seorang khotib dengan baik, dan yang diutamakan dalam acara ini adalah bersanad, karena ada ilmu yang bersanad sampai Rasulullah sehingga dapat menyempurnakan ilmu tentang khotib kepada peserta&quot; ujar M. Habibi, Ketua pelaksana pelatihan khotib dan sholat sempurna yang diadakan bekerja sama dengan LDNU Candi.&nbsp;</p>\r\n\r\n<p>Screening ini dilakukan pada Rabu malam (24/3/2021) dan bertempat di aula kantor MWC NU Candi. Tahapan screening yang dilakukan peserta adalah menyetorkan hafalan surat surat dalam Al-qur&#39;an yang ditentukan panitia, dan menyetorkan teks khutbah yang nantinya akan dibacakan pada hari dan tanggal pelaksanaan.&nbsp;</p>\r\n\r\n<p>Tujuan diadakan screening ini adalah untuk memilah antara khotib yang memang memiliki jam terbang, khotib muda yang belum berpengalaman, dan juga kader kader muda Nahdliyin yang tertarik dengan kegiatan khutbah.&nbsp;</p>\r\n\r\n<p>&quot;Untuk peserta kita menyasar dari beberapa kategori yaitu utusan dari Masjid yang ada di kecamatan Candi, utusan dari ranting ranting NU, dan juga terbuka untuk umum, dari dalam maupun luar wilayah candi, dan disini tujuan screening selain untuk mengklasifikasikan asal dan background peserta adalah kita akan mengkelompokkan peserta tergantung dari capaian atau kapasitas peserta&quot; kata M. Habibi.&nbsp;</p>\r\n\r\n<p>Panitia pun berharap kegiatan ini dapat berjalan lancar dan sesuai tujuan pelatihan yakni dapat menimba ilmu dan tips seputar khutbah serta dapat menyempurnakan ilmu seputar khutbah dan sholat.&nbsp;</p>\r\n\r\n<p>&quot;Dan nantinya peserta yang memang mampu dan siap untuk berpraktek akan didistribusikan ke masjid masjid di kecamatan Candi untuk mengaktualisasikan ilmu yang didapat di pelatihan ini&quot; tandas M. Habibi kepada tim media.&nbsp;</p>\r\n\r\n<p>Penulis : M. Haikal</p>\r\n', '2021-04-11 14:13:33', 3, 'Penelitian dan Pengabdian', 10, 'fa12718b853ecae4742619b4c2052fe4.jpg', 3, 'April', 0, 'persiapan-pelatihan-khotib-dan-sholat-sempurna-panitia-gelar-screening-peserta');
 
 -- --------------------------------------------------------
 
@@ -135,6 +134,41 @@ CREATE TABLE `tbl_aswajanucenter` (
   `tulisan_img_slider` int(2) NOT NULL,
   `tulisan_slug` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_blog`
+--
+
+CREATE TABLE `tbl_blog` (
+  `tulisan_id` int(11) NOT NULL,
+  `id_ranting` int(11) NOT NULL,
+  `id_jenis_kategori` int(11) NOT NULL,
+  `tulisan_judul` varchar(100) DEFAULT NULL,
+  `tulisan_isi` text DEFAULT NULL,
+  `tulisan_tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `tulisan_kategori_id` int(11) DEFAULT NULL,
+  `tulisan_kategori_nama` varchar(30) DEFAULT NULL,
+  `tulisan_views` int(11) NOT NULL,
+  `tulisan_gambar` varchar(40) DEFAULT NULL,
+  `tulisan_pengguna_id` int(11) DEFAULT NULL,
+  `tulisan_author` varchar(40) DEFAULT NULL,
+  `tulisan_img_slider` int(2) NOT NULL,
+  `tulisan_slug` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_blog`
+--
+
+INSERT INTO `tbl_blog` (`tulisan_id`, `id_ranting`, `id_jenis_kategori`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`) VALUES
+(1, 0, 0, 'asa', '2', '2021-04-12 08:04:22', 1, 'Politik', 0, '188e0947b6516ba74ec00ba3c4e2bb7b.jpg', 3, 'April', 0, 'asa'),
+(2, 0, 0, 'sasa', '<p>asasaasas</p>\r\n', '2021-04-12 10:06:02', 2, 'Sains dan Teknologi', 0, 'dde057cf9a3dc208b3341728fefd4aec.jpg', 3, 'April', 0, 'sasa'),
+(3, 0, 0, 'adadad', '<p>adada</p>\r\n', '2021-04-12 10:09:00', 3, 'Penelitian dan Pengabdian', 0, '66d7d2481d6afce8eddb6f0609510c04.jpg', 3, 'April', 0, 'adadad'),
+(4, 0, 0, '4', 'aswaja', '2021-04-12 10:10:33', 0, '<p>asdada</p>\r\n', 0, '3', 0, '0', 4, 'April'),
+(5, 2, 3, 'hallo mbak april', '<p>isi</p>\r\n', '2021-04-12 10:40:00', 1, 'Politik', 0, '0', 3, 'April', 0, 'hallo-mbak-april'),
+(6, 2, 3, 'Hallo mbak april ', '<h1>Lorem Ipsum</h1>\r\n\r\n<p>&quot;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...&quot;</p>\r\n\r\n<p>&quot;There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...&quot;</p>\r\n\r\n<hr />\r\n<h2>What is Lorem Ipsum?</h2>\r\n\r\n<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n\r\n<h2>Why do we use it?</h2>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', '2021-04-12 14:43:29', 2, 'Sains dan Teknologi', 0, 'ggcictx7e76r6r4ds4sexfufcfcfcftses', 3, 'April', 0, 'hallo-mbak-april');
 
 -- --------------------------------------------------------
 
@@ -419,6 +453,28 @@ CREATE TABLE `tbl_jatmannu` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_jenis_kategori`
+--
+
+CREATE TABLE `tbl_jenis_kategori` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_jenis_kategori`
+--
+
+INSERT INTO `tbl_jenis_kategori` (`id`, `nama`, `created_at`) VALUES
+(1, 'Kanal', '2021-04-12 07:31:19'),
+(2, 'Lembaga NU', '2021-04-12 07:31:19'),
+(3, 'Badan Otonom', '2021-04-12 07:31:19'),
+(4, 'Ranting', '2021-04-12 07:31:19');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_jqhnu`
 --
 
@@ -539,7 +595,8 @@ INSERT INTO `tbl_komentar` (`komentar_id`, `komentar_nama`, `komentar_email`, `k
 (6, 'April', 'aprilianamuzumrotul7@gmail.com', ' Bagus.!', '2020-08-15 13:01:58', '1', 31, 0),
 (8, 'Ari', 'ap@gmail.com', 'Bagus!', '2021-04-07 09:50:51', '1', 3, 0),
 (9, 'April', '', 'Terima kasih', '2021-04-07 09:52:34', '1', 3, 8),
-(10, 'aasa', 'ap@gmail.com', 'aaa suka', '2021-04-07 09:55:52', '1', 3, 0);
+(10, 'aasa', 'ap@gmail.com', 'aaa suka', '2021-04-07 09:55:52', '1', 3, 0),
+(11, 'April', '', ',,,', '2021-04-11 15:18:59', '1', 3, 10);
 
 -- --------------------------------------------------------
 
@@ -708,6 +765,13 @@ CREATE TABLE `tbl_lknu` (
   `tulisan_img_slider` int(2) NOT NULL,
   `tulisan_slug` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_lknu`
+--
+
+INSERT INTO `tbl_lknu` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`) VALUES
+(8, 'hallo mbak april', '<p>selamat malam</p>\r\n', '2021-04-07 16:32:08', 2, 'Sains dan Teknologi', 1, '24de37376143f5cf99cd4db8b769baa0.jpg', 3, 'April', 0, 'hallo-mbak-april');
 
 -- --------------------------------------------------------
 
@@ -1133,7 +1197,11 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (1034, '2021-04-03 01:43:25', '::1', 'Chrome'),
 (1035, '2021-04-05 10:29:38', '::1', 'Chrome'),
 (1036, '2021-04-05 23:24:01', '::1', 'Chrome'),
-(1037, '2021-04-06 23:36:34', '::1', 'Chrome');
+(1037, '2021-04-06 23:36:34', '::1', 'Chrome'),
+(1038, '2021-04-08 01:30:41', '::1', 'Chrome'),
+(1039, '2021-04-09 03:35:59', '::1', 'Chrome'),
+(1040, '2021-04-11 07:14:02', '::1', 'Chrome'),
+(1041, '2021-04-12 04:56:57', '::1', 'Chrome');
 
 -- --------------------------------------------------------
 
@@ -1275,6 +1343,29 @@ CREATE TABLE `tbl_profiltk` (
 
 INSERT INTO `tbl_profiltk` (`tulisan_id`, `tulisan_isi`, `tulisan_gambar`, `tulisan_author`) VALUES
 (3, '<p>Tk muslimat nu 02 nurul huda miji merupakan lembaga tk dibawah naungan yayasan nurul huda miji yang berdiri tahun 1999. Dengan kepala TK x dan wakil kepala tk&nbsp;</p>\r\n', 'c0d87bfd03dbea55be675589e99d0f90.jpeg', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_ranting`
+--
+
+CREATE TABLE `tbl_ranting` (
+  `id` int(11) NOT NULL,
+  `id_jenis_kategori` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_ranting`
+--
+
+INSERT INTO `tbl_ranting` (`id`, `id_jenis_kategori`, `nama`, `created_at`) VALUES
+(1, 4, 'aswaja', '2021-04-12 06:04:07'),
+(2, 4, 'ansor', '2021-04-12 06:04:07'),
+(3, 2, 'Aswaja NU Center', '2021-04-12 07:40:24'),
+(4, 2, 'Laziznu', '2021-04-12 07:40:24');
 
 -- --------------------------------------------------------
 
@@ -1827,7 +1918,7 @@ CREATE TABLE `tbl_redaksi` (
 --
 
 INSERT INTO `tbl_redaksi` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`) VALUES
-(1, 'COVID-19', '<p>Masing-masing orang memiliki respons yang berbeda terhadap COVID-19. Sebagian besar orang yang terpapar virus ini akan mengalami gejala ringan hingga sedang, dan akan pulih tanpa perlu dirawat di rumah sakit.</p>\r\n\r\n<hr />\r\n<p>Gejala yang paling umum:</p>\r\n\r\n<p>demam</p>\r\n\r\n<p>batuk kering</p>\r\n\r\n<p>kelelahan</p>\r\n\r\n<p>Gejala yang sedikit tidak umum:</p>\r\n\r\n<p>rasa tidak nyaman dan nyeri</p>\r\n\r\n<p>nyeri tenggorokan</p>\r\n\r\n<p>diare</p>\r\n\r\n<p>konjungtivitis (mata merah)</p>\r\n\r\n<p>sakit kepala</p>\r\n\r\n<p>hilangnya indera perasa atau penciuman</p>\r\n\r\n<p>ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki</p>\r\n', '2021-04-07 02:10:26', 2, 'Sains dan Teknologi', 50, '21d630d95b1c2027f174f7a42641f362.jpg', 3, 'April', 0, 'covid-19');
+(1, 'COVID-19', '<p>Masing-masing orang memiliki respons yang berbeda terhadap COVID-19. Sebagian besar orang yang terpapar virus ini akan mengalami gejala ringan hingga sedang, dan akan pulih tanpa perlu dirawat di rumah sakit.</p>\r\n\r\n<hr />\r\n<p>Gejala yang paling umum:</p>\r\n\r\n<p>demam</p>\r\n\r\n<p>batuk kering</p>\r\n\r\n<p>kelelahan</p>\r\n\r\n<p>Gejala yang sedikit tidak umum:</p>\r\n\r\n<p>rasa tidak nyaman dan nyeri</p>\r\n\r\n<p>nyeri tenggorokan</p>\r\n\r\n<p>diare</p>\r\n\r\n<p>konjungtivitis (mata merah)</p>\r\n\r\n<p>sakit kepala</p>\r\n\r\n<p>hilangnya indera perasa atau penciuman</p>\r\n\r\n<p>ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki</p>\r\n', '2021-04-12 14:11:59', 2, 'Sains dan Teknologi', 52, '21d630d95b1c2027f174f7a42641f362.jpg', 3, 'April', 0, 'covid-19');
 
 -- --------------------------------------------------------
 
@@ -1962,8 +2053,8 @@ CREATE TABLE `tbl_tulisan` (
 --
 
 INSERT INTO `tbl_tulisan` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`) VALUES
-(1, 'Ccoba', 'fwfjhqejhfemqds', '2021-04-07 01:10:53', 1, 'As', 4, '1be2c0e9ffc412f9987ea65b2b677be1.jpg', 1, 'april', 0, 'Sdsfdgagrgtye'),
-(3, 'PUASA', '<p>Saum atau puasa bagi orang Islam adalah menahan diri dari makan dan minum serta segala perbuatan yang bisa membatalkan puasa, mulai dari terbit fajar hingga terbenam matahari, dengan syarat tertentu, untuk meningkatkan ketakwaan seorang muslim. Berpuasa merupakan salah satu dari lima Rukun Islam.</p>\r\n', '2021-04-07 13:33:35', 2, 'Sains dan Teknologi', 229, 'def963fa9bbb5d4ad0f0065a1459996b.jpg', 3, 'April', 0, 'puasa');
+(1, 'Ccoba', 'fwfjhqejhfemqds', '2021-04-12 13:37:55', 1, 'As', 6, '1be2c0e9ffc412f9987ea65b2b677be1.jpg', 1, 'april', 0, 'Sdsfdgagrgtye'),
+(3, 'PUASA', '<p>Saum atau puasa bagi orang Islam adalah menahan diri dari makan dan minum serta segala perbuatan yang bisa membatalkan puasa, mulai dari terbit fajar hingga terbenam matahari, dengan syarat tertentu, untuk meningkatkan ketakwaan seorang muslim. Berpuasa merupakan salah satu dari lima Rukun Islam.</p>\r\n', '2021-04-11 07:47:40', 2, 'Sains dan Teknologi', 232, 'def963fa9bbb5d4ad0f0065a1459996b.jpg', 3, 'April', 0, 'puasa');
 
 -- --------------------------------------------------------
 
@@ -2026,6 +2117,14 @@ ALTER TABLE `tbl_aswaja`
 -- Indeks untuk tabel `tbl_aswajanucenter`
 --
 ALTER TABLE `tbl_aswajanucenter`
+  ADD PRIMARY KEY (`tulisan_id`) USING BTREE,
+  ADD KEY `tulisan_pengguna_id` (`tulisan_pengguna_id`) USING BTREE,
+  ADD KEY `tulisan_kategori_id` (`tulisan_kategori_id`) USING BTREE;
+
+--
+-- Indeks untuk tabel `tbl_blog`
+--
+ALTER TABLE `tbl_blog`
   ADD PRIMARY KEY (`tulisan_id`) USING BTREE,
   ADD KEY `tulisan_pengguna_id` (`tulisan_pengguna_id`) USING BTREE,
   ADD KEY `tulisan_kategori_id` (`tulisan_kategori_id`) USING BTREE;
@@ -2107,6 +2206,12 @@ ALTER TABLE `tbl_jatmannu`
   ADD PRIMARY KEY (`tulisan_id`) USING BTREE,
   ADD KEY `tulisan_pengguna_id` (`tulisan_pengguna_id`) USING BTREE,
   ADD KEY `tulisan_kategori_id` (`tulisan_kategori_id`) USING BTREE;
+
+--
+-- Indeks untuk tabel `tbl_jenis_kategori`
+--
+ALTER TABLE `tbl_jenis_kategori`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `tbl_jqhnu`
@@ -2362,6 +2467,12 @@ ALTER TABLE `tbl_prodi`
 --
 ALTER TABLE `tbl_profiltk`
   ADD PRIMARY KEY (`tulisan_id`);
+
+--
+-- Indeks untuk tabel `tbl_ranting`
+--
+ALTER TABLE `tbl_ranting`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `tbl_ranting25`
@@ -2644,6 +2755,12 @@ ALTER TABLE `tbl_aswajanucenter`
   MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT untuk tabel `tbl_blog`
+--
+ALTER TABLE `tbl_blog`
+  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT untuk tabel `tbl_datatk`
 --
 ALTER TABLE `tbl_datatk`
@@ -2710,6 +2827,12 @@ ALTER TABLE `tbl_jatmannu`
   MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `tbl_jenis_kategori`
+--
+ALTER TABLE `tbl_jenis_kategori`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT untuk tabel `tbl_jqhnu`
 --
 ALTER TABLE `tbl_jqhnu`
@@ -2737,7 +2860,7 @@ ALTER TABLE `tbl_kepalayayasan`
 -- AUTO_INCREMENT untuk tabel `tbl_komentar`
 --
 ALTER TABLE `tbl_komentar`
-  MODIFY `komentar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `komentar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_lakpesdam`
@@ -2785,7 +2908,7 @@ ALTER TABLE `tbl_lkknu`
 -- AUTO_INCREMENT untuk tabel `tbl_lknu`
 --
 ALTER TABLE `tbl_lknu`
-  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_lpbhnu`
@@ -2875,7 +2998,7 @@ ALTER TABLE `tbl_pengumuman`
 -- AUTO_INCREMENT untuk tabel `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
-  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1038;
+  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1042;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pengurus`
@@ -2912,6 +3035,12 @@ ALTER TABLE `tbl_prodi`
 --
 ALTER TABLE `tbl_profiltk`
   MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_ranting`
+--
+ALTER TABLE `tbl_ranting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_ranting25`
