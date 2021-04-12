@@ -41,30 +41,32 @@
         <div class="row mx-0">
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
                 <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>TAGS (nama tags)</b></div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>TAGS (<?php echo $tag; ?>)</b></div>
                 </div>
 
                 <?php echo $this->session->flashdata('msg');?>
+                <?php foreach ($post as $row) : ?>
                 <div class="row pb-4">
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
                             <div class="fh5co_news_img">
-                            <img src="" alt=""/></div>
+                            <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt=""/></div>
                             <div></div>
                         </div>
                     </div>
                     <div class="col-md-7 animate-box"><br><br>
-                        <a href="#" class="fh5co_magna py-2"> Judul </a> <a href="#" class="fh5co_mini_time py-3"> </a>
+                        <a href="<?php echo generate_tag_url_redaksi($row->tulisan_slug)?>" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a> <a href="#" class="fh5co_mini_time py-3"> </a>
                         <br>
 
-                        <a class="fh5co_mini_time py-3"> <i class="fa fa-user" aria-hidden="true"></i> <span> author |
-                        tanggal | </span></a>
+                        <a class="fh5co_mini_time py-3"> <i class="fa fa-user" aria-hidden="true"></i> <span> <?php echo $row->tulisan_author;?> |
+                        <?php echo $row->tulisan_tanggal;?> | </span></a>
                           <br>
-                        <div class="fh5co_consectetur"> isi limit
+                        <div class="fh5co_consectetur"> <?php echo $row->tulisan_isi;?>
                         </div>
                           <a href="#" class="">Read More</a>
                     </div>
                 </div>
+                <?php endforeach;?>
 
             </div>
             <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">

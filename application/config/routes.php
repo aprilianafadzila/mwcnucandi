@@ -55,6 +55,8 @@ $route['berita']='blog';
 $route['berita']='blog/index';
 $route['berita/(:any)']='blog/detail/$1';
 
+$route['politik'] = 'filter/politik';
+
 $route['galeri']='galeri';
 $route['galeri']='galeri/index';
 $route['galeri/(:any)']='galeri/detail/$1';

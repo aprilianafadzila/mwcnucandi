@@ -187,7 +187,7 @@
 
                     <?php foreach ($category->result() as $row) : ?>
                    <?php $slug = generate_slug($row->kategori_nama); ?>
-                    <a href="<?php echo base_url($slug)?>" class="fh5co_tagg"><?php echo $row->kategori_nama;?></a>
+                    <a href="<?php echo generate_tag_url($slug)?>" class="fh5co_tagg"><?php echo $row->kategori_nama;?></a>
                   <?php endforeach;?>
                 </div>
                 <div>

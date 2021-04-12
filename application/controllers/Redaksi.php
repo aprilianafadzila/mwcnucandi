@@ -43,12 +43,40 @@ class Redaksi extends CI_Controller{
             $config['next_link'] = 'Next >>';
             $config['prev_link'] = '<< Prev';
             $this->pagination->initialize($config);
-            $x['page'] =$this->pagination->create_links();
-						$x['data']=$this->m_redaksi->berita_perpage($offset,$limit);
-						$x['category']=$this->db->get('tbl_kategori');
-						$x['profil']=$this->m_profiltk->get_all_tulisan();
-						$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
-						$this->load->view('depan/v_redaksi',$x);
+
+            $title = $this->input->get('title',true);
+            $query = $this->db->get_where('tbl_blog', array('tulisan_slug' => $title));
+
+            if ($query->num_rows() > 0) {
+            	
+            	$id = $this->m_redaksi->get_id_title($title);
+            	
+				$data=$this->m_redaksi->get_berita_by_kode($id);
+				$row=$data->row_array();
+				$x['id']=$row['tulisan_id'];
+				$x['title']=$row['tulisan_judul'];
+				$x['image']=$row['tulisan_gambar'];
+				$x['blog'] =$row['tulisan_isi'];
+				$x['tanggal']=$row['tanggal'];
+				$x['author']=$row['tulisan_author'];
+				$x['kategori']=$row['tulisan_kategori_nama'];
+				$x['slug']=$row['tulisan_slug'];
+				$x['show_komentar']=$this->m_redaksi->show_komentar_by_tulisan_id($id);
+				$x['category']=$this->db->get('tbl_kategori');
+				$x['populer']=$this->db->query("SELECT * FROM tbl_redaksi ORDER BY tulisan_views DESC LIMIT 5");
+
+            } else {
+
+            	redirect('home');
+
+            }
+
+
+
+			
+			
+
+			$this->load->view('depan/v_blog_detail',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);

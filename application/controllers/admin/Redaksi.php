@@ -17,10 +17,19 @@ class Redaksi extends CI_Controller{
 		$x['data']=$this->m_redaksi->get_all_redaksi();
 		$this->load->view('admin/v_redaksi',$x);
 	}
+
 	function add_tulisan(){
 		$x['kat']=$this->m_kategori->get_all_kategori();
+		$x['data']=$this->m_kategori->get_kategori();
 		$this->load->view('admin/v_add_tulisanredaksi',$x);
 	}
+
+	function get_subkategori(){
+        $id=$this->input->post('id');
+        $data=$this->m_kategori->get_subkategori($id);
+        echo json_encode($data);
+    }
+
 	function get_edit(){
 		$kode=$this->uri->segment(4);
 		$x['data']=$this->m_redaksi->get_tulisan_by_kode($kode);
@@ -51,26 +60,29 @@ class Redaksi extends CI_Controller{
 	                        $this->image_lib->resize();
 
 	                        $gambar=$gbr['file_name'];
-													$judul=strip_tags($this->input->post('xjudul'));
-													$isi=$this->input->post('xisi');
-													$string   = preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $judul);
-													$trim     = trim($string);
-													$slug     = strtolower(str_replace(" ", "-", $trim));
-													$kategori_id=strip_tags($this->input->post('xkategori'));
-													$data=$this->m_kategori->get_kategori_byid($kategori_id);
-													$q=$data->row_array();
-													$kategori_nama=$q['kategori_nama'];
-													//$imgslider=$this->input->post('ximgslider');
-													$imgslider='0';
-													$kode=$this->session->userdata('idadmin');
-													$user=$this->m_pengguna->get_pengguna_login($kode);
-													$p=$user->row_array();
-													$user_id=$p['pengguna_id'];
-													$user_nama=$p['pengguna_nama'];
-													$this->m_redaksi->simpan_tulisan($judul,$isi,$kategori_id,$kategori_nama,$imgslider,$user_id,$user_nama,$gambar,$slug);
-													echo $this->session->set_flashdata('msg','success');
-													redirect('admin/redaksi');
-											}else{
+								$judul=strip_tags($this->input->post('xjudul'));
+								$isi=$this->input->post('xisi');
+								$string   = preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $judul);
+								$trim     = trim($string);
+								$slug     = strtolower(str_replace(" ", "-", $trim));
+								$kategori_id=strip_tags($this->input->post('xkategori'));
+								$data=$this->m_kategori->get_kategori_byid($kategori_id);
+								$q=$data->row_array();
+								$kategori_nama=$q['kategori_nama'];
+								//$imgslider=$this->input->post('ximgslider');
+								$imgslider='0';
+								$kode=$this->session->userdata('idadmin');
+								$user=$this->m_pengguna->get_pengguna_login($kode);
+								$p=$user->row_array();
+								$user_id=$p['pengguna_id'];
+								$user_nama=$p['pengguna_nama'];
+								$kategori = $this->input->post('kategori'); 
+								$subkategori = $this->input->post('subkategori');
+
+								$this->m_redaksi->simpan_tulisan($kategori,$subkategori,$judul,$isi,$kategori_id,$kategori_nama,$imgslider,$user_id,$user_nama,$gambar,$slug);
+								echo $this->session->set_flashdata('msg','success');
+								redirect('admin/redaksi');
+						}else{
 	                    echo $this->session->set_flashdata('msg','warning');
 	                    redirect('admin/redaksi');
 	                }
