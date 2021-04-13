@@ -50,6 +50,7 @@ class Galeri extends CI_Controller{
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_galeri ORDER BY tulisan_views DESC LIMIT 5");
+						$slug = $this->m_galeri->get_all_tag();
 						$this->load->view('depan/v_galeri',$x);
 	}
 	function detail($slugs){
