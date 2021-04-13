@@ -70,10 +70,6 @@ class Redaksi extends CI_Controller{
             	redirect('home');
 
             }
-
-
-
-			
 			
 
 			$this->load->view('depan/v_blog_detail',$x);
