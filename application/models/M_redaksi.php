@@ -5,6 +5,7 @@ class M_redaksi extends CI_Model{
 		$hsl=$this->db->query("SELECT tbl_redaksi.*,DATE_FORMAT(tulisan_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_redaksi ORDER BY tulisan_id DESC");
 		return $hsl;
 	}
+
 	function simpan_tulisan($subkategori,$kategori,$judul,$isi,$kategori_id,$kategori_nama,$imgslider,$user_id,$user_nama,$gambar,$slug){
 
 		$data = array(
@@ -21,15 +22,15 @@ class M_redaksi extends CI_Model{
 
                 'tulisan_kategori_nama' => $kategori_nama,
 
-                'tulisan_gambar' => $imgslider,
+                'tulisan_gambar' => $gambar,
 
                 'tulisan_pengguna_id' => $user_id,
 
                 'tulisan_author' => $user_nama,
 
-                'tulisan_img_slider' => $gambar,
+                'tulisan_img_slider' => $imgslider,
 
-                'tulisan_slug' => $slug,
+                'tulisan_slug' => $slug
 
             );
 

@@ -80,6 +80,7 @@ class Redaksi extends CI_Controller{
 								$subkategori = $this->input->post('subkategori');
 
 								$this->m_redaksi->simpan_tulisan($kategori,$subkategori,$judul,$isi,$kategori_id,$kategori_nama,$imgslider,$user_id,$user_nama,$gambar,$slug);
+								
 								echo $this->session->set_flashdata('msg','success');
 								redirect('admin/redaksi');
 						}else{
