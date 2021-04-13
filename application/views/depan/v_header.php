@@ -6,8 +6,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>MWCNU Candi Sidoarjo</title>
-    <link rel="shortcut icon" href="images/logo.png" <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/1c.png" <link rel="stylesheet" href="css/style.css">
+
+    <meta name="description" content="<?php echo ($description); ?>" />
+
+    <meta name="keywords" content="<?php echo ($keywords); ?>" />
+
+    <meta name="author" content="<?php echo ($title); ?>" />
+
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/1c.png">
+    <link rel="stylesheet" href="css/style.css">
     <link href="css/media_query.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
