@@ -76,7 +76,7 @@ class Redaksi extends CI_Controller{
 								$p=$user->row_array();
 								$user_id=$p['pengguna_id'];
 								$user_nama=$p['pengguna_nama'];
-								$kategori = $this->input->post('kategori'); 
+								$kategori = $this->input->post('kategori');
 								$subkategori = $this->input->post('subkategori');
 
 								$this->m_redaksi->simpan_tulisan($kategori,$subkategori,$judul,$isi,$kategori_id,$kategori_nama,$imgslider,$user_id,$user_nama,$gambar,$slug);

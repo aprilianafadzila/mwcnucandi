@@ -14,7 +14,15 @@ class Tulisan extends CI_Controller{
 
 
 	function index(){
-		$x['data']=$this->m_tulisan->get_all_tulisan();
+		//$x['data']=$this->m_tulisan->get_all_tulisan();
+
+		$this->db->select('tbl_blog.*, tbl_jenis_kategori.nama as kategori_nama, tbl_ranting.nama as nama_ranting, tbl_kategori.kategori_nama as kategori_nama_tag, tbl_jenis_kategori.nama as nama_menu, tbl_ranting.nama as sub_menu');
+		$this->db->from('tbl_blog');
+		$this->db->join('tbl_jenis_kategori','tbl_blog.id_jenis_kategori = tbl_jenis_kategori.id','left');
+		$this->db->join('tbl_ranting','tbl_blog.id_ranting = tbl_ranting.id','left');
+		$this->db->join('tbl_kategori','tbl_blog.tulisan_kategori_id = tbl_kategori.kategori_id','left');
+
+		$x['data'] = $this->db->get()->result();
 		$this->load->view('admin/v_tulisan',$x);
 	}
 	function add_tulisan(){

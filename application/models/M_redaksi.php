@@ -32,9 +32,11 @@ class M_redaksi extends CI_Model{
 
                 'tulisan_slug' => $slug
 
+
             );
 
 		 return $this->db->insert('tbl_blog', $data);
+
 	}
 	function get_tulisan_by_kode($kode){
 		$hsl=$this->db->query("SELECT tbl_redaksi.*,DATE_FORMAT(tulisan_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_redaksi where tulisan_id='$kode'");

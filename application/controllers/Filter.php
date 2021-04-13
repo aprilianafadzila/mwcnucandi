@@ -44,7 +44,7 @@ class Filter extends CI_Controller{
             $config['next_link'] = 'Next >>';
             $config['prev_link'] = '<< Prev';
             $this->pagination->initialize($config);
-            
+
             $x['page'] =$this->pagination->create_links();
 						$x['data']=$this->m_tulisan->berita_perpage($offset,$limit);
 						$x['category']=$this->db->get('tbl_kategori');
@@ -53,21 +53,19 @@ class Filter extends CI_Controller{
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
 
-			$tag = str_replace("-", " ", $this->input->get('tag',true)) ;
-			$x['tag'] = $tag;
+						$tag = str_replace("-", " ", $this->input->get('tag',true)) ;
+						$x['tag'] = $tag;
 
-			$this->db->select('tbl_blog.*, tbl_jenis_kategori.nama as kategori_nama, tbl_ranting.nama as nama_ranting, tbl_kategori.kategori_nama as kategori_nama_tag');
-	        $this->db->from('tbl_blog');
-	        $this->db->join('tbl_jenis_kategori','tbl_blog.id_jenis_kategori = tbl_jenis_kategori.id','left');
-	        $this->db->join('tbl_ranting','tbl_blog.id_ranting = tbl_ranting.id','left');
-	        $this->db->join('tbl_kategori','tbl_blog.tulisan_kategori_id = tbl_kategori.kategori_id','left');
+						$this->db->select('tbl_blog.*, tbl_jenis_kategori.nama as kategori_nama, tbl_ranting.nama as nama_ranting, tbl_kategori.kategori_nama as kategori_nama_tag');
+	        	$this->db->from('tbl_blog');
+	        	$this->db->join('tbl_jenis_kategori','tbl_blog.id_jenis_kategori = tbl_jenis_kategori.id','left');
+	        	$this->db->join('tbl_ranting','tbl_blog.id_ranting = tbl_ranting.id','left');
+	        	$this->db->join('tbl_kategori','tbl_blog.tulisan_kategori_id = tbl_kategori.kategori_id','left');
 
-	        $this->db->where('tbl_kategori.kategori_nama',$tag);
-	      
+	        	$this->db->where('tbl_kategori.kategori_nama',$tag);
+	        	$x['post'] = $this->db->get()->result();
 
-	        $x['post'] = $this->db->get()->result();
-
-			$this->load->view('depan/v_filter',$x);
+						$this->load->view('depan/v_filter',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);
@@ -108,48 +106,6 @@ class Filter extends CI_Controller{
 			 redirect('berita');
 		 }
 	}
-
-    function search(){
-        $keyword=str_replace("'", "", htmlspecialchars($this->input->get('keyword',TRUE),ENT_QUOTES));
-        $query=$this->m_tulisan->cari_berita($keyword);
-				if($query->num_rows() > 0){
-					$x['contact']=$this->m_datayayasan->get_all_datatk();
-					$x['all_galeri']=$this->m_galeri->get_all_galeri();
-					$x['data']=$query;
-					$x['category']=$this->db->get('tbl_kategori');
-  				$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
-          $this->load->view('depan/v_blog',$x);
-	 		 }else{
-				 echo $this->session->set_flashdata('msg','<div class="alert alert-danger">Tidak dapat menemukan artikel dengan kata kunci <b>'.$keyword.'</b></div>');
-				 redirect('berita');
-			 }
-    }
-
-		function komentar(){
-				$kode = htmlspecialchars($this->input->post('id',TRUE),ENT_QUOTES);
-				$data=$this->m_tulisan->get_berita_by_kode($kode);
-				$row=$data->row_array();
-				$slug=$row['tulisan_slug'];
-				$nama = htmlspecialchars($this->input->post('nama',TRUE),ENT_QUOTES);
-				$email = htmlspecialchars($this->input->post('email',TRUE),ENT_QUOTES);
-				$komentar = nl2br(htmlspecialchars($this->input->post('komentar',TRUE),ENT_QUOTES));
-				if(empty($nama) || empty($email)){
-					$this->session->set_flashdata('msg','<div class="alert alert-danger">Masukkan input dengan benar.</div>');
-					redirect('artikel/'.$slug);
-				}else{
-					$data = array(
-			        'komentar_nama' 			=> $nama,
-			        'komentar_email' 			=> $email,
-			        'komentar_isi' 				=> $komentar,
-							'komentar_status' 		=> 0,
-							'komentar_tulisan_id' => $kode
-					);
-
-					$this->db->insert('tbl_komentar', $data);
-					$this->session->set_flashdata('msg','<div class="alert alert-info">Komentar Anda akan tampil setelah moderasi.</div>');
-					redirect('berita/'.$slug);
-				}
-		}
 
 		public function politik(){
 
