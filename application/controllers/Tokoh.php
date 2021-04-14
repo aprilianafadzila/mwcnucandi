@@ -48,6 +48,9 @@ class Tokoh extends CI_Controller{
 						$x['category']=$this->db->get('tbl_kategori');
 						$x['profil']=$this->m_profiltk->get_all_tulisan();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_tokoh ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+			      $x['keywords'] = 'tokoh mwcnucandi, informasi tokoh mwcnucandi, tokoh sejarah nu, tokoh nahdliyin, tokoh nu di Sidoarjo, tokoh mwcnucandi Sidoarjo';
 						$this->load->view('depan/v_blog',$x);
 	}
 	function detail($slugs){

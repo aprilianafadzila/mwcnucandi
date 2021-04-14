@@ -11,6 +11,7 @@ class Redaksi extends CI_Controller{
 		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
+
 		$jum=$this->m_redaksi->berita();
         $page=$this->uri->segment(3);
         if(!$page):
@@ -48,9 +49,9 @@ class Redaksi extends CI_Controller{
             $query = $this->db->get_where('tbl_blog', array('tulisan_slug' => $title));
 
             if ($query->num_rows() > 0) {
-            	
+
             	$id = $this->m_redaksi->get_id_title($title);
-            	
+
 				$data=$this->m_redaksi->get_berita_by_kode($id);
 				$row=$data->row_array();
 				$x['id']=$row['tulisan_id'];
@@ -63,6 +64,9 @@ class Redaksi extends CI_Controller{
 				$x['slug']=$row['tulisan_slug'];
 				$x['show_komentar']=$this->m_redaksi->show_komentar_by_tulisan_id($id);
 				$x['category']=$this->db->get('tbl_kategori');
+				$x['title'] = 'mwcnucandi';
+				$x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+				$x['keywords'] = 'redaksi candi, berita redaksi candi, berita terbaru redaksi candi, artikel redaksi candi, tulisan redaksi candi, informasi redaksi candi, redaksi mwcnucandi Sidoarjo';
 				$x['populer']=$this->db->query("SELECT * FROM tbl_redaksi ORDER BY tulisan_views DESC LIMIT 5");
 
             } else {
@@ -70,7 +74,7 @@ class Redaksi extends CI_Controller{
             	redirect('home');
 
             }
-			
+
 
 			$this->load->view('depan/v_blog_detail',$x);
 	}

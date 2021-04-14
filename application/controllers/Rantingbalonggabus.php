@@ -51,6 +51,9 @@ class Rantingbalonggabus extends CI_Controller{
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_rantingbalonggabus ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+			      $x['keywords'] = 'ranting balonggabus candi, acara ranting balonggabus candi, berita ranting balonggabus candi, berita terbaru ranting balonggabus candi, artikel ranting balonggabus candi, acara ranting balonggabus candi, tulisan ranting balonggabus candi, informasi ranting balonggabus candi, ranting balonggabus mwcnucandi Sidoarjo';
 						$this->load->view('depan/v_rantingbalonggabus',$x);
 	}
 	function detail($slugs){

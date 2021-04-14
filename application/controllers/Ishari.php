@@ -19,7 +19,7 @@ class Ishari extends CI_Controller{
             $offset = $page;
         endif;
         $limit=5;
-        $config['base_url'] = base_url() . 'blog/index/';
+        $config['base_url'] = base_url() . 'ishari/index/';
             $config['total_rows'] = $jum->num_rows();
             $config['per_page'] = $limit;
             $config['uri_segment'] = 3;
@@ -49,6 +49,9 @@ class Ishari extends CI_Controller{
 						$x['profil']=$this->m_profiltk->get_all_tulisan();$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_ishari ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+			      $x['keywords'] = 'ishari, ishari candi, acara ishari candi, berita ishari candi, tulisan ishari candi, artikel ishari candi, berita terbaru ishari candi, informasi ishari candi, ishari mwcnucandi Sidoarjo';
 						$this->load->view('depan/v_blog',$x);
 	}
 	function detail($slugs){

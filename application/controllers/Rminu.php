@@ -50,6 +50,9 @@ class Rminu extends CI_Controller{
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['profil']=$this->m_profiltk->get_all_tulisan();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_rminu ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+			      $x['keywords'] = 'rmi nu candi, informasi rmi nu candi, berita terbaru rmi nu candi, artikel rmi nu candi, berita rmi nu candi, rmi nu mwcnucandi Sidoarjo';
 						$this->load->view('depan/v_rminu',$x);
 	}
 	function detail($slugs){

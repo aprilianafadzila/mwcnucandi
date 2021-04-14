@@ -51,6 +51,9 @@ class Rantingdurungbedug extends CI_Controller{
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_rantingdurungbedug ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+						$x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+						$x['keywords'] = 'ranting durungbedug candi, acara ranting durungbedug candi, berita ranting durungbedug candi, berita terbaru rantingdurungbedug candi, artikel rantingdurungbedug candi, acara rantingdurungbedug candi, tulisan rantingdurungbedug candi, informasi rantingdurungbedug candi, rantingdurungbedug mwcnucandi Sidoarjo';
 						$this->load->view('depan/v_rantingdurungbedug',$x);
 	}
 	function detail($slugs){

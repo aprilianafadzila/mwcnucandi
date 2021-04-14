@@ -49,6 +49,9 @@ class Aswajanucenter extends CI_Controller{
 						$x['profil']=$this->m_profiltk->get_all_tulisan();
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_aswajanucenter ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+			      $x['keywords'] = 'aswajanucenter, informasi seputar aswaja nu center, aswajanucenter mwcnucandi, Aswaja Nu Center Sidoarjo. artikel aswaja nu center, berita aswaja nu center';
 						$this->load->view('depan/v_aswajanucenter',$x);
 	}
 	function detail($slugs){
