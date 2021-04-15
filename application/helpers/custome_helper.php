@@ -84,3 +84,26 @@ if (!function_exists('generate_tag_url_redaksi')) {
     }
 
 }
+
+//get shop name
+
+if (!function_exists('get_kanal')) {
+
+
+
+    function get_kanal() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+        $id = 1;
+
+        return $ci->m_header->get_data_kanal($id);
+
+
+    }
+
+
+
+}

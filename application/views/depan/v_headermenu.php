@@ -1,7 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>MWCNU Candi Sidoarjo</title>
-<link rel="shortcut icon" href="images/1c.png" <link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="images/1c.png">
+<link rel="stylesheet" href="css/style.css">
 <link href="css/media_query.css" rel="stylesheet" type="text/css"/>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -40,6 +41,8 @@
 }
 </style>
 
+<?php $kanal = get_kanal();?>
+
     <div class="container padding_786">
         <nav class="navbar navbar-toggleable-md navbar-light ">
             <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
@@ -52,11 +55,9 @@
                       <a class="nav-link " href="" id="dropdownMenuButton2" data-toggle="dropdown"
                          aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle"><b>KANAL</b></h7><span class="sr-only">(current)</span></a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="blog">Berita</a>
-                          <a class="dropdown-item" href="galeri">Galeri</a>
-                          <a class="dropdown-item" href="aswaja">Keaswajan</a>
-                          <a class="dropdown-item" href="pesantren">Pesantren</a>
-                          <a class="dropdown-item" href="#">Lain-lain</a>
+                        <?php foreach ($kanal as $row) : ?>
+                          <a class="dropdown-item" href="<?php ?>"><?php echo $row->nama;?></a>
+                        <?php endforeach;?>
                       </div>
                   </li>
                   <li class="nav-item dropdown">
