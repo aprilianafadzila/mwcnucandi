@@ -337,13 +337,11 @@
 
 
 
-	<?php foreach ($data->result_array() as $i) :
-              $tulisan_id=$i['tulisan_id'];
-              $tulisan_judul=$i['tulisan_judul'];
-              $tulisan_gambar=$i['tulisan_gambar'];
+	<?php foreach ($data as $i) :
+
             ?>
 	<!--Modal Hapus Pengguna-->
-        <div class="modal fade" id="ModalHapus<?php echo $tulisan_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="ModalHapus<?php echo $i->tulisan_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -352,9 +350,9 @@
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url().'admin/tulisan/hapus_tulisan'?>" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
-							       <input type="hidden" name="kode" value="<?php echo $tulisan_id;?>"/>
-                     <input type="hidden" value="<?php echo $tulisan_gambar;?>" name="gambar">
-                            <p>Apakah Anda yakin mau menghapus Posting <b><?php echo $tulisan_judul;?></b> ?</p>
+							       <input type="hidden" name="kode" value="<?php echo $i->tulisan_id;?>"/>
+                     <input type="hidden" value="<?php echo $i->tulisan_gambar;?>" name="gambar">
+                            <p>Apakah Anda yakin mau menghapus Posting <b><?php echo $i->tulisan_judul;?></b> ?</p>
 
                     </div>
                     <div class="modal-footer">

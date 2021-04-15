@@ -19,11 +19,9 @@ class Home extends CI_Controller{
 	}
 	function index(){
 
-		$x['title'] = 'mwcnucandi';
-
-        $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
-
-        $x['keywords'] = 'mwcnucandi, informasi mwcnucandi, mwcnucandi Sidoarjo';
+			$x['title'] = 'mwcnucandi';
+      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+      $x['keywords'] = 'mwcnucandi, informasi mwcnucandi, artikel terbaru mwcnucandi, berita terbaru mwcnucandi, mwcnucandi Sidoarjo';
 
 			$x['berita']=$this->m_tulisan->get_berita_home();
 			$x['pengumuman']=$this->m_pengumuman->get_pengumuman_home();

@@ -10,9 +10,9 @@ class M_redaksi extends CI_Model{
 
 		$data = array(
 
-                'id_ranting' => $subkategori,
+                'id_ranting' => $kategori,
 
-                'id_jenis_kategori' => $kategori,
+                'id_jenis_kategori' => $subkategori,
 
                 'tulisan_judul' => $judul,
 

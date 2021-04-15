@@ -50,7 +50,10 @@ class Rantingklurak extends CI_Controller{
 						$x['profil']=$this->m_profiltk->get_all_tulisan();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_rantingklurak ORDER BY tulisan_views DESC LIMIT 5");
-						$this->load->view('depan/v_rantingklurak',$x);
+						$x['title'] = 'mwcnucandi';
+			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+			      $x['keywords'] = 'ranting klurak candi, acara ranting klurak candi, berita ranting klurak candi, berita terbaru ranting klurak candi, artikel ranting klurak candi, acara ranting klurak candi, tulisan ranting klurak candi, informasi ranting klurak candi, ranting klurak mwcnucandi Sidoarjo';
+					$this->load->view('depan/v_rantingklurak',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);

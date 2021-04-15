@@ -51,6 +51,9 @@ class Rantingcandi extends CI_Controller{
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_rantingcandi ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+			      $x['keywords'] = 'ranting candi, acara ranting candi, berita ranting candi, berita terbaru ranting candi, artikel ranting candi, acara ranting candi, tulisan ranting candi, informasi ranting candi, ranting candi mwcnucandi Sidoarjo';
 						$this->load->view('depan/v_rantingcandi',$x);
 	}
 	function detail($slugs){

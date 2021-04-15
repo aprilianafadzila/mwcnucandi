@@ -50,7 +50,10 @@ class rantingkedungpeluk extends CI_Controller{
 						$x['profil']=$this->m_profiltk->get_all_tulisan();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_rantingkedungpeluk ORDER BY tulisan_views DESC LIMIT 5");
-						$this->load->view('depan/v_rantingkedungpeluk',$x);
+						$x['title'] = 'mwcnucandi';
+						$x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+						$x['keywords'] = 'ranting kedungpeluk candi, acara rantingkedungpeluk candi, berita rantingkedungpeluk candi, berita terbaru rantingkedungpeluk candi, artikel rantingkedungpeluk candi, acara rantingkedungpeluk candi, tulisan rantingkedungpeluk candi, informasi rantingkedungpeluk candi, rantingkedungpeluk mwcnucandi Sidoarjo';
+					$this->load->view('depan/v_rantingkedungpeluk',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);

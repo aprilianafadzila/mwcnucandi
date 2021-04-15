@@ -49,6 +49,9 @@ class Ldnu extends CI_Controller{
 						$x['category']=$this->db->get('tbl_kategori');
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_ldnu ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+			      $x['keywords'] = 'ldnu, ldnu candi, informasi ldnu, berita ldnu candi, ldnu mwcnucandi Sidoarjo, artikel ldnu candi, berita terbaru ldnu candi';
 						$this->load->view('depan/v_blog',$x);
 	}
 	function detail($slugs){

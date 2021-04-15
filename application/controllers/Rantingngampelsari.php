@@ -50,6 +50,9 @@ class Rantingngampelsari extends CI_Controller{
 						$x['profil']=$this->m_profiltk->get_all_tulisan();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_rantingngampelsari ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+						$x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+						$x['keywords'] = 'ranting ngampelsari candi, acara ranting ngampelsari candi, berita rantingngampelsari candi, berita terbaru rantingngampelsari candi, artikel rantingngampelsari candi, acara rantingngampelsari candi, tulisan rantingngampelsari candi, informasi rantingngampelsari candi, rantingngampelsari mwcnucandi Sidoarjo';
 						$this->load->view('depan/v_rantingngampelsari',$x);
 	}
 	function detail($slugs){
