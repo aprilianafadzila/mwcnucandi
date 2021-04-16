@@ -383,20 +383,23 @@
 <!--//END HEADER -->
 <!--============================= BLOG =============================-->
 <section class="blog-wrap">
-    <div class="container">
+  <?php foreach ($post as $row) : ?>
+    <?php $id_tulisan = $row->tulisan_id; ?>
+    <div class="container"> 
         <div class="row">
             <div class="col-md-8">
                 <div class="blog-img_block">
-                    <img src="<?php echo base_url().'assets/images/'.$image?>" class="img-fluid" alt="">
+                    <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar?>" class="img-fluid" alt="">
                     <div class="blog-date">
-                        <span><?php echo $tanggal;?></span>
+                        <span><?php echo $row->tulisan_tanggal;?></span>
                     </div>
                 </div>
                 <div class="blog-tiltle_block">
-                    <h4><a href="<?php echo site_url('berita/'.$slug);?>"><?php echo $title;?></a></h4>
-                    <h6> <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span><?php echo $author;?></span> </a>  |   <a href="#"><i class="fa fa-tags" aria-hidden="true"></i><span><?php echo $kategori;?></span></a></h6>
-                    <?php echo $blog;?>
+                    <h4><a href="<?php echo site_url('berita/'.$slug);?>"><?php echo $row->tulisan_judul;?></a></h4>
+                    <h6> <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span><?php echo $row->tulisan_author;?></span> </a>  |   <a href="#"><i class="fa fa-tags" aria-hidden="true"></i><span><?php echo $row->kategori_nama;?></span></a>  |  <a href="#"><i class="fa fa-tags" aria-hidden="true"></i><span><?php echo $row->nama_ranting;?></span></a></h6>
+                    <?php echo $row->tulisan_isi;?>
                 </div>
+  <?php endforeach;?>
 
                 <div class="blog-tiltle_block">
                   <h6>Bagikan ke:</h6>
@@ -433,7 +436,7 @@
                                       '#d4ec15',
                                       '#613021',
                                   );
-                                  foreach ($show_komentar->result() as $row) :
+                                  foreach ($show_komentar as $row) :
                                   shuffle($colors);
                                 ?>
                                 <div class="row">
@@ -493,7 +496,7 @@
                                   </div>
 
                                   <div class="col-12 py-3 text-center">
-                                    <input type="hidden" name="id" value="<?php echo $id;?>" required>
+                                    <input type="hidden" name="id" value="<?php echo $id_tulisan;?>" required>
                                     <button type="submit" class="btn contact_btn" >Send</button>
                                         </div>
                               </form>
@@ -541,6 +544,7 @@
             </div>
         </div>
     </div>
+    
 </section>
 <div class="container-fluid fh5co_footer_bg pb-3">
 

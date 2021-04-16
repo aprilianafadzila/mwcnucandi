@@ -119,17 +119,22 @@
         <div class="row mx-0">
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
                 <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>BERITA TERKINI</b></div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b><?php foreach ($post as $row) : ?> <?php echo $row->nama_ranting;?> <?php endforeach;?></b></div>
                 </div>
 
                 <?php echo $this->session->flashdata('msg');?>
-                <?php foreach ($data->result() as $row) : ?>
+                <?php foreach ($post as $row) : ?>
+
+                    <?php $depan = strtolower($row->kategori_nama) ?>
+                    <?php $ranting = strtolower($row->nama_ranting) ?>
+                    <?php $slug = generate_slug($row->tulisan_slug); ?>
+
                 <div class="row pb-4">
                     <div class="col-md-5">
 
                         <div class="fh5co_hover_news_img">
 
-                        <h6 style="background:#00702d; padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px;"><a class="text-white">Berita</h6>
+                        <h6 style="background:#00702d; padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px;"><a class="text-white"><?php echo $row->nama_ranting;?></h6>
                             <div class="fh5co_news_img">
 
 
@@ -138,11 +143,12 @@
                         </div>
                     </div>
                     <div class="col-md-7 animate-box"><br><br>
-                        <a href="#" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a> <a href="#" class="fh5co_mini_time py-3"> </a>
+                        <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a> <a href="#" class="fh5co_mini_time py-3"> </a>
                         <div class="c_g"><?php echo $row->tulisan_author;?> - <i class=""></i><?php echo $row->tulisan_tanggal;?></div>
                         <div class="fh5co_consectetur"> <?php echo limit_words($row->tulisan_isi,30).'...';?>
                         </div>
-                          <a href="<?php echo site_url('berita/'.$row->tulisan_slug);?>" class="">Read More</a>
+                        
+                          <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="">Read More</a>
                     </div>
                 </div>
                 <nav>

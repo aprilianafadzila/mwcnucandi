@@ -85,7 +85,7 @@ if (!function_exists('generate_tag_url_redaksi')) {
 
 }
 
-//get shop name
+//get kanal name
 
 if (!function_exists('get_kanal')) {
 
@@ -104,6 +104,37 @@ if (!function_exists('get_kanal')) {
 
     }
 
+}
 
+//generate kanal url
+
+if (!function_exists('generate_url')) {
+
+    function generate_url($depan,$tag)
+
+    {
+
+        if (!empty($tag)) {
+
+            return base_url() . $depan.'?menu=' . $tag;
+
+        }
+
+    }
+
+}
+
+//generate  url detail
+
+if (!function_exists('generate_url_detail')) {
+
+    function generate_url_detail($depan,$ranting,$slug)
+
+    {
+
+            return base_url() . $depan.'?menu=' . $ranting .'&slug='. $slug;
+
+
+    }
 
 }

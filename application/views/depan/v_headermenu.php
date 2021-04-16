@@ -56,7 +56,9 @@
                          aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle"><b>KANAL</b></h7><span class="sr-only">(current)</span></a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
                         <?php foreach ($kanal as $row) : ?>
-                          <a class="dropdown-item" href="<?php ?>"><?php echo $row->nama;?></a>
+                            <?php $depan = strtolower($row->subcategori) ?>
+                            <?php $slug = generate_slug($row->nama); ?>
+                          <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
                         <?php endforeach;?>
                       </div>
                   </li>

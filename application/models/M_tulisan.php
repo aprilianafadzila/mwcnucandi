@@ -62,4 +62,12 @@ class M_tulisan extends CI_Model{
 	public function get_all_tag(){
 				return $this->db->get('tbl_kategori')->result();
 	}
+
+	public function get_all_tulisan_by_slug($id){
+
+		$this->db->select('*');
+    	$this->db->from('tbl_komentar');
+    	$this->db->where('komentar_tulisan_id', $id);
+    	return $this->db->get()->result();
+	}
 }
