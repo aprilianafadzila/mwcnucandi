@@ -207,7 +207,7 @@ if (!function_exists('generate_url')) {
 
         if (!empty($tag)) {
 
-            $depan = strtolower(str_replace(" ", "-", $depan));
+            $depan = strtolower(explode(' ', $depan, )[0]);
             $tag = strtolower(str_replace(" ", "-", $tag));
 
             return base_url() . $depan.'?menu=' . $tag;
