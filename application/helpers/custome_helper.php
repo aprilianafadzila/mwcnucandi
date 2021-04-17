@@ -99,13 +99,104 @@ if (!function_exists('get_kanal')) {
 
         $id = 1;
 
+
         return $ci->m_header->get_data_kanal($id);
+    }
+
+}
+//get tentang
+if (!function_exists('get_tentang')) {
 
 
+
+    function get_tentang() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+        $id = 5;
+
+
+        return $ci->m_header->get_data_kanal($id);
     }
 
 }
 
+//get lembaga
+
+if (!function_exists('get_lembaga')) {
+
+
+
+    function get_lembaga() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+        $id = 2;
+
+
+        return $ci->m_header->get_data_kanal($id);
+    }
+
+}
+
+//get Badanotonom
+if (!function_exists('get_badanotonom')) {
+
+
+
+    function get_badanotonom() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+        $id = 3;
+
+
+        return $ci->m_header->get_data_kanal($id);
+    }
+
+}
+//get ranting
+if (!function_exists('get_ranting')) {
+
+
+
+    function get_ranting() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+        $id = 4;
+
+
+        return $ci->m_header->get_data_kanal($id);
+    }
+
+}
+//get ranting
+if (!function_exists('get_redaksi')) {
+
+
+
+    function get_redaksi() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+        $id = 6;
+
+
+        return $ci->m_header->get_data_kanal($id);
+    }
+
+}
 //generate kanal url
 
 if (!function_exists('generate_url')) {

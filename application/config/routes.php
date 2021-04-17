@@ -289,6 +289,7 @@ $route['rantingkedungpeluk']='rantingkedungpeluk/index';
 $route['rantingkedungpeluk/(:any)']='rantingkedungpeluk/detail/$1';
 
 $route['kanal/(:any)']='kanal/detail/$1';
+$route['tentang/(:any)']='kanal/detail/$1';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

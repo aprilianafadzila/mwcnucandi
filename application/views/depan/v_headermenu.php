@@ -42,6 +42,11 @@
 </style>
 
 <?php $kanal = get_kanal();?>
+<?php $tentang = get_tentang();?>
+<?php $lembaga = get_lembaga();?>
+<?php $badanotonom = get_badanotonom();?>
+<?php $ranting = get_ranting();?>
+<?php $redaksi = get_redaksi();?>
 
     <div class="container padding_786">
         <nav class="navbar navbar-toggleable-md navbar-light ">
@@ -66,79 +71,44 @@
                       <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
                          aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">TENTANG NU CANDI</h7><span class="sr-only">(current)</span></a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="sejarah">Sejarah NU Candi</a>
-                          <a class="dropdown-item" href="kantor">Kantor</a>
-                          <a class="dropdown-item" href="pengurus">Pengurus</a>
-                          <a class="dropdown-item" href="tokoh">Tokoh</a>
+                        <?php foreach ($tentang as $row) : ?>
+                            <?php $depan = strtolower($row->subcategori) ?>
+                            <?php $slug = generate_slug($row->nama); ?>
+                          <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                        <?php endforeach;?>
                       </div>
                   </li>
                   <li class="nav-item dropdown">
                       <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
                          aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">LEMBAGA NU</h7><span class="sr-only">(current)</span></a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="aswajanucenter">Aswaja NU Center</a>
-                          <a class="dropdown-item" href="laziznu">LAZISNU</a>
-                          <a class="dropdown-item" href="ldnu">LDNU</a>
-                          <a class="dropdown-item" href="lknu">LKNU</a>
-                          <a class="dropdown-item" href="lakpesdam">LAKPESDAM</a>
-                          <a class="dropdown-item" href="lbmnu">LBMNU</a>
-                          <a class="dropdown-item" href="lesbumi">LESBUMI NU</a>
-                          <a class="dropdown-item" href="lfnu">LFNU</a>
-                          <a class="dropdown-item" href="lkknu">LKKNU</a>
-                          <a class="dropdown-item" href="lpmaarifnu">LP MA'ARIF NU</a>
-                          <a class="dropdown-item" href="lpbhnu">LPBHNU</a>
-                          <a class="dropdown-item" href="lpbinu">LPBI NU</a>
-                          <a class="dropdown-item" href="lpnu">LPNU</a>
-                          <a class="dropdown-item" href="lppnu">LPPNU</a>
-                          <a class="dropdown-item" href="lptnu">LPTNU</a>
-                          <a class="dropdown-item" href="ltmnu">LTMNU</a>
-                          <a class="dropdown-item" href="ltnnu">LTNNU</a>
-                          <a class="dropdown-item" href="lwpnu">LWPNU</a>
-                          <a class="dropdown-item" href="rminu">RMI NU</a>
+                        <?php foreach ($lembaga as $row) : ?>
+                            <?php $depan = strtolower($row->subcategori) ?>
+                            <?php $slug = generate_slug($row->nama); ?>
+                          <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                        <?php endforeach;?>
                       </div>
                   </li>
                   <li class="nav-item dropdown">
                       <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
                          aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">BADAN OTONOM</h7><span class="sr-only">(current)</span></a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                          <a class="dropdown-item" href="ansor">GP ANSOR</a>
-                          <a class="dropdown-item" href="fatayat">FATAYAT</a>
-                          <a class="dropdown-item" href="muslimat">MUSLIMAT</a>
-                          <a class="dropdown-item" href="ipnu">IPNU-IPPNU</a>
-                          <a class="dropdown-item" href="pagarnusa">Pagar Nusa</a>
-                          <a class="dropdown-item" href="ishari">ISHARI</a>
-                          <a class="dropdown-item" href="jatmannu">JATMAN NU</a>
+                        <?php foreach ($badanotonom as $row) : ?>
+                            <?php $depan = strtolower($row->subcategori) ?>
+                            <?php $slug = generate_slug($row->nama); ?>
+                          <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                        <?php endforeach;?>
                       </div>
                   </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">RANTING</h7><span class="sr-only">(current)</span></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="rantingsepande">Ranting Sepande</a>
-                            <a class="dropdown-item" href="rantingsumokali">Ranting Sumokali</a>
-                            <a class="dropdown-item" href="rantingtenggulunan">Ranting Tenggulunan</a>
-                            <a class="dropdown-item" href="rantingsugihwaras">Ranting Sugihwaras</a>
-                            <a class="dropdown-item" href="rantingkedungkendo">Ranting Kedungkendo</a>
-                            <a class="dropdown-item" href="rantinglarangan">Ranting Larangan</a>
-                            <a class="dropdown-item" href="rantingsidodadi">Ranting Sidodadi</a>
-                            <a class="dropdown-item" href="rantingcandi">Ranting Candi</a>
-                            <a class="dropdown-item" href="rantingjambangan">Ranting Jambangan</a>
-                            <a class="dropdown-item" href="rantinggelam">Ranting Gelam</a>
-                            <a class="dropdown-item" href="rantingbligo">Ranting Bligo</a>
-                            <a class="dropdown-item" href="rantingkerangtanjung">Ranting Kerangtanjung</a>
-                            <a class="dropdown-item" href="rantingsumorame">Ranting Sumorame</a>
-                            <a class="dropdown-item" href="rantingbalongdowo">Ranting Balongdowo</a>
-                            <a class="dropdown-item" href="rantingbalonggabus">Ranting Balonggabus</a>
-                            <a class="dropdown-item" href="rantingwedoroklurak">Ranting Wedoroklurak</a>
-                            <a class="dropdown-item" href="rantingklurak">Ranting Klurak</a>
-                            <a class="dropdown-item" href="rantingkebonsari">Ranting Kebonsari</a>
-                            <a class="dropdown-item" href="rantingdurungbedug">Ranting Durung Bedug</a>
-                            <a class="dropdown-item" href="rantingdurungbanjar">Ranting Durung Banjar</a>
-                            <a class="dropdown-item" href="rantingngampelsari">Ranting Ngampelsari</a>
-                            <a class="dropdown-item" href="rantingkalipecabean">Ranting Kalipecabean</a>
-                            <a class="dropdown-item" href="rantingkendalpecabean">Ranting Kendalpecabean</a>
-                            <a class="dropdown-item" href="rantingkedungpeluk">Ranting Kedungpeluk</a>
-
+                          <?php foreach ($ranting as $row) : ?>
+                              <?php $depan = strtolower($row->subcategori) ?>
+                              <?php $slug = generate_slug($row->nama); ?>
+                            <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                          <?php endforeach;?>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
