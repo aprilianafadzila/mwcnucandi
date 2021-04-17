@@ -117,6 +117,7 @@
 <div class="container-fluid pb-4 pt-4 paddding" style="background:#ffffff;">
     <div class="container paddding">
         <div class="row mx-0">
+
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
                 <div>
                     <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b><?php foreach ($post as $row) : ?> <?php echo $row->nama_ranting;?> <?php endforeach;?></b></div>
@@ -147,7 +148,7 @@
                         <div class="c_g"><?php echo $row->tulisan_author;?> - <i class=""></i><?php echo $row->tulisan_tanggal;?></div>
                         <div class="fh5co_consectetur"> <?php echo limit_words($row->tulisan_isi,30).'...';?>
                         </div>
-                        
+
                           <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="">Read More</a>
                     </div>
                 </div>
