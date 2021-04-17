@@ -70,13 +70,13 @@ class Kanal extends CI_Controller{
 				
 				$this->db->select('tbl_blog.*, tbl_jenis_kategori.id as id_kategori ,tbl_jenis_kategori.nama as kategori_nama, tbl_ranting.nama as nama_ranting');
 	        	$this->db->from('tbl_blog');
-	        	$this->db->join('tbl_jenis_kategori','tbl_blog.id_ranting = tbl_jenis_kategori.id','left');
-	        	$this->db->join('tbl_ranting','tbl_blog.id_jenis_kategori = tbl_ranting.id','left');
+	        	$this->db->join('tbl_jenis_kategori','tbl_blog.id_jenis_kategori = tbl_jenis_kategori.id','left');
+	        	$this->db->join('tbl_ranting','tbl_blog.id_ranting = tbl_ranting.id','left');
 
 
-	        	$this->db->where('tbl_jenis_kategori.id', 1);
+	        	$this->db->where('tbl_blog.id_jenis_kategori', 1);
 	        	$this->db->where('tbl_ranting.nama', $x['menu']);
-	        	$x['post'] = $this->db->get()->result();
+	        	$x['post'] = $this->db->get()->result(); //print_r($x['post']); die();
 
 	        	$view = 'depan/v_blog';
 
@@ -86,16 +86,22 @@ class Kanal extends CI_Controller{
 
 				$this->db->select('tbl_blog.*, tbl_jenis_kategori.id as id_kategori ,tbl_jenis_kategori.nama as kategori_nama, tbl_ranting.nama as nama_ranting');
 	        	$this->db->from('tbl_blog');
-	        	$this->db->join('tbl_jenis_kategori','tbl_blog.id_ranting = tbl_jenis_kategori.id','left');
-	        	$this->db->join('tbl_ranting','tbl_blog.id_jenis_kategori = tbl_ranting.id','left');
+	        	$this->db->join('tbl_jenis_kategori','tbl_blog.id_jenis_kategori = tbl_jenis_kategori.id','left');
+	        	$this->db->join('tbl_ranting','tbl_blog.id_ranting = tbl_ranting.id','left');
 	        	$this->db->where('tbl_jenis_kategori.id', 1);
 	        	$this->db->where('tbl_ranting.nama', $x['menu']);
 	        	$this->db->where('tbl_blog.tulisan_slug', $x['slug']);
 	        	$x['post'] = $this->db->get()->result();
 
 	        	$query = $this->db->get_where('tbl_tulisan', array('tulisan_slug' => $x['slug']));
-	        	$b=$query->row_array();
-				$id=$b['tulisan_id']; //print_r($id); die();
+	        	$b=$query->row_array(); //print_r($b); die();
+
+	        	if (!empty($b)) {
+	        		$id=$b['tulisan_id']; 
+	        	} else {
+	        		$id=0;
+	        	}
+				
 
 	        	$x['show_komentar']=$this->m_tulisan->get_all_tulisan_by_slug($id); //print_r($x['show_komentar']); die();
 
