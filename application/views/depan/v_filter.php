@@ -17,7 +17,7 @@
 }
 </style>
 
-<body style="background:#4dab73;">
+<body>
 <div class="padding-page">
 <?php
  $this->load->view('depan/v_header');
@@ -76,7 +76,8 @@
                 <div class="clearfix"></div>
                 <div class="fh5co_tags_all">
                   <?php foreach ($category->result() as $row) : ?>
-                    <a href="#" class="fh5co_tagg"><?php echo $row->kategori_nama;?></a>
+                     <?php $slug = generate_slug($row->kategori_nama); ?>
+                    <a href="<?php echo generate_tag_url($slug)?>" class="fh5co_tagg"><?php echo $row->kategori_nama;?></a>
                   <?php endforeach;?>
                 </div>
                 <div>

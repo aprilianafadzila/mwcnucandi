@@ -55,20 +55,20 @@ class Kanal extends CI_Controller{
 						$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
 						$slug = $this->m_tulisan->get_all_tag();
 
-			$data = array(
+						$data = array(
 
 	            'menu' => str_replace("-", " ", $this->input->get('menu',true)),
 
 	            'slug' => $this->input->get('slug', true),
- 
-        	);
 
-			$x['menu'] = $data['menu'];
-			$x['slug'] = $data['slug'];
+        		);
 
-			if (!empty($x['menu'])) {
-				
-				$this->db->select('tbl_blog.*, tbl_jenis_kategori.id as id_kategori ,tbl_jenis_kategori.nama as kategori_nama, tbl_ranting.nama as nama_ranting');
+						$x['menu'] = $data['menu'];
+						$x['slug'] = $data['slug'];
+
+						if (!empty($x['menu'])) {
+
+						$this->db->select('tbl_blog.*, tbl_jenis_kategori.id as id_kategori ,tbl_jenis_kategori.nama as kategori_nama, tbl_ranting.nama as nama_ranting');
 	        	$this->db->from('tbl_blog');
 	        	$this->db->join('tbl_jenis_kategori','tbl_blog.id_ranting = tbl_jenis_kategori.id','left');
 	        	$this->db->join('tbl_ranting','tbl_blog.id_jenis_kategori = tbl_ranting.id','left');
@@ -102,10 +102,10 @@ class Kanal extends CI_Controller{
 	        	$view = 'depan/v_blog_detail';
 
 			}
-			
+
 			$this->load->view($view, $x);
 
-				
+
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);

@@ -52,6 +52,9 @@ class Filter extends CI_Controller{
 						$x['contact']=$this->m_datayayasan->get_all_datatk();
 						$x['all_galeri']=$this->m_galeri->get_all_galeri();
 						$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
+						$x['title'] = 'mwcnucandi';
+						$x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
+						$x['keywords'] = 'tag mwcnucandi, politik, sains dan teknologi, informasi mwcnucandi, artikel terbaru mwcnucandi, berita terbaru mwcnucandi, mwcnucandi Sidoarjo';
 
 						$tag = str_replace("-", " ", $this->input->get('tag',true)) ;
 						$x['tag'] = $tag;

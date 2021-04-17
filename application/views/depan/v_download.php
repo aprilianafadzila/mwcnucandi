@@ -17,7 +17,7 @@
 }
 </style>
 
-<body style="background:#4dab73;">
+<body>
 <div class="padding-page">
 <?php
  $this->load->view('depan/v_header');
