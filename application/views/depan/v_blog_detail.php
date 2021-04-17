@@ -384,7 +384,12 @@
 <!--============================= BLOG =============================-->
 <section class="blog-wrap">
   <?php foreach ($post as $row) : ?>
-    <?php $id_tulisan = $row->tulisan_id; ?>
+    <?php 
+      $id_tulisan = $row->tulisan_id;
+      $depan = $row->kategori_nama;
+      $tengah = $row->nama_ranting;
+      $belakang = $row->tulisan_slug;
+    ?>
     <div class="container"> 
         <div class="row">
             <div class="col-md-8">
@@ -483,6 +488,9 @@
                             <div class="tab-pane" id="write-comment" role="tabpanel">
                               <a class="nav-link active" data-toggle="" role=""><center><h5><b>TINGGALKAN KOMENTAR</b></h5></a>
                               <form action="<?php echo site_url('blog/komentar');?>" method="post" class="row" id="fh5co_contact_form">
+                                <input type="hidden" name="depan" value="<?php echo $depan;?>">
+                                <input type="hidden" name="tengah" value="<?php echo $tengah;?>">
+                                <input type="hidden" name="belakang" value="<?php echo $belakang;?>">
                                   <div class="col-12 py-3">
                                       <input type="text" name="nama" class="form-control fh5co_contact_text_box" placeholder="Enter Your Name" />
                                   </div>

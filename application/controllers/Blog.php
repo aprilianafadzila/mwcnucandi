@@ -146,21 +146,27 @@ class Blog extends CI_Controller{
 				$nama = htmlspecialchars($this->input->post('nama',TRUE),ENT_QUOTES);
 				$email = htmlspecialchars($this->input->post('email',TRUE),ENT_QUOTES);
 				$komentar = nl2br(htmlspecialchars($this->input->post('komentar',TRUE),ENT_QUOTES));
+
+				$depan = nl2br(htmlspecialchars($this->input->post('depan',TRUE),ENT_QUOTES));
+				$tengah = nl2br(htmlspecialchars($this->input->post('tengah',TRUE),ENT_QUOTES));
+				$belakang = nl2br(htmlspecialchars($this->input->post('belakang',TRUE),ENT_QUOTES));
+
 				if(empty($nama) || empty($email)){
 					$this->session->set_flashdata('msg','<div class="alert alert-danger">Masukkan input dengan benar.</div>');
 					redirect('artikel/'.$slug);
 				}else{
 					$data = array(
-			        'komentar_nama' 			=> $nama,
-			        'komentar_email' 			=> $email,
-			        'komentar_isi' 				=> $komentar,
-							'komentar_status' 		=> 0,
-							'komentar_tulisan_id' => $kode
+				        'komentar_nama' 	=> $nama,
+				        'komentar_email' 	=> $email,
+				        'komentar_isi' 		=> $komentar,
+						'komentar_status' 	=> 0,
+						'komentar_tulisan_id' => $kode
 					);
 
 					$this->db->insert('tbl_komentar', $data);
 					$this->session->set_flashdata('msg','<div class="alert alert-info">Komentar Anda akan tampil setelah moderasi.</div>');
-					redirect('berita/'.$slug);
+					redirect( generate_url_route($depan, $tengah, $belakang));
+
 				}
 		}
 

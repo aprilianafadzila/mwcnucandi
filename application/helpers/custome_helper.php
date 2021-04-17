@@ -197,6 +197,7 @@ if (!function_exists('get_redaksi')) {
     }
 
 }
+
 //generate kanal url
 
 if (!function_exists('generate_url')) {
@@ -218,6 +219,26 @@ if (!function_exists('generate_url')) {
 
 }
 
+//generate kanal url
+
+if (!function_exists('generate_url_route')) {
+
+    function generate_url_route($depan,$tengah,$belakang)
+
+    {
+
+        if (!empty($depan) AND !empty($tengah) AND !empty($belakang)) {
+
+             $depan = strtolower(str_replace(" ", "", $depan));
+             $tengah = strtolower(str_replace(" ", "-", $tengah));
+            return base_url() . $depan.'?menu=' . $tengah .'&slug='. $belakang;
+
+        }
+
+    }
+
+}
+
 //generate  url detail
 
 if (!function_exists('generate_url_detail')) {
@@ -226,6 +247,7 @@ if (!function_exists('generate_url_detail')) {
 
     {
         $depan = strtolower(str_replace(" ", "", $depan));
+        $ranting = strtolower(str_replace(" ", "-", $ranting));
         return base_url() . $depan.'?menu=' . $ranting .'&slug='. $slug;
 
 
