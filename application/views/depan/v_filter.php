@@ -46,6 +46,10 @@
 
                 <?php echo $this->session->flashdata('msg');?>
                 <?php foreach ($post as $row) : ?>
+                  <?php $depan = strtolower($row->kategori_nama) ?>
+                  <?php $ranting = strtolower($row->nama_ranting) ?>
+                  <?php $slug = generate_slug($row->tulisan_slug); ?>
+
                 <div class="row pb-4">
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
@@ -55,7 +59,7 @@
                         </div>
                     </div>
                     <div class="col-md-7 animate-box"><br><br>
-                        <a href="<?php echo generate_tag_url_redaksi($row->tulisan_slug)?>" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a> <a href="#" class="fh5co_mini_time py-3"> </a>
+                        <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a> <a href="#" class="fh5co_mini_time py-3"> </a>
                         <br>
 
                         <a class="fh5co_mini_time py-3"> <i class="fa fa-user" aria-hidden="true"></i> <span> <?php echo $row->tulisan_author;?> |
@@ -63,7 +67,7 @@
                           <br>
                         <div class="fh5co_consectetur"> <?php echo $row->tulisan_isi;?>
                         </div>
-                          <a href="#" class="">Read More</a>
+                          <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="">Read More</a>
                     </div>
                 </div>
                 <?php endforeach;?>
@@ -83,13 +87,18 @@
                 <div>
                     <div class="fh5co_heading fh5co_heading_border_bottom pt-3 py-2 mb-4"><b>BERITA POPULER</b></div>
                 </div>
-                  <?php foreach ($populer->result() as $row) :?>
+                <?php echo $this->session->flashdata('msg');?>
+                <?php foreach ($post as $row) : ?>
+
+                    <?php $depan = strtolower($row->kategori_nama) ?>
+                    <?php $ranting = strtolower($row->nama_ranting) ?>
+                    <?php $slug = generate_slug($row->tulisan_slug); ?>
                 <div class="row pb-3">
                     <div class="col-5 align-self-center">
                         <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="img" class="fh5co_most_trading"/>
                     </div>
                     <div class="col-7 paddding">
-                      <div class="most_fh5co_treding_font"><a href="<?php echo site_url('berita/'.$row->tulisan_slug);?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></div>
+                      <div class="most_fh5co_treding_font"><a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></div>
                       <div class="most_fh5co_treding_font_123"> <?php echo $row->tulisan_author;?> | <?php echo $row->tulisan_tanggal;?></div>
                     </div>
                 </div>

@@ -79,7 +79,7 @@
 
           <div class="box">
             <div class="box-header">
-              <a class="btn btn-success btn-flat" href="<?php echo base_url().'admin/tulisan/add_tulisan'?>"><span class="fa fa-plus"></span> Post Tulisan</a>
+              <a class="btn btn-success btn-flat" href="<?php echo base_url().'admin/redaksi/add_tulisan'?>"><span class="fa fa-plus"></span> Post Tulisan</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

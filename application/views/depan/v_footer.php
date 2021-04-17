@@ -71,9 +71,14 @@
 
             <div class="col-12 col-md-5 col-lg-3 position_footer_relative">
                 <div class="footer_main_title py-3"> Most Viewed Posts</div>
-                <?php foreach ($populer->result() as $row) :?>
+                <?php echo $this->session->flashdata('msg');?>
+                <?php foreach ($post as $row) : ?>
+
+                    <?php $depan = strtolower($row->kategori_nama) ?>
+                    <?php $ranting = strtolower($row->nama_ranting) ?>
+                    <?php $slug = generate_slug($row->tulisan_slug); ?>
                 <div class="footer_makes_sub_font"><?php echo $row->tulisan_tanggal;?></div>
-                <a href="<?php echo site_url('aswaja/'.$row->tulisan_slug);?>" class="footer_post pb-4"> <?php echo limit_words($row->tulisan_judul,3).'...';?> </a>
+                <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="footer_post pb-4"> <?php echo limit_words($row->tulisan_judul,3).'...';?> </a>
       <?php endforeach;?>
             </div>
             <div class="col-12 col-md-12 col-lg-4 ">

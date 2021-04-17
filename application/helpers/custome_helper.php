@@ -225,8 +225,8 @@ if (!function_exists('generate_url_detail')) {
     function generate_url_detail($depan,$ranting,$slug)
 
     {
-
-            return base_url() . $depan.'?menu=' . $ranting .'&slug='. $slug;
+        $depan = strtolower(str_replace(" ", "", $depan));
+        return base_url() . $depan.'?menu=' . $ranting .'&slug='. $slug;
 
 
     }
