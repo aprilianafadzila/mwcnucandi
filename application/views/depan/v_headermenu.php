@@ -115,7 +115,7 @@
                         <a class="nav-link " href="download" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="" >DOWNLOAD</h7><span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link " href="redaksi" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="">REDAKSI</h7><span class="sr-only">(current)</span></a>
+                        <a class="nav-link " href="kantor" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="">KANTOR</h7><span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
