@@ -93,17 +93,19 @@ class Tentang extends CI_Controller{
 	        	$this->db->where('tbl_blog.tulisan_slug', $x['slug']);
 	        	$x['post'] = $this->db->get()->result();
 
-	        	$query = $this->db->get_where('tbl_tulisan', array('tulisan_slug' => $x['slug']));
+	        	$query = $this->db->get_where('tbl_blog', array('tulisan_slug' => $x['slug']));
 	        	$b=$query->row_array(); //print_r($b); die();
 
 	        	if (!empty($b)) {
-	        		$id=$b['tulisan_id'];
+	        		$id=$b['tulisan_id']; 
 	        	} else {
 	        		$id=0;
 	        	}
+				//print_r($id); die();
 
+				$this->db->query("UPDATE tbl_blog SET tulisan_views=tulisan_views+1 WHERE tulisan_id='$id'");
 
-	        	$x['show_komentar']=$this->m_tulisan->get_all_tulisan_by_slug($id); //print_r($x['show_komentar']); die();
+	        	$x['show_komentar']=$this->m_tulisan->get_all_tulisan_by_slug($id);
 
 	        	$view = 'depan/v_blog_detail';
 

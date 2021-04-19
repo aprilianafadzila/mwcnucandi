@@ -10,7 +10,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>MWCNU CANDI Sidoarjo</title>
+    <title><?php echo $title;?></title>
     <link rel="shorcut icon" href="<?php echo base_url().'images/logo1.png'?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url().'theme/css/bootstrap.min.css'?>">
@@ -384,8 +384,13 @@
 <!--============================= BLOG =============================-->
 <section class="blog-wrap">
   <?php foreach ($post as $row) : ?>
-    <?php $id_tulisan = $row->tulisan_id; ?>
-    <div class="container">
+    <?php 
+      $id_tulisan = $row->tulisan_id;
+      $depan = $row->kategori_nama;
+      $tengah = $row->nama_ranting;
+      $belakang = $row->tulisan_slug;
+    ?>
+    <div class="container"> 
         <div class="row">
             <div class="col-md-8">
                 <div class="blog-img_block">
@@ -483,6 +488,9 @@
                             <div class="tab-pane" id="write-comment" role="tabpanel">
                               <a class="nav-link active" data-toggle="" role=""><center><h5><b>TINGGALKAN KOMENTAR</b></h5></a>
                               <form action="<?php echo site_url('blog/komentar');?>" method="post" class="row" id="fh5co_contact_form">
+                                <input type="hidden" name="depan" value="<?php echo $depan;?>">
+                                <input type="hidden" name="tengah" value="<?php echo $tengah;?>">
+                                <input type="hidden" name="belakang" value="<?php echo $belakang;?>">
                                   <div class="col-12 py-3">
                                       <input type="text" name="nama" class="form-control fh5co_contact_text_box" placeholder="Enter Your Name" />
                                   </div>
@@ -519,15 +527,10 @@
               <hr>
                 <div class="blog-featured_post" >
                     <h3>Populer</h3>
-                    <?php echo $this->session->flashdata('msg');?>
-                    <?php foreach ($post as $row) : ?>
-
-                        <?php $depan = strtolower($row->kategori_nama) ?>
-                        <?php $ranting = strtolower($row->nama_ranting) ?>
-                        <?php $slug = generate_slug($row->tulisan_slug); ?>
-                        <div  class="user blog-featured-img_block">
+                  <?php foreach ($populer->result() as $row) :?>
+                    <div  class="user blog-featured-img_block">
                         <img width="35%" src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img">
-                        <h5><a class="user-data" href="<?php echo generate_url_detail($depan, $ranting, $slug)?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></h5>
+                        <h5><a class="user-data" href="<?php echo site_url('artikel/'.$row->tulisan_slug);?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></h5>
                         <p><?php echo limit_words($row->tulisan_isi,5).'...';?></p>
                     </div>
                     <hr>
@@ -549,7 +552,7 @@
             </div>
         </div>
     </div>
-
+    
 </section>
 <div class="container-fluid fh5co_footer_bg pb-3">
 

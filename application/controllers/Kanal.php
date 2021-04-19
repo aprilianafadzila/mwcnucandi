@@ -93,7 +93,7 @@ class Kanal extends CI_Controller{
 	        	$this->db->where('tbl_blog.tulisan_slug', $x['slug']);
 	        	$x['post'] = $this->db->get()->result();
 
-	        	$query = $this->db->get_where('tbl_tulisan', array('tulisan_slug' => $x['slug']));
+	        	$query = $this->db->get_where('tbl_blog', array('tulisan_slug' => $x['slug']));
 	        	$b=$query->row_array(); //print_r($b); die();
 
 	        	if (!empty($b)) {
@@ -101,9 +101,11 @@ class Kanal extends CI_Controller{
 	        	} else {
 	        		$id=0;
 	        	}
-				
+				//print_r($id); die();
 
-	        	$x['show_komentar']=$this->m_tulisan->get_all_tulisan_by_slug($id); //print_r($x['show_komentar']); die();
+				$this->db->query("UPDATE tbl_blog SET tulisan_views=tulisan_views+1 WHERE tulisan_id='$id'");
+
+	        	$x['show_komentar']=$this->m_tulisan->get_all_tulisan_by_slug($id);
 
 	        	$view = 'depan/v_blog_detail';
 
@@ -211,8 +213,8 @@ class Kanal extends CI_Controller{
 			        'komentar_nama' 			=> $nama,
 			        'komentar_email' 			=> $email,
 			        'komentar_isi' 				=> $komentar,
-							'komentar_status' 		=> 0,
-							'komentar_tulisan_id' => $kode
+					'komentar_status' 		=> 0,
+					'komentar_tulisan_id' => $kode
 					);
 
 					$this->db->insert('tbl_komentar', $data);

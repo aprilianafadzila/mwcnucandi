@@ -68,6 +68,7 @@ class M_tulisan extends CI_Model{
 		$this->db->select('*');
     	$this->db->from('tbl_komentar');
     	$this->db->where('komentar_tulisan_id', $id);
+    	$this->db->where('komentar_status', 1);
     	return $this->db->get()->result();
 	}
 }
