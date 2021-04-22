@@ -26,10 +26,10 @@ class Home extends CI_Controller{
 			$x['berita']=$this->m_tulisan->get_berita_home();
 			$x['pengumuman']=$this->m_pengumuman->get_pengumuman_home();
 			$x['all_galeri']=$this->m_galeri->get_all_galeri();
-			$x['data']=$this->m_kepalayayasan->get_pengumuman_home();
+			$x['data']=$this->m_tulisan->get_all_tulisan();
 			$x['redaksi']=$this->m_redaksi->get_all_redaksi();
 			$x['agenda']=$this->m_agenda->get_agenda_home();
-			$x['ansor']=$this->m_ansor->get_all_ansor();
+			$x['banom']=$this->m_tulisan->get_all_banom();
 			$x['profil']=$this->m_profiltk->get_all_tulisan();
 			$x['contact']=$this->m_datayayasan->get_all_datatk();
 			$x['tot_guru']=$this->db->query("SELECT * FROM tbl_guru WHERE guru_status = 'Aktif'")->num_rows();

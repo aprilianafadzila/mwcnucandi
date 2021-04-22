@@ -80,13 +80,18 @@
       </span>
     </a>
   </li>
-  <li>
-    <a href="<?php echo base_url().'admin/profiltk'?>">
-      <i class="fa fa-database"></i> <span>DATA PROFIL</span>
+   <li class="treeview">
+    <a href="#">
+      <i class="fa fa-database"></i>
+      <span>DATA PROFIL</span>
       <span class="pull-right-container">
-        <small class="label pull-right"></small>
+        <i class="fa fa-angle-left pull-right"></i>
       </span>
     </a>
+    <ul class="treeview-menu">
+      <li><a href="<?php echo base_url().'admin/datayayasan'?>"><i class="fa fa-"></i>KONTAK</a></li>
+      <li><a href="<?php echo base_url().'admin/profiltk'?>"><i class="fa fa-"></i>PROFIL</a></li>
+    </ul>
   </li>
   <li>
     <a href="<?php echo base_url().'admin/pengguna'?>">

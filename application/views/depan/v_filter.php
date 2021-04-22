@@ -53,12 +53,12 @@
                 <div class="row pb-4">
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
-                            <div class="fh5co_news_img">
-                            <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt=""/></div>
-                            <div></div>
+                            <div class="col-20 align-self-center">
+                            <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img"/></div>
+                           
                         </div>
                     </div>
-                    <div class="col-md-7 animate-box"><br><br>
+                    <div class="col-md-7 animate-box">
                         <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a> <a href="#" class="fh5co_mini_time py-3"> </a>
                         <br>
 
@@ -70,12 +70,13 @@
                           <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="">Read More</a>
                     </div>
                 </div>
+                <hr>
                 <?php endforeach;?>
 
             </div>
             <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
                 <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"></b>TAGS</b></div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"></b>TAGS</div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="fh5co_tags_all">
@@ -95,7 +96,7 @@
                     <?php $slug = generate_slug($row->tulisan_slug); ?>
                 <div class="row pb-3">
                     <div class="col-5 align-self-center">
-                        <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="img" class="fh5co_most_trading"/>
+                        <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img"/>
                     </div>
                     <div class="col-7 paddding">
                       <div class="most_fh5co_treding_font"><a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></div>
@@ -111,7 +112,7 @@
 <div class="container-fluid fh5co_video_news_bg pb-4" style="background:#ffffff; ">
     <div class="container animate-box" data-animate-effect="fadeIn">
         <div>
-            <div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4  text-white">VIDEO TERBARU</div>
+            <div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4  text-black"><b>VIDEO TERBARU</div>
         </div>
         <?php
          $this->load->view('depan/v_youtube');

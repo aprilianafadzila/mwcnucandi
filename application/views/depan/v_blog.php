@@ -37,7 +37,10 @@
 
     <div class="mx-0" style="display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; margin-right: -15px; margin-left: -15px;">
         <div class="slider col-md-8 col-16 paddding animate-box" data-animate-effect="fadeIn" style="padding-left: 0px !important; padding-right: 5px !important;">
-          <?php foreach ($data->result() as $row) : ?>
+          <?php foreach ($post as $row) : ?>
+             <?php $depan = strtolower($row->kategori_nama) ?>
+                    <?php $ranting = strtolower($row->nama_ranting) ?>
+                    <?php $slug = generate_slug($row->tulisan_slug); ?>
             <div  class="slide">
             <div class="fh5co_suceefh5co_height">
               <div class="course-content">
@@ -54,7 +57,7 @@
                 <div class="fh5co_suceefh5co_height_position_absolute_font">
                     <div class=""><a href="#" class="color_fff"> <i class=" "></i><?php echo $row->tulisan_tanggal;?></a>
                   </div><br>
-                  <div class=""><a href="#" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
+                  <div class=""><a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
                   </div>
                     <div class=""><a href="" class="fh5co_good_font"> </a></div>
                 </div>
@@ -136,11 +139,11 @@
                         <div class="fh5co_hover_news_img">
 
                         <h6 style="background:#00702d; padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px;"><a class="text-white"><?php echo $row->nama_ranting;?></h6>
-                            <div class="fh5co_news_img">
+                            <div class="col-20 align-self-center">
 
 
-                            <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt=""/></div>
-                            <div></div>
+                            <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img"/></div>
+                            
                         </div>
                     </div>
                     <div class="col-md-7 animate-box"><br><br>
@@ -152,9 +155,8 @@
                           <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="">Read More</a>
                     </div>
                 </div>
-                <nav>
-                    <?php error_reporting(0); echo $page;?>
-                </nav>
+              
+                <hr>
                  <?php endforeach;?>
 
             </div>

@@ -39,7 +39,7 @@
 
     <div class="mx-0" style="display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; margin-right: -15px; margin-left: -15px;">
         <div class="slider col-md-8 col-16 paddding animate-box" data-animate-effect="fadeIn" style="padding-left: 0px !important; padding-right: 5px !important;">
-            <?php foreach ($ansor->result() as $row) : ?>
+            <?php foreach ($data->result() as $row) : ?>
             <div  class="slide">
             <div class="fh5co_suceefh5co_height">
               <div class="course-content">
@@ -56,7 +56,7 @@
                 <div class="fh5co_suceefh5co_height_position_absolute_font">
                     <div class=""><a href="#" class="color_fff"> <i class=" "></i><?php echo $row->tulisan_tanggal;?></a>
                   </div><br>
-                  <div class=""><a href="<?php echo site_url('ansor/'.$row->tulisan_slug);?>" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
+                  <div class=""><a href="<?php echo site_url('data/'.$row->tulisan_slug);?>" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
                   </div>
                     <div class=""><a href="#" class="fh5co_good_font">  </a></div>
                 </div>
@@ -123,9 +123,10 @@
             <div class="item px-2">
 
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt=""/></div>
+                    <div class="col-20 align-self-center"><img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img"/></div>
+                    <br>
                     <div>
-                        <a href="<?php echo site_url('berita/'.$row->tulisan_slug);?>" class="d-block fh5co_small_post_heading"><span class=""><?php echo $row->tulisan_judul;?></span></a>
+                        <a href="<?php echo site_url('berita/'.$row->tulisan_slug);?>" class="d-block fh5co_small_post_heading"><span class=""><b>"<?php echo $row->tulisan_judul;?>"</b></span></a>
                         <div class="c_g"><i class=" "></i> <?php echo $row->tulisan_tanggal;?></div>
                     </div>
                 </div>
@@ -137,26 +138,24 @@
 </div>
 
 <div class="padding-page">
-<div class="container-fluid pb-4 pt-4 paddding" style="background:#ffffff;">
+<div class="container-fluid pb-4 pt-5 paddding" style="background:#ffffff;">
     <div class="container paddding">
         <div class="row mx-0">
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
                 <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>REDAKSI TERBARU</b></div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>ARTIKEL TERBARU</b></div>
                 </div>
 
                 <div class="row pb-4">
 
-                                  <?php echo $this->session->flashdata('msg');?>
-                                  <?php foreach ($redaksi->result() as $row) : ?>
+                 <?php echo $this->session->flashdata('msg');?>
+                  <?php foreach ($banom->result() as $row) : ?>
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
 
                       <h6 class="text-white" style=" padding: 10px 15px; -moz-transition: all .5s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; display: inline-block; height: 30px; "><center><i> Redaksi </i></center></h6>
-                            <div class="fh5co_news_img">
-
-
-                            <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt=""/></div>
+                            <div class="col-20 align-self-center">
+                            <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="blog-featured-img" class="img-fluid"/></div>
                             <div></div>
                         </div>
                     </div>
@@ -178,7 +177,6 @@
 
             </div>
 
-          </div>
             <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
                 <div>
                     <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>TAGS</b></div>

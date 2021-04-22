@@ -31,8 +31,12 @@ class M_tulisan extends CI_Model{
 		$hsl=$this->db->query("SELECT tbl_blog.*,DATE_FORMAT(tulisan_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_blog where tulisan_img_slider='1' ORDER BY tulisan_id DESC");
 		return $hsl;
 	}
+	function get_all_banom(){
+		$hsl=$this->db->query("SELECT tbl_blog.*,DATE_FORMAT(tulisan_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_blog where id_jenis_kategori='3' ORDER BY tulisan_id DESC");
+		return $hsl;
+	}
 	function get_berita_home(){
-		$hsl=$this->db->query("SELECT tbl_blog.*,DATE_FORMAT(tulisan_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_blog ORDER BY tulisan_id DESC limit 4");
+		$hsl=$this->db->query("SELECT tbl_blog.*,DATE_FORMAT(tulisan_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_blog ORDER BY tulisan_id DESC");
 		return $hsl;
 	}
 

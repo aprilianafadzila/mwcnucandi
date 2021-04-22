@@ -38,23 +38,23 @@ class Blog extends CI_Controller{
 	          $config['first_tagl_close'] = '</span></li>';
 	          $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
 	          $config['last_tagl_close']  = '</span></li>';
-            $config['first_link'] = 'Awal';
+           	$config['first_link'] = 'Awal';
             $config['last_link'] = 'Akhir';
             $config['next_link'] = 'Next >>';
             $config['prev_link'] = '<< Prev';
             $this->pagination->initialize($config);
             $x['page'] =$this->pagination->create_links();
-						$x['data']=$this->m_tulisan->berita_perpage($offset,$limit);
-						$x['category']=$this->db->get('tbl_kategori');
-						$x['profil']=$this->m_profiltk->get_all_tulisan();
-						$x['contact']=$this->m_datayayasan->get_all_datatk();
-						$x['all_galeri']=$this->m_galeri->get_all_galeri();
-						$x['title'] = 'mwcnucandi';
+				$x['data']=$this->m_tulisan->berita_perpage($offset,$limit);
+				$x['category']=$this->db->get('tbl_kategori');
+				$x['profil']=$this->m_profiltk->get_all_tulisan();
+				$x['contact']=$this->m_datayayasan->get_all_datatk();
+				$x['all_galeri']=$this->m_galeri->get_all_galeri();
+				$x['title'] = 'mwcnucandi';
 		        $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
 		        $x['keywords'] = 'beritamwcnu, beritanu, berita terkini, berita terbaru Sidoarjo';
-						$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
-						$slug = $this->m_tulisan->get_all_tag();
-						$this->load->view('depan/v_blog',$x);
+				$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
+				$slug = $this->m_tulisan->get_all_tag();
+				$this->load->view('depan/v_blog',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);
