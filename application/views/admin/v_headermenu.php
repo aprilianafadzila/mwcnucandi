@@ -3,6 +3,7 @@
     $query2=$this->db->query("SELECT * FROM tbl_komentar WHERE komentar_status='0'");
     $jum_comment=$query2->num_rows();
     $jum_pesan=$query->num_rows();
+    $jenis_kategori = get_jenis_kategori();
 ?>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,17 +37,31 @@
       </span>
     </a>
   </li>
+  <li class="active">
+    <a href="<?php echo base_url().'admin/redaksi/add_tulisan'?>">
+      <i class="fa fa-pencil"></i> <span>POST ARTIKEL</span>
+      <span class="pull-right-container">
+        <small class="label pull-right"></small>
+      </span>
+    </a>
+  </li>
   <li class="treeview">
     <a href="#">
-      <i class="fa fa-pencil"></i>
-      <span>TULISAN</span>
+      <i class="fa fa-list"></i>
+      <span>LIST ARTIKEL</span>
       <span class="pull-right-container">
         <i class="fa fa-angle-left pull-right"></i>
       </span>
     </a>
     <ul class="treeview-menu">
-      <li><a href="<?php echo base_url().'admin/tulisan'?>"><i class="fa fa-"></i> LIST ARTIKEL</a></li>
-      <li><a href="<?php echo base_url().'admin/redaksi/add_tulisan'?>"><i class="fa fa-"></i> POST</a></li>
+      <?php foreach ($jenis_kategori as $row) : ?>
+        <?php 
+            $jenis = strtolower(str_replace(" ", "", $row->id));
+            $jeniss = strtoupper($row->nama);
+         ?>
+
+      <li><a href="<?php echo base_url().'admin/tulisan?jenis='.$jenis?>"><i class="fa fa-"></i>LIST <?php echo $jeniss; ?></a></li>
+      <?php endforeach;?>
     </ul>
   </li>
   <li>

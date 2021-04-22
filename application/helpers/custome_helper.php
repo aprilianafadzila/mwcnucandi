@@ -198,6 +198,42 @@ if (!function_exists('get_redaksi')) {
 
 }
 
+//get jenis kategori
+if (!function_exists('get_jenis_kategori')) {
+
+
+
+    function get_jenis_kategori() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+        $id = 6;
+
+
+        return $ci->m_header->get_jenis_kategori();
+    }
+
+}
+
+//get jenis kategori id
+if (!function_exists('get_jenis_kategori_id')) {
+
+
+
+    function get_jenis_kategori_id($id) {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+
+        return $ci->m_header->get_jenis_kategori_id($id);
+    }
+
+}
+
 //generate kanal url
 
 if (!function_exists('generate_url')) {

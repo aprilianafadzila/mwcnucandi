@@ -4,6 +4,7 @@
     $query2=$this->db->query("SELECT * FROM tbl_komentar WHERE komentar_status='0'");
     $jum_comment=$query2->num_rows();
     $jum_pesan=$query->num_rows();
+    $jenis_kategori = get_jenis_kategori_id($jenis);
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,8 +61,10 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        List Artikel
+      <h1> 
+        <?php foreach ($jenis_kategori as $key ) : ?>
+          List Artikel <?php echo $key->nama; ?> 
+        <?php endforeach;?>
         <small></small>
       </h1>
       <ol class="breadcrumb">
@@ -78,12 +81,14 @@
           <div class="box">
 
           <div class="box">
-            <div class="box-header">
-              <a class="btn btn-success btn-flat" href="<?php echo base_url().'admin/redaksi/add_tulisan'?>"><span class="fa fa-plus"></span> Post Tulisan</a>
-            </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-striped" style="font-size:13px;">
+
+                <?php if (!empty($jenis)) {
+                  $this->load->view('admin/filter_artikel'); 
+                }
+                ?>
                 <thead>
                 <tr>
       					<th>Gambar</th>
