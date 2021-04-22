@@ -442,15 +442,12 @@
         </script>
     <?php elseif($this->session->flashdata('msg')=='success-hapus'):?>
         <script type="text/javascript">
-                $.toast({
-                    heading: 'Success',
-                    text: "Artikel Berhasil dihapus.",
-                    showHideTransition: 'slide',
-                    icon: 'success',
-                    hideAfter: false,
-                    position: 'bottom-right',
-                    bgColor: '#7EC857'
-                });
+              $(document).ready(function() {
+              $('.confirm-div').hide();
+             
+              $('.confirm-div').html('<?php echo $this->session->flashdata('msg'); ?>').show();
+        
+        });
         </script>
     <?php else:?>
 

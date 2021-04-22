@@ -37,6 +37,7 @@
 
     <div class="mx-0" style="display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; margin-right: -15px; margin-left: -15px;">
         <div class="slider col-md-8 col-16 paddding animate-box" data-animate-effect="fadeIn" style="padding-left: 0px !important; padding-right: 5px !important;">
+              
           <?php foreach ($post as $row) : ?>
              <?php $depan = strtolower($row->kategori_nama) ?>
                     <?php $ranting = strtolower($row->nama_ranting) ?>
@@ -63,8 +64,9 @@
                 </div>
             </div>
             </div>
-        <?php endforeach;?>
 
+        <?php endforeach;?>
+         
         </div>
 
         <div ID="hiddenslider">
@@ -125,7 +127,6 @@
                 <div>
                     <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b><?php foreach ($post as $row) : ?> <?php echo $row->nama_ranting;?> <?php endforeach;?></b></div>
                 </div>
-
                 <?php echo $this->session->flashdata('msg');?>
                 <?php foreach ($post as $row) : ?>
 
