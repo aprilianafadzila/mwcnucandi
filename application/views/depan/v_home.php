@@ -39,7 +39,11 @@
 
     <div class="mx-0" style="display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; margin-right: -15px; margin-left: -15px;">
         <div class="slider col-md-8 col-16 paddding animate-box" data-animate-effect="fadeIn" style="padding-left: 0px !important; padding-right: 5px !important;">
-            <?php foreach ($data->result() as $row) : ?>
+            <?php $banner = get_data_banner();?>
+            <?php foreach ($banner as $row) : ?>
+                <?php $depan = strtolower($row->kategori_nama) ?>
+                <?php $ranting = strtolower($row->nama_ranting) ?>
+                <?php $slug = generate_slug($row->tulisan_slug); ?>
             <div  class="slide">
             <div class="fh5co_suceefh5co_height">
               <div class="course-content">
@@ -56,7 +60,7 @@
                 <div class="fh5co_suceefh5co_height_position_absolute_font">
                     <div class=""><a href="#" class="color_fff"> <i class=" "></i><?php echo $row->tulisan_tanggal;?></a>
                   </div><br>
-                  <div class=""><a href="<?php echo site_url('data/'.$row->tulisan_slug);?>" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
+                  <div class=""><a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
                   </div>
                     <div class=""><a href="#" class="fh5co_good_font">  </a></div>
                 </div>
@@ -119,14 +123,18 @@
             <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>BERITA TERKINI</b></div>
         </div>
         <div class="owl-carousel owl-theme" id="slider2">
-              <?php foreach ($berita->result() as $row) : ?>
+            <?php $blog_all = get_blog_all();?>
+              <?php foreach ($blog_all as $row) : ?>
+                <?php $depan = strtolower($row->kategori_nama) ?>
+                <?php $ranting = strtolower($row->nama_ranting) ?>
+                <?php $slug = generate_slug($row->tulisan_slug); ?>
             <div class="item px-2">
 
                 <div class="fh5co_hover_news_img">
                     <div class="col-20 align-self-center"><img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img"/></div>
                     <br>
                     <div>
-                        <a href="<?php echo site_url('berita/'.$row->tulisan_slug);?>" class="d-block fh5co_small_post_heading"><span class=""><b>"<?php echo $row->tulisan_judul;?>"</b></span></a>
+                        <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="d-block fh5co_small_post_heading"><span class=""><b>"<?php echo $row->tulisan_judul;?>"</b></span></a>
                         <div class="c_g"><i class=" "></i> <?php echo $row->tulisan_tanggal;?></div>
                     </div>
                 </div>
@@ -149,7 +157,10 @@
                 <div class="row pb-4">
 
                  <?php echo $this->session->flashdata('msg');?>
-                  <?php foreach ($banom->result() as $row) : ?>
+                  <?php foreach ($post as $row) : ?>
+                    <?php $depan = strtolower($row->kategori_nama) ?>
+                    <?php $ranting = strtolower($row->nama_ranting) ?>
+                    <?php $slug = generate_slug($row->tulisan_slug); ?>
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
 
@@ -160,13 +171,13 @@
                         </div>
                     </div>
                     <div class="col-md-7 animate-box"><br><br>
-                        <a href="<?php echo site_url('redaksi/'.$row->tulisan_slug);?>" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a>
+                        <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="fh5co_magna py-2"> <?php echo $row->tulisan_judul;?> </a>
                         <br>
                         <a class="fh5co_mini_time py-3"> <i class="fa fa-user" aria-hidden="true"></i> <span> <?php echo $row->tulisan_author;?> |
                         <?php echo $row->tulisan_tanggal;?> | </span></a>
                         <div class="fh5co_consectetur"> <?php echo limit_words($row->tulisan_isi,30).'...';?>
                         </div>
-                        <a href="<?php echo site_url('redaksi/'.$row->tulisan_slug);?>" class="">Read More</a>
+                        <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="">Read More</a>
 
                     </div>
                     <nav>
@@ -177,34 +188,9 @@
 
             </div>
 
-            <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
-                <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4"><b>TAGS</b></div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="fh5co_tags_all">
-
-                    <?php foreach ($category->result() as $row) : ?>
-                   <?php $slug = generate_slug($row->kategori_nama); ?>
-                    <a href="<?php echo generate_tag_url($slug)?>" class="fh5co_tagg"><?php echo $row->kategori_nama;?></a>
-                  <?php endforeach;?>
-                </div>
-                <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom pt-3 py-2 mb-4"><b>BERITA POPULER</b></div>
-                </div>
-                <?php foreach ($populer->result() as $row) :?>
-                <div class="row pb-3">
-                    <div class="col-5 align-self-center">
-                        <img width="100%" src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="blog-featured-img" class="img-fluid">
-                    </div>
-                    <div class="col-7 paddding">
-                        <div class="most_fh5co_treding_font"><a href="<?php echo site_url('berita/'.$row->tulisan_slug);?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></div>
-                        <div class="most_fh5co_treding_font_123"> <?php echo $row->tulisan_author;?> | <?php echo $row->tulisan_tanggal;?></div>
-                    </div>
-                </div>
-              <?php endforeach;?>
-
-            </div>
+            <?php
+                $this->load->view('depan/v_side_right');
+             ?>
         </div>
         </div>
       </div>

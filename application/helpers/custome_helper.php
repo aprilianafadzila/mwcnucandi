@@ -161,6 +161,72 @@ if (!function_exists('get_badanotonom')) {
     }
 
 }
+
+//get berita populer
+if (!function_exists('get_berita_populer')) {
+
+
+
+    function get_berita_populer() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+
+        return $ci->m_header->get_berita_populer();
+    }
+
+}
+
+//get berita populer
+if (!function_exists('get_tag')) {
+
+
+
+    function get_tag() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+        
+        return $ci->m_header->get_tag();
+    }
+
+}
+
+//get berita populer
+if (!function_exists('get_data_banner')) {
+
+
+
+    function get_data_banner() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+        
+        return $ci->m_header->get_data_banner();
+    }
+
+}
+
+//get berita populer
+if (!function_exists('get_blog_all')) {
+
+
+
+    function get_blog_all() {
+
+        // ambil data kanal di database
+
+        $ci =& get_instance();
+        
+        return $ci->m_header->get_blog_all();
+    }
+
+}
+
+
 //get ranting
 if (!function_exists('get_ranting')) {
 
