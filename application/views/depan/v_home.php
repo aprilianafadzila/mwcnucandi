@@ -58,7 +58,7 @@
               </div>
                 <div class="fh5co_suceefh5co_height_position_absolute"></div>
                 <div class="fh5co_suceefh5co_height_position_absolute_font">
-                    <div class=""><a href="#" class="color_fff"> <i class=" "></i><?php echo $row->tulisan_tanggal;?></a>
+                    <div class=""> <i class=" "></i><?php echo $row->tulisan_tanggal;?>
                   </div><br>
                   <div class=""><a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
                   </div>

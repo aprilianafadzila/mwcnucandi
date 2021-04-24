@@ -52,7 +52,7 @@ class Lknu extends CI_Controller{
 						$x['title'] = 'mwcnucandi';
 			      $x['description'] = 'Ini adalah Website MWCNU Candi, Kabupaten Sidoarjo, Provinsi Jawa Timur. Isinya Informasi dari situs-situs NU lainnya serta bagaimana MWC  NU Candi beraktivitas. Tujuannya untuk lebih memasyarakatkan dan memudahkan akses informasi kepada warga nahdliyin khususnya di Candi.';
 			      $x['keywords'] = 'lknu, informasi tentang lknu candi, lknu candi Sidoarjo, berita terbaru lknu candi sidoarjo, artikel baru ldnu candi';
-$this->load->view('depan/v_lknu',$x);
+			$this->load->view('depan/v_lknu',$x);
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);

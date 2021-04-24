@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>MWCNU Candi Sidoarjo</title>
+<link rel="shorcut icon" href="<?php echo base_url().'images/logo1.png'?>">
+<meta name="description" content="<?php echo ($description); ?>" />
+
+<meta name="keywords" content="<?php echo ($keywords); ?>" />
+
+<meta name="author" content="<?php echo ($title); ?>" />
 <style>
 @media only screen and (min-width:700px) {
   /* For tablets: */
@@ -37,7 +46,7 @@
 
     <div class="mx-0" style="display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; margin-right: -15px; margin-left: -15px;">
         <div class="slider col-md-8 col-16 paddding animate-box" data-animate-effect="fadeIn" style="padding-left: 0px !important; padding-right: 5px !important;">
-              
+
           <?php foreach ($post as $row) : ?>
              <?php $depan = strtolower($row->kategori_nama) ?>
                     <?php $ranting = strtolower($row->nama_ranting) ?>
@@ -56,7 +65,7 @@
               </div>
                 <div class="fh5co_suceefh5co_height_position_absolute"></div>
                 <div class="fh5co_suceefh5co_height_position_absolute_font">
-                    <div class=""><a href="#" class="color_fff"> <i class=" "></i><?php echo $row->tulisan_tanggal;?></a>
+                    <div class=""> <i class=" "></i><?php echo $row->tulisan_tanggal;?>
                   </div><br>
                   <div class=""><a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="color_fff"> <?php echo $row->tulisan_judul;?></a>
                   </div>
@@ -66,7 +75,7 @@
             </div>
 
         <?php endforeach;?>
-         
+
         </div>
 
         <div ID="hiddenslider">
@@ -144,7 +153,7 @@
 
 
                             <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img"/></div>
-                            
+
                         </div>
                     </div>
                     <div class="col-md-7 animate-box"><br><br>
@@ -156,7 +165,7 @@
                           <a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>" class="">Read More</a>
                     </div>
                 </div>
-              
+
                 <hr>
                  <?php endforeach;?>
 
@@ -184,7 +193,7 @@
     <div class="col-12 text-center pb-4 pt-4">
         <a href="home" class="btn_mange_pagging"><i class="fa fa-long-arrow-left"></i>&nbsp;&nbsp; Previous</a>
 
-        <a href="galeri" class="btn_mange_pagging">Next <i class="fa fa-long-arrow-right"></i>&nbsp;&nbsp; </a>
+        <a href="download" class="btn_mange_pagging">Next <i class="fa fa-long-arrow-right"></i>&nbsp;&nbsp; </a>
      </div>
 </div>
 </div>

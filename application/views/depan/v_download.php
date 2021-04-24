@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>MWCNU Candi Sidoarjo</title>
+<link rel="shorcut icon" href="<?php echo base_url().'images/logo1.png'?>">
+<meta name="description" content="<?php echo ($description); ?>" />
+
+<meta name="keywords" content="<?php echo ($keywords); ?>" />
+
+<meta name="author" content="<?php echo ($title); ?>" />
+<link rel="stylesheet" href="css/style.css">
+<link href="css/media_query.css" rel="stylesheet" type="text/css"/>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="css/animate.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+<link href="css/owl.theme.default.css" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" href="assets/plugins/Nivo-Slider/nivo-slider.css" type="text/css" />
+<link rel="stylesheet" href="css/slick.css" type="text/css" />
+<link rel="stylesheet" href="css/slick-theme.css" type="text/css" />
+<link rel="stylesheet" href="assets/plugins/Nivo-Slider/themes/default/default.css" type="text/css" />
+
+<!-- Bootstrap CSS -->
+<link href="css/style_1.css" rel="stylesheet" type="text/css"/>
+<!-- Modernizr JS -->
+<script src="js/modernizr-3.5.0.min.js"></script>
+
 <style>
 @media only screen and (min-width:700px) {
   /* For tablets: */
@@ -49,7 +79,7 @@
         <div class="row">
             <div class="col-md-12">
               <div class="table-responsive">
-                <table class="table table-striped" id="display">
+                <table id="example2" class="table table-striped" id="display">
                   <thead>
                     <tr>
                       <th>No</th>
@@ -66,7 +96,7 @@
                     ?>
                     <tr>
                       <td><?php echo $no++;?></td>
-                      <td><?php echo $row->file_judul;?></td>
+                      <td class="user-data"><?php echo $row->file_judul;?></td>
                       <td><?php echo $row->tanggal;?></td>
                       <td><?php echo $row->file_oleh;?></td>
                       <td style="text-align:right;"><a href="<?php echo site_url('download/get_file/'.$row->file_id);?>" class="btn btn-info">Download</a></td>
@@ -98,7 +128,46 @@
         <div class="gototop js-top">
             <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
         </div>
-
+        <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
+            <script src="<?php echo base_url().'theme/js/tether.min.js'?>"></script>
+            <script src="<?php echo base_url().'theme/js/bootstrap.min.js'?>"></script>
+            <script src="<?php echo base_url().'theme/js/owl.carousel.min.js'?>"></script>
+            <script src="<?php echo base_url().'theme/js/validate.js'?>"></script>
+            <script src="<?php echo base_url().'theme/js/tweetie.min.js'?>"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+                    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+                    crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+                    integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+                    crossorigin="anonymous"></script>
+            <!-- Subscribe / Contact-->
+            <script src="<?php echo base_url().'theme/js/subscribe.js'?>"></script>
+            <script src="<?php echo base_url().'theme/js/contact.js'?>"></script>
+            <!-- Script JS -->
+            <!-- Waypoints -->
+            <script src="js/jquery.waypoints.min.js"></script>
+            <!-- Main -->
+            <script src="js/main.js"></script>
+            <script src="js/slick.js"></script>
+            <script src="<?php echo base_url().'theme/js/script.js'?>"></script>
+            <script src="<?php echo base_url().'theme/js/jquery.dataTables.min.js'?>"></script>
+            <script src="<?php echo base_url().'theme/js/dataTables.bootstrap4.min.js'?>"></script>
+            <script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
@@ -157,33 +226,6 @@
         </script>
             <!--//END FOOTER -->
             <!-- jQuery, Bootstrap JS. -->
-            <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/tether.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/bootstrap.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/owl.carousel.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/validate.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/tweetie.min.js'?>"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script src="js/owl.carousel.min.js"></script>
-            <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-                    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-                    crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-                    integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-                    crossorigin="anonymous"></script>
-            <!-- Subscribe / Contact-->
-            <script src="<?php echo base_url().'theme/js/subscribe.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/contact.js'?>"></script>
-            <!-- Script JS -->
-            <!-- Waypoints -->
-            <script src="js/jquery.waypoints.min.js"></script>
-            <!-- Main -->
-            <script src="js/main.js"></script>
-            <script src="js/slick.js"></script>
-            <script src="<?php echo base_url().'theme/js/script.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/jquery.dataTables.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/dataTables.bootstrap4.min.js'?>"></script>
             <script>
               $(document).ready(function() {
                 $('#display').DataTable();
@@ -199,6 +241,7 @@
               var hariarray=new Array("Ahad,","Senin,","Selasa,","Rabu,","Kamis,","Jum'at,","Sabtu,");
               var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","Nopember","Desember");
               document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun;
+
             </script>
       </body>
 
