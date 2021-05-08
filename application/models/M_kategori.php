@@ -2,7 +2,7 @@
 class M_kategori extends CI_Model{
 
 	function get_all_kategori(){
-		$hsl=$this->db->query("select * from tbl_kategori");
+		$hsl=$this->db->query("SELECT * from tbl_kategori");
 		return $hsl;
 	}
 	function simpan_kategori($kategori){
@@ -27,10 +27,30 @@ class M_kategori extends CI_Model{
         $hasil=$this->db->query("SELECT * FROM tbl_jenis_kategori");
         return $hasil;
     }
+
+    function get_kategorii(){
+        $hasil=$this->db->query("SELECT * FROM tbl_jenis_kategori");
+        return $hasil->result();
+    }
+
+    function get_ranting(){
+        $hasil=$this->db->query("SELECT * FROM tbl_ranting");
+        return $hasil->result();
+    }
  
     function get_subkategori($id){
         $hasil=$this->db->query("SELECT * FROM tbl_ranting WHERE id_jenis_kategori='$id'");
         return $hasil->result();
     }
+
+    function get_sub_category($category_id){
+		$query = $this->db->get_where('tbl_ranting', array('id_jenis_kategori' => $category_id));
+		return $query;
+	}
+
+	function get_product_by_id($product_id){
+		$query = $this->db->get_where('tbl_blog', array('tulisan_id' =>  $product_id));
+		return $query;
+	}
 
 }

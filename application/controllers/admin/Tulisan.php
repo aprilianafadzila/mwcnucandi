@@ -56,11 +56,25 @@ class Tulisan extends CI_Controller{
 		$x['kat']=$this->m_kategori->get_all_kategori();
 		$this->load->view('admin/v_add_tulisan',$x);
 	}
-	function get_edit(){
+	function get_edit($id){
 		$kode=$this->uri->segment(4);
-		$x['data']=$this->m_tulisan->get_tulisan_by_kode($kode);
-		$x['kat']=$this->m_kategori->get_all_kategori();
+		$query = $this->m_tulisan->get($id);
+		if ($query->num_rows() > 0) {
+			$item = $query->row(); 
+
+			$x['product_id'] = $item->tulisan_id;
+			$x['data'] = $this->m_tulisan->get_tulisan_by_kode($kode);
+			$x['kat']=$this->m_kategori->get_all_kategori();
+			$x['category'] = $this->m_kategori->get_kategori()->result();
+			$x['sub_category_id'] = $item->id_ranting; //print_r($x['sub_category_id']); die();
+			
 		$this->load->view('admin/v_edit_tulisan',$x);
+		} else {
+			echo "<script>alert('Data Tidak Ditemukan !!');";
+			echo "window.location='".site_url('admin/tulisan')."';</script>";
+		}
+
+		
 	}
 	function simpan_tulisan(){
 				$config['upload_path'] = './assets/images/'; //path folder
@@ -143,24 +157,44 @@ class Tulisan extends CI_Controller{
 	                        $gambar=$gbr['file_name'];
 	                        $tulisan_id=$this->input->post('kode');
 	                        $judul=strip_tags($this->input->post('xjudul'));
-													$isi=$this->input->post('xisi');
-													$string   = preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $judul);
-													$trim     = trim($string);
-													$slug     = strtolower(str_replace(" ", "-", $trim));
-													$kategori_id=strip_tags($this->input->post('xkategori'));
-													$data=$this->m_kategori->get_kategori_byid($kategori_id);
-													$q=$data->row_array();
-													$kategori_nama=$q['kategori_nama'];
-													//$imgslider=$this->input->post('ximgslider');
-													$imgslider='0';
-													$kode=$this->session->userdata('idadmin');
-													$user=$this->m_pengguna->get_pengguna_login($kode);
-													$p=$user->row_array();
-													$user_id=$p['pengguna_id'];
-													$user_nama=$p['pengguna_nama'];
-													$this->m_tulisan->update_tulisan($tulisan_id,$judul,$isi,$kategori_id,$kategori_nama,$imgslider,$user_id,$user_nama,$gambar,$slug);
-													echo $this->session->set_flashdata('msg','info');
-													redirect('admin/tulisan');
+							$isi=$this->input->post('xisi');
+							$string   = preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $judul);
+							$trim     = trim($string);
+							$slug     = strtolower(str_replace(" ", "-", $trim));
+							$kategori_id=strip_tags($this->input->post('xkategori'));
+							$data=$this->m_kategori->get_kategori_byid($kategori_id);
+							$q=$data->row_array();
+							$kategori_nama=$q['kategori_nama'];
+							//$imgslider=$this->input->post('ximgslider');
+							$imgslider='0';
+							$kode=$this->session->userdata('idadmin');
+							$user=$this->m_pengguna->get_pengguna_login($kode);
+							$p=$user->row_array();
+							$user_id=$p['pengguna_id'];
+							$user_nama=$p['pengguna_nama'];
+							$kategorii = $this->input->post('category');
+							$menu = $this->input->post('sub_category');
+
+							$data = array(
+								'tulisan_id' => $this->input->post('kode'),
+								'id_ranting' => $this->input->post('sub_category'),
+								'id_jenis_kategori' => $this->input->post('category'),
+								'tulisan_judul' => strip_tags($this->input->post('xjudul')),
+								'tulisan_isi' => $this->input->post('xisi'),
+								'tulisan_kategori_id' => strip_tags($this->input->post('xkategori')),
+								'tulisan_kategori_nama' => $q['kategori_nama'],
+								'tulisan_gambar' => $gambar,
+								'tulisan_img_slider' => $imgslider,
+								'tulisan_pengguna_id' => $p['pengguna_id'],
+								'tulisan_author' => $p['pengguna_nama'],
+								'tulisan_slug' => strtolower(str_replace(" ", "-", $trim))
+							);
+
+							$where = array('tulisan_id' => $this->input->post('kode'));
+
+							$this->m_tulisan->update_data($where,$data,'tbl_blog');
+							echo $this->session->set_flashdata('msg','info');
+							redirect('admin/tulisan');
 
 	                }else{
 	                    echo $this->session->set_flashdata('msg','warning');
@@ -168,26 +202,46 @@ class Tulisan extends CI_Controller{
 	                }
 
 	            }else{
-									$tulisan_id=$this->input->post('kode');
-									$judul=strip_tags($this->input->post('xjudul'));
-									$isi=$this->input->post('xisi');
-									$string   = preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $judul);
-									$trim     = trim($string);
-									$slug     = strtolower(str_replace(" ", "-", $trim));
-									$kategori_id=strip_tags($this->input->post('xkategori'));
-									$data=$this->m_kategori->get_kategori_byid($kategori_id);
-									$q=$data->row_array();
-									$kategori_nama=$q['kategori_nama'];
-									//$imgslider=$this->input->post('ximgslider');
-									$imgslider='0';
-									$kode=$this->session->userdata('idadmin');
-									$user=$this->m_pengguna->get_pengguna_login($kode);
-									$p=$user->row_array();
-									$user_id=$p['pengguna_id'];
-									$user_nama=$p['pengguna_nama'];
-									$this->m_tulisan->update_tulisan_tanpa_img($tulisan_id,$judul,$isi,$kategori_id,$kategori_nama,$imgslider,$user_id,$user_nama,$slug);
-									echo $this->session->set_flashdata('msg','info');
-									redirect('admin/tulisan');
+					$tulisan_id=$this->input->post('kode');
+	                        $judul=strip_tags($this->input->post('xjudul'));
+							$isi=$this->input->post('xisi');
+							$string   = preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $judul);
+							$trim     = trim($string);
+							$slug     = strtolower(str_replace(" ", "-", $trim));
+							$kategori_id=strip_tags($this->input->post('xkategori'));
+							$data=$this->m_kategori->get_kategori_byid($kategori_id);
+							$q=$data->row_array();
+							$kategori_nama=$q['kategori_nama'];
+							//$imgslider=$this->input->post('ximgslider');
+							$imgslider='0';
+							$kode=$this->session->userdata('idadmin');
+							$user=$this->m_pengguna->get_pengguna_login($kode);
+							$p=$user->row_array();
+							$user_id=$p['pengguna_id'];
+							$user_nama=$p['pengguna_nama'];
+							$kategorii = $this->input->post('category');
+							$menu = $this->input->post('sub_category');
+
+							$data = array(
+								'tulisan_id' => $this->input->post('kode'),
+								'id_ranting' => $this->input->post('sub_category'),
+								'id_jenis_kategori' => $this->input->post('category'),
+								'tulisan_judul' => strip_tags($this->input->post('xjudul')),
+								'tulisan_isi' => $this->input->post('xisi'),
+								'tulisan_kategori_id' => strip_tags($this->input->post('xkategori')),
+								'tulisan_kategori_nama' => $q['kategori_nama'],
+								'tulisan_pengguna_id' => $p['pengguna_id'],
+								'tulisan_author' => $p['pengguna_nama'],
+								'tulisan_slug' => strtolower(str_replace(" ", "-", $trim))
+							); 
+
+							$where = array('tulisan_id' => $this->input->post('kode'));
+
+							$this->m_tulisan->update_data($where,$data,'tbl_blog');
+
+							
+							echo $this->session->set_flashdata('msg','info');
+							redirect('admin/tulisan');
 	            }
 
 	}
@@ -200,6 +254,19 @@ class Tulisan extends CI_Controller{
 		$this->m_tulisan->hapus_tulisan($kode);
 		echo $this->session->set_flashdata('msg','success-hapus');
 		redirect('admin/tulisan');
+	}
+
+	// get sub category by category_id
+	function get_sub_category(){
+		$category_id = $this->input->post('id',TRUE);
+		$data = $this->m_kategori->get_sub_category($category_id)->result();
+		echo json_encode($data);
+	}
+
+	function get_data_edit(){
+		$product_id = $this->input->post('product_id',TRUE);
+		$data = $this->m_kategori->get_product_by_id($product_id)->result();
+		echo json_encode($data);
 	}
 
 }

@@ -136,12 +136,12 @@
                 <label>Kategori</label>
                 <select class="form-control select2" name="xkategori" style="width: 100%;" required>
                   <option value="">-Pilih-</option>
-				  <?php
-					$no=0;
-					foreach ($kat->result_array() as $i) :
-					   $no++;
-                       $kategori_id=$i['kategori_id'];
-                       $kategori_nama=$i['kategori_nama'];
+        				  <?php
+        					$no=0;
+        					foreach ($kat->result_array() as $i) :
+        					   $no++;
+                     $kategori_id=$i['kategori_id'];
+                     $kategori_nama=$i['kategori_nama'];
 
                     ?>
                   <option value="<?php echo $kategori_id;?>"><?php echo $kategori_nama;?></option>

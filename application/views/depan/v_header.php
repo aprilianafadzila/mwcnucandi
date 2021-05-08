@@ -150,7 +150,7 @@ body {
 <script src="js/main.js"></script>
 <script src="js/slick.js"></script>
 <script>
-    $('.slider').slick({
+    $(".slider").not('.slick-initialized').slick({
 	infinite: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
