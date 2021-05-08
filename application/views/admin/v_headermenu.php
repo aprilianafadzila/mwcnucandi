@@ -109,7 +109,14 @@
       </span>
     </a>
   </li>
-
+<li>
+    <a href="<?php echo base_url().'admin/subscribe'?>">
+      <i class="fa fa-envelope-square"></i> <span>SUBSCRIBE</span>
+      <span class="pull-right-container">
+        <small class="label pull-right bg-green"></small>
+      </span>
+    </a>
+  </li>
   <li>
     <a href="<?php echo base_url().'admin/komentar'?>">
       <i class="fa fa-comments"></i> <span>KOMENTAR</span>

@@ -10,7 +10,7 @@ class Komentar extends CI_Controller{
     }
 
     function index(){
-        $x['data']=$this->db->query("SELECT tbl_komentar.*,tulisan_judul,tulisan_slug FROM tbl_komentar JOIN tbl_tulisan ON komentar_tulisan_id=tulisan_id ORDER BY komentar_id DESC");
+        $x['data']=$this->db->query("SELECT tbl_komentar.*,tulisan_judul,tulisan_slug FROM tbl_komentar JOIN tbl_blog ON komentar_tulisan_id=tulisan_id ORDER BY komentar_id DESC");
         $this->load->view('admin/v_komentar',$x);
     }
 

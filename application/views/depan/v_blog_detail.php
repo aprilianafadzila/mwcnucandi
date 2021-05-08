@@ -10,7 +10,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?php echo $title;?></title>
+    <title>MWCNU Candi Sidoarjo</title>
     <link rel="shorcut icon" href="<?php echo base_url().'images/logo1.png'?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url().'theme/css/bootstrap.min.css'?>">
@@ -262,120 +262,89 @@
   <div class="padding-page">
   <div class="container-fluid bg-faded fh5co_padd_mediya padding_786" style="background:#00702d;">
 
-      <div class="container padding_786">
-          <nav class="navbar navbar-toggleable-md navbar-light ">
-              <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
-                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                      aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-              <a class="navbar-brand" href="home"><img src="<?php echo base_url();?>images/logo1.png" alt="img" class="mobile_logo_width"/></a>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle"><b>KANAL</b></h7><span class="sr-only">(current)</span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="blog">Berita</a>
-                            <a class="dropdown-item" href="galeri">Galeri</a>
-                            <a class="dropdown-item" href="aswaja">Keaswajan</a>
-                            <a class="dropdown-item" href="pesantren">Pesantren</a>
-                            <a class="dropdown-item" href="#">Lain-lain</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">TENTANG NU CANDI</h7><span class="sr-only">(current)</span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="sejarah">Sejarah NU Candi</a>
-                            <a class="dropdown-item" href="kantor">Kantor</a>
-                            <a class="dropdown-item" href="pengurus">Pengurus</a>
-                            <a class="dropdown-item" href="tokoh">Tokoh</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">LEMBAGA NU</h7><span class="sr-only">(current)</span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="aswajanucenter">Aswaja NU Center</a>
-                            <a class="dropdown-item" href="laziznu">LAZISNU</a>
-                            <a class="dropdown-item" href="ldnu">LDNU</a>
-                            <a class="dropdown-item" href="lknu">LKNU</a>
-                            <a class="dropdown-item" href="lakpesdam">LAKPESDAM</a>
-                            <a class="dropdown-item" href="lbmnu">LBMNU</a>
-                            <a class="dropdown-item" href="lesbumi">LESBUMI NU</a>
-                            <a class="dropdown-item" href="lfnu">LFNU</a>
-                            <a class="dropdown-item" href="lkknu">LKKNU</a>
-                            <a class="dropdown-item" href="lpmaarifnu">LP MA'ARIF NU</a>
-                            <a class="dropdown-item" href="lpbhnu">LPBHNU</a>
-                            <a class="dropdown-item" href="lpbinu">LPBI NU</a>
-                            <a class="dropdown-item" href="lpnu">LPNU</a>
-                            <a class="dropdown-item" href="lppnu">LPPNU</a>
-                            <a class="dropdown-item" href="lptnu">LPTNU</a>
-                            <a class="dropdown-item" href="ltmnu">LTMNU</a>
-                            <a class="dropdown-item" href="ltnnu">LTNNU</a>
-                            <a class="dropdown-item" href="lwpnu">LWPNU</a>
-                            <a class="dropdown-item" href="rminu">RMI NU</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">BADAN OTONOM</h7><span class="sr-only">(current)</span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                            <a class="dropdown-item" href="jatmannu">JATMAN NU</a>
-                            <a class="dropdown-item" href="jqhnu">JQH NU</a>
-                            <a class="dropdown-item" href="pagarnusa">Pagar Nusa</a>
-                            <a class="dropdown-item" href="muslimat">MUSLIMAT</a>
-                            <a class="dropdown-item" href="fatayat">FATAYAT</a>
-                            <a class="dropdown-item" href="isnu">ISNU</a>
-                            <a class="dropdown-item" href="pergunu">PERGUNU</a>
-                            <a class="dropdown-item" href="sarbumusi">SARBUMUSI</a>
-                            <a class="dropdown-item" href="pmii">PMII</a>
-                            <a class="dropdown-item" href="ipnu">IPNU-IPPNU</a>
-                            <a class="dropdown-item" href="ishari">ISHARI</a>
-                        </div>
-                    </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">RANTING</h7><span class="sr-only">(current)</span></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
-                              <a class="dropdown-item" href="#">Ranting Sepande</a>
-                              <a class="dropdown-item" href="#">Ranting Sumokali</a>
-                              <a class="dropdown-item" href="#">Ranting Tenggulunan</a>
-                              <a class="dropdown-item" href="#">Ranting Sugihwaras</a>
-                              <a class="dropdown-item" href="#">Ranting Kedungkendo</a>
-                              <a class="dropdown-item" href="#">Ranting Larangan</a>
-                              <a class="dropdown-item" href="#">Ranting Sidodadi</a>
-                              <a class="dropdown-item" href="#">Ranting Candi</a>
-                              <a class="dropdown-item" href="#">Ranting Jambangan</a>
-                              <a class="dropdown-item" href="#">Ranting Gelam</a>
-                              <a class="dropdown-item" href="#">Ranting Bligo</a>
-                              <a class="dropdown-item" href="#">Ranting Kerangtanjung</a>
-                              <a class="dropdown-item" href="#">Ranting Sumorame</a>
-                              <a class="dropdown-item" href="#">Ranting Balongdowo</a>
-                              <a class="dropdown-item" href="#">Ranting Balonggabus</a>
-                              <a class="dropdown-item" href="#">Ranting Wedoroklurak</a>
-                              <a class="dropdown-item" href="#">Ranting Klurak</a>
-                              <a class="dropdown-item" href="#">Ranting Kebonsari</a>
-                              <a class="dropdown-item" href="#">Ranting Durung Bedug</a>
-                              <a class="dropdown-item" href="#">Ranting Durung Banjar</a>
-                              <a class="dropdown-item" href="#">Ranting Ngampelsari</a>
-                              <a class="dropdown-item" href="#">Ranting Kalipecabean</a>
-                              <a class="dropdown-item" href="#">Ranting Kendalpecabean</a>
-                              <a class="dropdown-item" href="#">Ranting Kedungpeluk</a>
+<?php $kanal = get_kanal();?>
+<?php $tentang = get_tentang();?>
+<?php $lembaga = get_lembaga();?>
+<?php $badanotonom = get_badanotonom();?>
+<?php $ranting = get_ranting();?>
+<?php $redaksi = get_redaksi();?>
 
-                          </div>
-                      </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link " href="download" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="" >DOWNLOAD</h7><span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link " href="redaksi" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="">REDAKSI</h7><span class="sr-only">(current)</span></a>
-                      </li>
-                  </ul>
-              </div>
-          </nav>
-      </div>
-  </div>
-  </div>
+    <div class="container padding_786">
+        <nav class="navbar navbar-toggleable-md navbar-light ">
+            <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+            <a class="navbar-brand" href="hpme"><img src="images/logo1.png" alt="img" class="mobile_logo_width"/></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link " href="" id="dropdownMenuButton2" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle"><b>KANAL</b></h7><span class="sr-only">(current)</span></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                        <?php foreach ($kanal as $row) : ?>
+                            <?php $depan = strtolower($row->subcategori) ?>
+                            <?php $slug = generate_slug($row->nama); ?>
+                          <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                        <?php endforeach;?>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">TENTANG NU CANDI</h7><span class="sr-only">(current)</span></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                        <?php foreach ($tentang as $row) : ?>
+                            <?php $depan = strtolower($row->subcategori) ?>
+                            <?php $slug = generate_slug($row->nama); ?>
+                          <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                        <?php endforeach;?>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">LEMBAGA NU</h7><span class="sr-only">(current)</span></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                        <?php foreach ($lembaga as $row) : ?>
+                            <?php $depan = strtolower($row->subcategori) ?>
+                            <?php $slug = generate_slug($row->nama); ?>
+                          <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                        <?php endforeach;?>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">BADAN OTONOM</h7><span class="sr-only">(current)</span></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                        <?php foreach ($badanotonom as $row) : ?>
+                            <?php $depan = strtolower($row->subcategori) ?>
+                            <?php $slug = generate_slug($row->nama); ?>
+                          <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                        <?php endforeach;?>
+                      </div>
+                  </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " href="#" id="dropdownMenuButton2" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false"><h7 style="color:#ffffff;" class="dropdown-toggle">RANTING</h7><span class="sr-only">(current)</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                          <?php foreach ($ranting as $row) : ?>
+                              <?php $depan = strtolower($row->subcategori) ?>
+                              <?php $slug = generate_slug($row->nama); ?>
+                            <a class="dropdown-item" href="<?php echo generate_url($depan, $slug)?>"><?php echo $row->nama;?></a>
+                          <?php endforeach;?>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " href="download" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="" >DOWNLOAD</h7><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " href="kantor" aria-labelledby="dropdownMenuLink_1"><h7 style="color:#ffffff;" class="">KANTOR</h7><span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+</div>
+
   <!--============================= HEADER =============================-->
 
     <section>
@@ -384,13 +353,13 @@
 <!--============================= BLOG =============================-->
 <section class="blog-wrap">
   <?php foreach ($post as $row) : ?>
-    <?php 
+    <?php
       $id_tulisan = $row->tulisan_id;
       $depan = $row->kategori_nama;
       $tengah = $row->nama_ranting;
       $belakang = $row->tulisan_slug;
     ?>
-    <div class="container"> 
+    <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <div class="blog-img_block">
@@ -402,7 +371,7 @@
                 <div class="blog-tiltle_block">
                     <h4><a href="<?php echo site_url('berita/'.$slug);?>"><?php echo $row->tulisan_judul;?></a></h4>
                     <h6> <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span><?php echo $row->tulisan_author;?></span> </a>  |   <a href="#"><i class="fa fa-tags" aria-hidden="true"></i><span><?php echo $row->kategori_nama;?></span></a>  |  <a href="#"><i class="fa fa-tags" aria-hidden="true"></i><span><?php echo $row->nama_ranting;?></span></a></h6>
-                    <?php echo $row->tulisan_isi;?>
+                 <?php echo $row->tulisan_isi;?>
                 </div>
   <?php endforeach;?>
 
@@ -518,23 +487,34 @@
           </div>
 
             <div class="col-md-4">
-              <div class="blog-featured_post">
-                  <i><h6><b>Search</b></h6></i>
-                  <form action="" method="get">
-                  <input id="search-users" class="search-users" type="text" name="keyword" placeholder="Search"  required>
-              </form>
+              
+              <div class="blog-featured_post" >
+                  <h3>TAGS</h3>
+              <?php $tag = get_tag();?>
+              <?php foreach ($tag as $row) : ?>
+             <?php $slug = generate_slug($row->kategori_nama); ?>
+              <a href="<?php echo generate_tag_url($slug)?>" class="fh5co_tagg"><?php echo $row->kategori_nama;?></a>
+            <?php endforeach;?>
 
               <hr>
                 <div class="blog-featured_post" >
                     <h3>Populer</h3>
-                  <?php foreach ($populer->result() as $row) :?>
-                    <div  class="user blog-featured-img_block">
-                        <img width="35%" src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img">
-                        <h5><a class="user-data" href="<?php echo site_url('artikel/'.$row->tulisan_slug);?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></h5>
-                        <p><?php echo limit_words($row->tulisan_isi,5).'...';?></p>
-                    </div>
-                    <hr>
-                  <?php endforeach;?>
+                    <?php $b_populer = get_berita_populer();?>
+                   <?php foreach ($b_populer as $row) :?>
+                       <?php $depan = strtolower($row->kategori_nama) ?>
+                       <?php $ranting = strtolower($row->nama_ranting) ?>
+                       <?php $slug = generate_slug($row->tulisan_slug); ?>
+                   <div class="row pb-3">
+                       <div class="col-5 align-self-center">
+                           <img width="100%" src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" alt="blog-featured-img" class="img-fluid">
+                       </div>
+                       <div class="col-7 paddding">
+                           <div class="most_fh5co_treding_font"><a href="<?php echo generate_url_detail($depan, $ranting, $slug)?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></div>
+                           <div class="most_fh5co_treding_font_123"> <?php echo $row->tulisan_author;?> | <?php echo $row->tulisan_tanggal;?></div>
+                           <div class="most_fh5co_treding_font_123"> Views : <?php echo $row->tulisan_views;?></div>
+                       </div>
+                   </div>
+                 <?php endforeach;?>
                 </div>
                 <hr>
                 <div class="blog-featured_post" >
@@ -552,7 +532,7 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 <div class="container-fluid fh5co_footer_bg pb-3">
 

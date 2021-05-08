@@ -94,9 +94,10 @@
         <div class="row justify-content-center pt-2 pb-4">
             <div class="col-12 col-md-8 col-lg-7 ">
                 <div class="input-group">
-                    <span class="input-group-addon fh5co_footer_text_box" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                    <input type="text" class="form-control fh5co_footer_text_box" placeholder="Enter your email..." aria-describedby="basic-addon1">
-                    <a href="#" class="input-group-addon fh5co_footer_subcribe" id="basic-addon12"> <i class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a>
+                    <form action="<?php echo site_url('subscribe/kirim_pesan');?>" method="post" class="row" id="fh5co_contact_form">
+                    <input type="email" name="xemail" class="form-control fh5co_footer_text_box" placeholder="Enter your email..." aria-describedby="basic-addon1"/>
+                    <button type="submit" class="btn contact_btn" > <i class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a> </button>
+                  </form>
                 </div>
             </div>
         </div>

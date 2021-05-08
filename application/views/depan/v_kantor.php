@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>MWCNU Candi Sidoarjo</title>
+<link rel="shorcut icon" href="<?php echo base_url().'images/logo1.png'?>">
+<meta name="description" content="<?php echo ($description); ?>" />
+
+<meta name="keywords" content="<?php echo ($keywords); ?>" />
+
+<meta name="author" content="<?php echo ($title); ?>" />
 <style>
 @media only screen and (min-width:700px) {
   /* For tablets: */
@@ -87,7 +97,7 @@
   <div class="container-fluid mb-4">
       <div class="container">
           <div class="col-12 text-center contact_margin_svnit ">
-              <div class="text-center fh5co_heading py-2">Contact Us</div>
+              <div class="text-center fh5co_heading py-2"><b>HUBUNGI KAMI</b></div>
           </div>
           <div class="row">
               <div class="col-12 col-md-6">
@@ -149,7 +159,7 @@
 
             <div class="col-12 col-md-5 col-lg-3 position_footer_relative">
                 <div class="footer_main_title py-3"> Most Viewed Posts</div>
-
+                
                 <div class="footer_makes_sub_font"></div>
                 <a href="" class="footer_post pb-4">  </a>
 
@@ -165,9 +175,10 @@
         <div class="row justify-content-center pt-2 pb-4">
             <div class="col-12 col-md-8 col-lg-7 ">
                 <div class="input-group">
-                    <span class="input-group-addon fh5co_footer_text_box" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                    <input type="text" class="form-control fh5co_footer_text_box" placeholder="Enter your email..." aria-describedby="basic-addon1">
-                    <a href="#" class="input-group-addon fh5co_footer_subcribe" id="basic-addon12"> <i class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a>
+                     <form action="<?php echo site_url('subscribe/kirim_pesan');?>" method="post" class="row" id="fh5co_contact_form">
+                    <input type="email" name="xemail" class="form-control fh5co_footer_text_box" placeholder="Enter your email..." aria-describedby="basic-addon1"/>
+                    <button type="submit" class="btn contact_btn" > <i class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a> </button>
+                  </form>
                 </div>
             </div>
         </div>
